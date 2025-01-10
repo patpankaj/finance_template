@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional Wealth Management Website">
+    <meta name="author" content="Your Name">
+    <title>Wealth Management</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- JavaScript Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="js/scripts.js" defer></script>
+</head>
+
+<body>
+        <!-- Market Ticker -->
+        <div class="market-ticker">
+            <div class="ticker-wrapper">
+                <div class="ticker-track">
+                    <div class="ticker-item">
+                        <span class="stock">NIFTY</span>
+                        <span class="price up">19,425.35</span>
+                        <span class="change up">+0.85%</span>
+                    </div>
+                    <div class="ticker-item">
+                        <span class="stock">SENSEX</span>
+                        <span class="price up">64,383.47</span>
+                        <span class="change up">+0.92%</span>
+                    </div>
+                    <div class="ticker-item">
+                        <span class="stock">USD/INR</span>
+                        <span class="price down">82.45</span>
+                        <span class="change down">-0.15%</span>
+                    </div>
+                    <!-- More ticker items -->
+                </div>
+            </div>
+        </div>
+    
+    <!-- Header Section -->
+    <header class="hero-section">
+        <nav class="nav-wrapper">
+            <div class="logo">Wealth<span>Management</span></div>
+            <ul class="menu">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li class="dropdown">
+                    <a href="#">Wealth Management</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Investment</a></li>
+                        <li><a href="#">Retirement</a></li>
+                        <li><a href="#">Tax Planning</a></li>
+                    </ul>
+                </li>
+                <li><a href="#insights">Insights</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="#contact" class="cta-button">Schedule Consultation</a>
+        </nav>
+
+        <div class="hero-content">
+            <h1>Your Trusted Wealth Management Partner</h1>
+            <p>Providing tailored solutions to help you achieve financial freedom and security.</p>
+            <a href="#services" class="hero-button">Learn More</a>
+        </div>
+    </header>
+
+    <!-- Performance Metrics Section -->
+    <section class="performance-metrics" id="metrics">
+        <div class="metrics-wrapper">
+            <div class="metric">
+                <h2>20+</h2>
+                <p>Years of Experience</p>
+            </div>
+            <div class="metric">
+                <h2>1000+</h2>
+                <p>Happy Clients</p>
+            </div>
+            <div class="metric">
+                <h2>$500M+</h2>
+                <p>Assets Managed</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Finance Calculator Section -->
+<section class="finance-calculator" id="calculator">
+    <div class="container">
+        <h2 class="section-title">Finance Calculator</h2>
+        <p class="section-description">Plan your investments efficiently with our easy-to-use calculator.</p>
+        <form id="calculator-form" class="form-grid">
+            <div class="form-group">
+                <label for="amount">Investment Amount:</label>
+                <input type="number" id="amount" placeholder="Enter amount" required>
+            </div>
+            <div class="form-group">
+                <label for="rate">Annual Interest Rate (%):</label>
+                <input type="number" id="rate" placeholder="Enter rate" required>
+            </div>
+            <div class="form-group">
+                <label for="years">Years:</label>
+                <input type="number" id="years" placeholder="Enter years" required>
+            </div>
+            <button type="button" id="calculate-btn" class="btn-primary">Calculate</button>
+        </form>
+        <div id="calculator-result" class="result-box"></div>
+    </div>
+</section>
+
+<!-- Registration Section -->
+<section class="registration" id="registration">
+    <div class="container">
+        <h2 class="section-title">Register for Consultation</h2>
+        <p class="section-description">Fill out the form below to book your consultation with our experts.</p>
+        <form id="registration-form" class="form-grid">
+            <div class="form-group">
+                <input type="text" id="name" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+                <input type="email" id="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+                <input type="tel" id="phone" placeholder="Your Phone Number" required>
+            </div>
+            <button type="submit" class="btn-primary">Register</button>
+        </form>
+    </div>
+</section>
+
+    <!-- Insurance Section -->
+    <section class="insurance" id="insurance">
+        <h2>Insurance Plans</h2>
+        <div class="insurance-grid">
+            <div class="insurance-card">
+                <h3>Life Insurance</h3>
+                <p>Secure your loved ones with our comprehensive life insurance plans.</p>
+            </div>
+            <div class="insurance-card">
+                <h3>Health Insurance</h3>
+                <p>Protect yourself with customizable health insurance options.</p>
+            </div>
+            <div class="insurance-card">
+                <h3>Vehicle Insurance</h3>
+                <p>Stay safe with our affordable vehicle insurance plans.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Market Trends Section -->
+    <section class="market-trends" id="market">
+        <h2>Market Trends</h2>
+        <div id="market-data"></div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <h2>What Our Clients Say</h2>
+        <div class="testimonial-slider">
+            <div class="testimonial">
+                <p>"Exceptional service and personalized solutions. Highly recommend!"</p>
+                <span>- John Doe</span>
+            </div>
+            <div class="testimonial">
+                <p>"They helped me secure my retirement goals with ease."</p>
+                <span>- Jane Smith</span>
+            </div>
+            <div class="testimonial">
+                <p>"Professional and reliable wealth management services."</p>
+                <span>- Emily Johnson</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Insights Section -->
+    <section class="insights" id="insights">
+        <h2>Latest Insights</h2>
+        <div class="insights-grid">
+            <div class="insight">
+                <h3>Maximizing Your Investments</h3>
+                <p>Discover strategies to grow your portfolio efficiently.</p>
+                <a href="#">Read More</a>
+            </div>
+            <div class="insight">
+                <h3>Retirement Planning 101</h3>
+                <p>Ensure a secure and stress-free retirement.</p>
+                <a href="#">Read More</a>
+            </div>
+            <div class="insight">
+                <h3>Tax-Saving Tips</h3>
+                <p>Learn how to minimize your tax liabilities legally.</p>
+                <a href="#">Read More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <footer id="contact">
+        <div class="footer-content">
+            <h2>Contact Us</h2>
+            <p>Email: info@wealthmanagement.com</p>
+            <p>Phone: +123-456-7890</p>
+        </div>
+    </footer>
+</body>
+
+</html>
