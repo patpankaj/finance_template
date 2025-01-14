@@ -51,6 +51,95 @@ gsap.utils.toArray(".insight").forEach((insight, index) => {
     });
 });
 
+
+    // Function to render charts
+    function renderCharts() {
+        // Chart 1: Investment Growth (Line Chart)
+        const investmentCtx = document.getElementById('investmentChart').getContext('2d');
+        new Chart(investmentCtx, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May'],
+                datasets: [{
+                    label: 'Investment Growth ($)',
+                    data: [100, 200, 300, 450, 600],
+                    backgroundColor: 'rgba(52, 152, 219, 0.2)',
+                    borderColor: '#3498db',
+                    borderWidth: 2,
+                    pointBackgroundColor: '#3498db',
+                }]
+            },
+            options: {
+                maintainAspectRatio: false,
+                responsive: true,
+                scales: {
+                    x: {
+                        grid: { display: false },
+                        title: { display: true, text: 'Months' },
+                    },
+                    y: {
+                        beginAtZero: true,
+                        title: { display: true, text: 'Value ($)' },
+                    },
+                },
+            }
+        });
+
+        // Chart 2: Retirement Planning (Doughnut Chart)
+        const retirementCtx = document.getElementById('retirementChart').getContext('2d');
+        new Chart(retirementCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Savings', 'Investments', 'Expenses'],
+                datasets: [{
+                    data: [40, 35, 25],
+                    backgroundColor: ['#e67e22', '#3498db', '#e74c3c'],
+                }]
+            },
+            options: {
+                maintainAspectRatio: false,
+                responsive: true,
+                plugins: {
+                    legend: { position: 'bottom' },
+                }
+            }
+        });
+
+        // Chart 3: Tax-Saving Analysis (Bar Chart)
+        const taxCtx = document.getElementById('taxChart').getContext('2d');
+        new Chart(taxCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Income Tax', 'GST', 'Property Tax', 'Capital Gains'],
+                datasets: [{
+                    label: 'Taxes Paid ($)',
+                    data: [200, 150, 50, 100],
+                    backgroundColor: ['#1abc9c', '#16a085', '#f39c12', '#e74c3c'],
+                    borderWidth: 1,
+                }]
+            },
+            options: {
+                maintainAspectRatio: false,
+                responsive: true,
+                scales: {
+                    x: {
+                        grid: { display: false },
+                        title: { display: true, text: 'Tax Types' },
+                    },
+                    y: {
+                        beginAtZero: true,
+                        title: { display: true, text: 'Amount ($)' },
+                    },
+                },
+            }
+        });
+    }
+
+    // Initialize charts when the DOM is fully loaded
+    document.addEventListener('DOMContentLoaded', renderCharts);
+
+
+
 // Enhanced Testimonials Slider
 let currentTestimonial = 0;
 const testimonials = document.querySelectorAll(".testimonial");
@@ -90,18 +179,18 @@ document.getElementById('registration-form').addEventListener('submit', (e) => {
     alert('Thank you for registering!');
 });
 
-// Fetch Market Trends Data
-const marketData = [
-    { symbol: "RELIANCE", price: 2625.50, change: "+1.45%" },
-    { symbol: "TCS", price: 3515.80, change: "+0.90%" },
-    { symbol: "HDFCBANK", price: 1605.25, change: "-0.35%" },
-    { symbol: "INFY", price: 1468.60, change: "+1.10%" },
-    { symbol: "ICICIBANK", price: 937.50, change: "+0.85%" },
-];
+// // Fetch Market Trends Data
+// const marketData = [
+//     { symbol: "RELIANCE", price: 2625.50, change: "+1.45%" },
+//     { symbol: "TCS", price: 3515.80, change: "+0.90%" },
+//     { symbol: "HDFCBANK", price: 1605.25, change: "-0.35%" },
+//     { symbol: "INFY", price: 1468.60, change: "+1.10%" },
+//     { symbol: "ICICIBANK", price: 937.50, change: "+0.85%" },
+// ];
 
-const marketContainer = document.getElementById('market-data');
-marketData.forEach(stock => {
-    const stockElement = document.createElement('div');
-    stockElement.innerHTML = `<strong>${stock.symbol}</strong>: ₹${stock.price} (${stock.change})`;
-    marketContainer.appendChild(stockElement);
-});
+// const marketContainer = document.getElementById('market-data');
+// marketData.forEach(stock => {
+//     const stockElement = document.createElement('div');
+//     stockElement.innerHTML = `<strong>${stock.symbol}</strong>: ₹${stock.price} (${stock.change})`;
+//     marketContainer.appendChild(stockElement);
+// });
