@@ -52,91 +52,51 @@ gsap.utils.toArray(".insight").forEach((insight, index) => {
 });
 
 
-    // Function to render charts
-    function renderCharts() {
-        // Chart 1: Investment Growth (Line Chart)
-        const investmentCtx = document.getElementById('investmentChart').getContext('2d');
-        new Chart(investmentCtx, {
-            type: 'line',
-            data: {
-                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May'],
-                datasets: [{
-                    label: 'Investment Growth ($)',
-                    data: [100, 200, 300, 450, 600],
-                    backgroundColor: 'rgba(52, 152, 219, 0.2)',
-                    borderColor: '#3498db',
-                    borderWidth: 2,
-                    pointBackgroundColor: '#3498db',
-                }]
-            },
-            options: {
-                maintainAspectRatio: false,
-                responsive: true,
-                scales: {
-                    x: {
-                        grid: { display: false },
-                        title: { display: true, text: 'Months' },
-                    },
-                    y: {
-                        beginAtZero: true,
-                        title: { display: true, text: 'Value ($)' },
-                    },
-                },
-            }
-        });
+<script>
+    // Investment Chart
+    const investmentCtx = document.getElementById('investmentChart').getContext('2d');
+    new Chart(investmentCtx, {
+        type: 'bar',
+        data: {
+            labels: ['Stocks', 'Bonds', 'Mutual Funds'],
+            datasets: [{
+                label: 'Investments',
+                data: [40, 25, 35],
+                backgroundColor: ['#4caf50', '#2196f3', '#ff9800']
+            }]
+        }
+    });
 
-        // Chart 2: Retirement Planning (Doughnut Chart)
-        const retirementCtx = document.getElementById('retirementChart').getContext('2d');
-        new Chart(retirementCtx, {
-            type: 'doughnut',
-            data: {
-                labels: ['Savings', 'Investments', 'Expenses'],
-                datasets: [{
-                    data: [40, 35, 25],
-                    backgroundColor: ['#e67e22', '#3498db', '#e74c3c'],
-                }]
-            },
-            options: {
-                maintainAspectRatio: false,
-                responsive: true,
-                plugins: {
-                    legend: { position: 'bottom' },
-                }
-            }
-        });
+    // Retirement Chart
+    const retirementCtx = document.getElementById('retirementChart').getContext('2d');
+    new Chart(retirementCtx, {
+        type: 'pie',
+        data: {
+            labels: ['Savings', 'Pension', 'Investments'],
+            datasets: [{
+                label: 'Retirement Planning',
+                data: [50, 30, 20],
+                backgroundColor: ['#ff5722', '#00bcd4', '#8bc34a']
+            }]
+        }
+    });
 
-        // Chart 3: Tax-Saving Analysis (Bar Chart)
-        const taxCtx = document.getElementById('taxChart').getContext('2d');
-        new Chart(taxCtx, {
-            type: 'bar',
-            data: {
-                labels: ['Income Tax', 'GST', 'Property Tax', 'Capital Gains'],
-                datasets: [{
-                    label: 'Taxes Paid ($)',
-                    data: [200, 150, 50, 100],
-                    backgroundColor: ['#1abc9c', '#16a085', '#f39c12', '#e74c3c'],
-                    borderWidth: 1,
-                }]
-            },
-            options: {
-                maintainAspectRatio: false,
-                responsive: true,
-                scales: {
-                    x: {
-                        grid: { display: false },
-                        title: { display: true, text: 'Tax Types' },
-                    },
-                    y: {
-                        beginAtZero: true,
-                        title: { display: true, text: 'Amount ($)' },
-                    },
-                },
-            }
-        });
-    }
+    // Tax Chart
+    const taxCtx = document.getElementById('taxChart').getContext('2d');
+    new Chart(taxCtx, {
+        type: 'line',
+        data: {
+            labels: ['Jan', 'Feb', 'Mar', 'Apr'],
+            datasets: [{
+                label: 'Tax Savings',
+                data: [100, 200, 150, 300],
+                borderColor: '#ffeb3b',
+                fill: false
+            }]
+        }
+    });
+</script>
 
-    // Initialize charts when the DOM is fully loaded
-    document.addEventListener('DOMContentLoaded', renderCharts);
 
 
 
