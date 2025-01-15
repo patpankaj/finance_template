@@ -21,8 +21,12 @@ body {
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     position: relative;
+    width:100%;
+    top:0;
+    left:0;    
     border-top: 2px solid #f39c12;
     border-bottom: 2px solid #f39c12;
+    z-index:10001;
 }
 
 .ticker-wrapper {
@@ -149,7 +153,7 @@ body {
     position: fixed;
     width: 90%;
     margin: 0 auto;
-    top: 20px;
+    top: 60px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1000;
