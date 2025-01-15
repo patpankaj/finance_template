@@ -6,20 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Professional Wealth Management Website">
     <meta name="author" content="Your Name">
-    <title>Indian Money Master</title>
+    <title>Wealth Management</title>
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <!-- JavaScript Libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
     
 
-    <script src="scripts.js" defer></script>
+    <script src="js/scripts.js" defer></script>
 </head>
 
 <body>
@@ -50,29 +48,28 @@
     <!-- Header Section -->
     <header class="hero-section">
         <nav class="nav-wrapper">
-            <div class="logo">Indian Money<span>Master</span></div>
+            <div class="logo">Wealth<span>Management</span></div>
             <ul class="menu">
-                <li><a href="#services">Services</a></li>
-                <li><a href="#about">About Us</a></li>
+                <li><a href="http://127.0.0.1:5500/templates%20-%20Copy/services.html">Services</a></li>
+                <li><a href="http://127.0.0.1:5500/templates%20-%20Copy/about.html">About Us</a></li>
                 <li class="dropdown">
                     <a href="#">Wealth Management</a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Investment</a></li>
-                        <li><a href="#">Retirement</a></li>
-                        <li><a href="#">Tax Planning</a></li>
+                        <li><a href="http://127.0.0.1:5500/templates%20-%20Copy/investment.html">Investment</a></li>
+                        <li><a href="http://127.0.0.1:5500/templates%20-%20Copy/retirement.html">Retirement</a></li>
+                        <li><a href="http://127.0.0.1:5500/templates%20-%20Copy/taxplanning.html">Tax Planning</a></li>
                     </ul>
                 </li>
-                <li><a href="#insights">Insights</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="http://127.0.0.1:5500/templates%20-%20Copy/insights.html">Insights</a></li>
+                <li><a href="http://127.0.0.1:5500/templates%20-%20Copy/contact.html">Contact</a></li>
             </ul>
-            <a href="#contact" class="cta-button">Schedule Consultation</a>
+            <a href="http://127.0.0.1:5500/templates%20-%20Copy/contact.html" class="cta-button">Schedule Consultation</a>
         </nav>
 
         <div class="hero-content">
             <h1>Your Trusted Wealth Management Partner</h1>
             <p>Providing tailored solutions to help you achieve financial freedom and security.</p>
-            <a href="#services" class="hero-button">Learn More</a>
-        </div>
+            <a href="services.html" class="cta-button">Explore Our Services</a>        </div>
     </header>
 
     <!-- Performance Metrics Section -->
@@ -93,30 +90,54 @@
         </div>
     </section>
 
-    <!-- Finance Calculator Section -->
-<section class="finance-calculator" id="calculator">
-    <div class="container">
-        <h2 class="section-title">Finance Calculator</h2>
-        <p class="section-description">Plan your investments efficiently with our easy-to-use calculator.</p>
-        <form id="calculator-form" class="form-grid">
-            <div class="form-group">
-                <label for="amount">Investment Amount:</label>
-                <input type="number" id="amount" placeholder="Enter amount" required>
+    
+    <section class="featured-services">
+        <h2>Our Key Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Business Start-up and Formation</h3>
+                <p>New business set-up, company incorporation, branding, and more.</p>
+                <a href="services.html#business-startup" class="learn-more">Learn More</a>
             </div>
-            <div class="form-group">
-                <label for="rate">Annual Interest Rate (%):</label>
-                <input type="number" id="rate" placeholder="Enter rate" required>
+            <div class="service-card">
+                <h3>Tax Management</h3>
+                <p>Comprehensive tax services for individuals and businesses.</p>
+                <a href="services.html#tax-management" class="learn-more">Learn More</a>
             </div>
-            <div class="form-group">
-                <label for="years">Years:</label>
-                <input type="number" id="years" placeholder="Enter years" required>
+            <div class="service-card">
+                <h3>Financial Services</h3>
+                <p>Wide range of financial services to meet your needs.</p>
+                <a href="services.html#financial-services" class="learn-more">Learn More</a>
             </div>
-            <button type="button" id="calculate-btn" class="btn-primary">Calculate</button>
-        </form>
-        <div id="calculator-result" class="result-box"></div>
-    </div>
-</section>
+        </div>
+    </section>
 
+    <!-- Finance Calculator Section -->
+    <section class="finance-calculator" id="calculator">
+        <div class="container">
+            <h2 class="section-title">Finance Calculator</h2>
+            <p class="section-description">Plan your investments efficiently with our easy-to-use calculator.</p>
+            <form id="calculator-form" class="form-grid">
+                <div class="form-group">
+                    <label for="amount">Investment Amount:</label>
+                    <input type="number" id="amount" placeholder="Enter amount" required>
+                </div>
+                <div class="form-group">
+                    <label for="rate">Annual Interest Rate (%):</label>
+                    <input type="number" id="rate" placeholder="Enter rate" required>
+                </div>
+                <div class="form-group">
+                    <label for="years">Years:</label>
+                    <input type="number" id="years" placeholder="Enter years" required>
+                </div>
+                <button type="button" id="calculate-btn" class="btn-primary">Calculate</button>
+            </form>
+            <div id="calculator-result" class="result-box">
+                <p id="result-output"></p>
+            </div>
+        </div>
+    </section>
+    
 <!-- Registration Section -->
 <section class="registration" id="registration">
     <div class="container">
@@ -137,24 +158,28 @@
     </div>
 </section>
 
-    <!-- Insurance Section -->
-    <section class="insurance" id="insurance">
-        <h2>Insurance Plans</h2>
-        <div class="insurance-grid">
-            <div class="insurance-card">
-                <h3>Life Insurance</h3>
-                <p>Secure your loved ones with our comprehensive life insurance plans.</p>
-            </div>
-            <div class="insurance-card">
-                <h3>Health Insurance</h3>
-                <p>Protect yourself with customizable health insurance options.</p>
-            </div>
-            <div class="insurance-card">
-                <h3>Vehicle Insurance</h3>
-                <p>Stay safe with our affordable vehicle insurance plans.</p>
-            </div>
+   <!-- Insurance Section -->
+<section class="insurance" id="insurance">
+    <h2>Insurance Plans</h2>
+    <div class="insurance-grid">
+        <div class="insurance-card">
+            <h3>Life Insurance</h3>
+            <p>Secure your loved ones with our comprehensive life insurance plans.</p>
+            <button class="view-more-btn">View More</button>
         </div>
-    </section>
+        <div class="insurance-card">
+            <h3>Health Insurance</h3>
+            <p>Protect yourself with customizable health insurance options.</p>
+            <button class="view-more-btn">View More</button>
+        </div>
+        <div class="insurance-card">
+            <h3>Vehicle Insurance</h3>
+            <p>Stay safe with our affordable vehicle insurance plans & benifits</p>
+            <button class="view-more-btn">View More</button>
+        </div>
+    </div>
+</section>
+
 
     <!-- Market Trends Section -->
     <!-- <section class="market-trends" id="market">
@@ -164,31 +189,42 @@
 
     
     <!-- Insights Section -->
-    <section class="insights" id="insights">
-        <h2>Latest Insights</h2>
-        <div class="insights-grid">
-            <!-- Insight 1 -->
-            <div class="insight">
-                <canvas id="investmentChart"></canvas>
-                <h3>Maximizing Your Investments</h3>
-                <p>Discover strategies to grow your portfolio efficiently.</p>
-                <a href="#">Read More</a>
-            </div>
-            <!-- Insight 2 -->
-            <div class="insight">
-                <canvas id="retirementChart"></canvas>
-                <h3>Retirement Planning 101</h3>
-                <p>Ensure a secure and stress-free retirement.</p>
-                <a href="#">Read More</a>
-            </div>
-            <!-- Insight 3 -->
-            <div class="insight">
-                <canvas id="taxChart"></canvas>
-                <h3>Tax-Saving Tips</h3>
-                <p>Learn how to minimize your tax liabilities legally.</p>
-                <a href="#">Read More</a>
-            </div>
-        </div>
+    <section class="page-header">
+        <h1>Financial Insights</h1>
+        <p>Stay informed with our latest financial news and expert analysis</p>
+    </section>
+
+    <section class="insights-grid">
+        <article class="insight-card">
+            <h2>Maximizing Your Investments</h2>
+            <p>Discover strategies to grow your portfolio efficiently in today's market conditions.</p>
+            <a href="#" class="read-more">Read More</a>
+        </article>
+        <article class="insight-card">
+            <h2>Retirement Planning 101</h2>
+            <p>Learn the essentials of planning for a secure and comfortable retirement.</p>
+            <a href="#" class="read-more">Read More</a>
+        </article>
+        <article class="insight-card">
+            <h2>Understanding GST</h2>
+            <p>A comprehensive guide to Goods and Services Tax and its impact on businesses.</p>
+            <a href="#" class="read-more">Read More</a>
+        </article>
+        <article class="insight-card">
+            <h2>The Basics of Stock Market Investing</h2>
+            <p>Get started with stock market investing with our beginner-friendly guide.</p>
+            <a href="#" class="read-more">Read More</a>
+        </article>
+        <article class="insight-card">
+            <h2>Tax-Saving Tips for Individuals</h2>
+            <p>Explore legal ways to minimize your tax liability and maximize your savings.</p>
+            <a href="#" class="read-more">Read More</a>
+        </article>
+        <article class="insight-card">
+            <h2>Understanding Mutual Funds</h2>
+            <p>Learn about different types of mutual funds and how to choose the right ones for your portfolio.</p>
+            <a href="#" class="read-more">Read More</a>
+        </article>
     </section>
     
     <!-- Testimonials Section -->
@@ -212,13 +248,32 @@
 
 
     <!-- Contact Section -->
-    <footer id="contact">
+    <footer>
         <div class="footer-content">
-            <h2>Contact Us</h2>
-            <p>Email: info@wealthmanagement.com</p>
-            <p>Phone: +123-456-7890</p>
+            <div class="footer-section">
+                <h3>Indian Money Master</h3>
+                <p>Your trusted partner in wealth management and financial services.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="insights.html">Insights</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@indianmoneymaster.com</p>
+                <p>Phone: +91 123-456-7890</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 Indian Money Master. All rights reserved.
         </div>
     </footer>
+
 </body>
 
 </html>
