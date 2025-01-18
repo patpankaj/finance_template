@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional Wealth Management Website">
+    <meta name="author" content="Your Name">
+    <title>Services - Indian Money Master</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- JavaScript Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="scripts.js" defer></script>
+</head>
+
+<body>
+    <!-- Market Ticker -->
+    <div class="market-ticker">
+        <div class="ticker-wrapper">
+            <div class="ticker-track">
+                <div class="ticker-item">
+                    <span class="stock">NIFTY</span>
+                    <span class="price up">19,425.35</span>
+                    <span class="change up">+0.85%</span>
+                </div>
+                <div class="ticker-item">
+                    <span class="stock">SENSEX</span>
+                    <span class="price up">64,383.47</span>
+                    <span class="change up">+0.92%</span>
+                </div>
+                <div class="ticker-item">
+                    <span class="stock">USD/INR</span>
+                    <span class="price down">82.45</span>
+                    <span class="change down">-0.15%</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Section -->
+    <header class="hero-section">
+        <nav class="nav-wrapper">
+            <div class="logo">IndianMoney<span>Master</span></div>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li class="dropdown">
+                    <a href="#">Wealth Management</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="investment.html">Investment</a></li>
+                        <li><a href="retirement.html">Retirement</a></li>
+                        <li><a href="taxplanning.html">Tax Planning</a></li>
+                    </ul>
+                </li>
+                <li><a href="insights.html">Insights</a></li>
+            </ul>
+            <a href="contact.html" class="cta-button">Contact Us</a>
+        </nav>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">
+            <h4>Indian Money Master</h4>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html" class="active">Services</a></li>
+            <li><a href="calculator.html">Calculator</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <!-- Services Header -->
+    <header class="services-header">
+        <h1>Our Services</h1>
+        <p>Comprehensive Financial Solutions for Your Success</p>
+    </header>
+
+    <!-- Core Services Section -->
+    <section class="services-section">
+        <h2>Core Financial Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <img src="images/personal-loan.jpg" alt="Personal Loans">
+                <h3>Personal Loans</h3>
+                <p>Quick and hassle-free personal loan solutions</p>
+            </div>
+            <div class="service-card">
+                <img src="images/property-loan.jpg" alt="Loans against Property">
+                <h3>Loans against Property (LAP)</h3>
+                <p>Secure loans using your property as collateral</p>
+            </div>
+            <div class="service-card">
+                <img src="images/overdraft.jpg" alt="Overdraft Services">
+                <h3>Overdraft & Working Capital</h3>
+                <p>Flexible OD and working capital solutions</p>
+            </div>
+            <div class="service-card">
+                <img src="images/education-loan.jpg" alt="Education Loan">
+                <h3>Education Loan</h3>
+                <p>Support for higher education aspirations</p>
+            </div>
+            <div class="service-card">
+                <img src="images/gold-loan.jpg" alt="Gold Loan">
+                <h3>Gold Loan</h3>
+                <p>Quick loans against gold assets</p>
+            </div>
+            <div class="service-card">
+                <img src="images/auto-loan.jpg" alt="Auto Loans">
+                <h3>Auto Loans</h3>
+                <p>Vehicle financing solutions</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment & Trading Services Section -->
+    <section class="services-section secondary">
+        <h2>Investment & Trading Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <img src="images/stock-market.jpg" alt="Share Market Trading">
+                <h3>Share Market Trading</h3>
+                <p>BSE & NSE trading solutions</p>
+            </div>
+            <div class="service-card">
+                <img src="images/mutual-fund.jpg" alt="Mutual Fund">
+                <h3>Mutual Fund Consultancy</h3>
+                <p>Expert mutual fund investment advice</p>
+            </div>
+            <div class="service-card">
+                <img src="images/commodities.jpg" alt="Commodities Trading">
+                <h3>Commodities Trading</h3>
+                <p>Trade in various commodities markets</p>
+            </div>
+            <div class="service-card">
+                <img src="images/forex.jpg" alt="Forex Trading">
+                <h3>Forex Trading</h3>
+                <p>Currency trading and forex solutions</p>
+            </div>
+            <div class="service-card">
+                <img src="images/demat.jpg" alt="Demat Services">
+                <h3>Demat Services</h3>
+                <p>Complete demat account solutions</p>
+            </div>
+            <div class="service-card">
+                <img src="images/derivatives.jpg" alt="Derivatives Trading">
+                <h3>Derivatives Trading</h3>
+                <p>Future, Option, and Put trading</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Services Section -->
+    <section class="services-section">
+        <h2>Business Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <img src="images/startup.jpg" alt="Business Start-Up">
+                <h3>Business Start-Up</h3>
+                <p>Complete startup consultation and support</p>
+            </div>
+            <div class="service-card">
+                <img src="images/gst.jpg" alt="GST Services">
+                <h3>GST Services</h3>
+                <p>GST registration and compliance</p>
+            </div>
+            <div class="service-card">
+                <img src="images/income-tax.jpg" alt="Income Tax">
+                <h3>Income Tax Services</h3>
+                <p>Tax planning and filing solutions</p>
+            </div>
+            <div class="service-card">
+                <img src="images/msme.jpg" alt="MSME Registration">
+                <h3>MSME Registration</h3>
+                <p>Complete MSME registration services</p>
+            </div>
+            <div class="service-card">
+                <img src="images/iso.jpg" alt="ISO Certification">
+                <h3>ISO Certification</h3>
+                <p>ISO certification assistance</p>
+            </div>
+            <div class="service-card">
+                <img src="images/intellectual-property.jpg" alt="Intellectual Property">
+                <h3>Intellectual Property</h3>
+                <p>IP rights and trademark services</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Achievements -->
+    <section class="achievements-section">
+        <h2>Our Achievements</h2>
+        <div class="achievements-grid">
+            <div class="achievement-item">
+                <img src="images/laurel.png" alt="India's Biggest">
+                <h3>India's Biggest</h3>
+                <p>Diversified Financial Services</p>
+            </div>
+            <div class="achievement-item">
+                <img src="images/laurel.png" alt="India's First">
+                <h3>India's First</h3>
+                <p>Unique Concept in Financial Market</p>
+            </div>
+            <div class="achievement-item">
+                <img src="images/laurel.png" alt="100+ Services">
+                <h3>More than 100 Services</h3>
+                <p>Comprehensive Financial Solutions</p>
+            </div>
+            <div class="achievement-item">
+                <img src="images/laurel.png" alt="One Roof">
+                <h3>All Services under One Roof</h3>
+                <p>Complete Financial Solutions</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Indian Money Master</h3>
+                <p>Your trusted partner in wealth management and financial services.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="insights.html">Insights</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@indianmoneymaster.com</p>
+                <p>Phone: +91 123-456-7890</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 Indian Money Master. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>
