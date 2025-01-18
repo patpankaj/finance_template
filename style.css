@@ -132,13 +132,15 @@ body {
 /* Hero Section with Overlay */
 .hero-section {
     background: linear-gradient(to right, rgba(28, 28, 28, 0.9), rgba(89, 89, 89, 0.9)),
-                url('hero-bg.jpg') center/cover no-repeat;
+                url('') center/cover no-repeat;
     color: #fff;
     text-align: center;
     padding: 100px 20px;
     position: relative;
     overflow: hidden;
+    height:100vh;
 }
+
 
 /* Glassmorphism Navbar */
 .nav-wrapper {
