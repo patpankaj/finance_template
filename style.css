@@ -159,6 +159,141 @@ body {
     transform: translateX(-50%);
     z-index: 1000;
 }
+.gradient-text {
+        background: linear-gradient(45deg, #ffd700, #ff6b6b, #4ecdc4);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        display: block;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        animation: gradient 3s ease infinite;
+        background-size: 200% 200%;
+    }
+    
+    .emphasis-text {
+        display: block;
+        color: #ffffff;
+        font-size: 1.2em;
+        font-weight: 900;
+        text-shadow: 3px 3px 6px rgba(0,0,0,0.3);
+        letter-spacing: 4px;
+    }
+    
+    .hero-tagline {
+        font-size: 2.2em;
+        font-weight: 700;
+        line-height: 1.4;
+        margin: 35px 0;
+        text-align: center;
+    }
+    
+    .highlight-wrapper {
+        display: block;
+        margin: 20px 0;
+    }
+    
+    .highlight-number {
+        font-size: 1.4em;
+        color: #ffd700;
+        font-weight: 900;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        animation: pulse 2s infinite;
+    }
+    
+    .highlight-text {
+        color: #ff6b6b;
+        font-weight: 800;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+    
+    .emphasis-line {
+        display: block;
+        font-size: 1.1em;
+        color: #ffffff;
+        font-weight: 700;
+        margin: 15px 0;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        animation: slideIn 1s ease-out;
+    }
+    
+    .sub-tagline {
+        display: block;
+        font-size: 0.6em;
+        color: #fff;
+        margin-top: 20px;
+        letter-spacing: 1.5px;
+        font-weight: 600;
+        text-transform: uppercase;
+        animation: fadeIn 2s ease-in;
+    }
+    
+    @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+    
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.05);
+            text-shadow: 0 0 20px rgba(255,215,0,0.7);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+    
+    @keyframes slideIn {
+        from {
+            transform: translateY(20px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+    
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    
+    /* Add a hover effect for additional interactivity */
+    .main-heading:hover .gradient-text {
+        animation: gradient 1.5s ease infinite;
+    }
+    
+    .highlight-wrapper:hover .highlight-number {
+        animation: pulse 1s infinite;
+    }
+    
+    /* Add responsive design */
+    @media (max-width: 768px) {
+        .main-heading {
+            font-size: 3em;
+        }
+        
+        .hero-tagline {
+            font-size: 1.8em;
+        }
+    }
 
 /* Logo Styling */
 .logo {
