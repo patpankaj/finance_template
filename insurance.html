@@ -1,0 +1,98 @@
+<header class="bg-primary text-white text-center py-5">
+    <div class="container">
+        <h1 class="display-4">Insurance Services</h1>
+        <p class="lead">Protect your future with comprehensive insurance solutions</p>
+        <a href="#contact" class="btn btn-light btn-lg">Get Started</a>
+    </div>
+</header>
+
+<!-- Market Ticker Section -->
+<div class="container-fluid bg-dark text-white py-2">
+    <div class="ticker-wrap">
+        <div class="ticker">
+            <div class="ticker-item">
+                NIFTY: <span id="nifty-value">Loading...</span>
+                <span id="nifty-change" class="ms-2">Loading...</span>
+            </div>
+            <div class="ticker-item">
+                SENSEX: <span id="sensex-value">Loading...</span>
+                <span id="sensex-change" class="ms-2">Loading...</span>
+            </div>
+            <div class="ticker-item">
+                USD/INR: <span id="usdinr-value">Loading...</span>
+                <span id="usdinr-change" class="ms-2">Loading...</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add this CSS in the head section -->
+<style>
+    .ticker-wrap {
+        overflow: hidden;
+        background-color: #212529;
+    }
+    
+    .ticker {
+        display: flex;
+        animation: ticker 30s linear infinite;
+        white-space: nowrap;
+    }
+    
+    .ticker-item {
+        padding: 0 2rem;
+        color: white;
+    }
+    
+    @keyframes ticker {
+        0% { transform: translateX(100%); }
+        100% { transform: translateX(-100%); }
+    }
+    
+    .value-up {
+        color: #28a745;
+    }
+    
+    .value-down {
+        color: #dc3545;
+    }
+</style>
+
+<!-- Add this JavaScript before the closing body tag -->
+<script>
+    function updateMarketData() {
+        // Simulated market data (replace with actual API calls)
+        const marketData = {
+            nifty: {
+                value: Math.floor(19000 + Math.random() * 1000),
+                change: (Math.random() * 2 - 1).toFixed(2)
+            },
+            sensex: {
+                value: Math.floor(63000 + Math.random() * 2000),
+                change: (Math.random() * 2 - 1).toFixed(2)
+            },
+            usdinr: {
+                value: (82 + Math.random()).toFixed(2),
+                change: (Math.random() * 0.4 - 0.2).toFixed(2)
+            }
+        };
+
+        // Update DOM elements
+        updateTickerItem('nifty', marketData.nifty);
+        updateTickerItem('sensex', marketData.sensex);
+        updateTickerItem('usdinr', marketData.usdinr);
+    }
+
+    function updateTickerItem(id, data) {
+        const valueElement = document.getElementById(`${id}-value`);
+        const changeElement = document.getElementById(`${id}-change`);
+        
+        valueElement.textContent = data.value;
+        changeElement.textContent = `${data.change > 0 ? '+' : ''}${data.change}%`;
+        changeElement.className = `ms-2 ${data.change > 0 ? 'value-up' : 'value-down'}`;
+    }
+
+    // Update every 2 seconds
+    updateMarketData();
+    setInterval(updateMarketData, 2000);
+</script> 

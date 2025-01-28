@@ -20,7 +20,38 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-    
+    <!-- Add this CSS in the head section -->
+    <style>
+        .ticker-wrap {
+            overflow: hidden;
+            background-color: #212529;
+        }
+        
+        .ticker {
+            display: flex;
+            animation: ticker 30s linear infinite;
+            white-space: nowrap;
+        }
+        
+        .ticker-item {
+            padding: 0 2rem;
+            color: white;
+        }
+        
+        @keyframes ticker {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        
+        .value-up {
+            color: #28a745;
+        }
+        
+        .value-down {
+            color: #dc3545;
+        }
+    </style>
+
 </head>
 
 
@@ -70,50 +101,33 @@
     </div>
 
     <!-- Header Section -->
-    <header class="hero-section" style="background-image: url('../images/127.jpg');">
-        <nav class="nav-wrapper">
-            <div class="logo">Indian<span>Money</span>Master</div>
-            <ul class="menu">
-                <li><a href="index.html">Home</a></li>
-                <li class="dropdown">
-                    <a href="#">Services</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="tax-services.html">Tax Services</a></li>
-                        <li><a href="business-services.html">Business Services</a></li>
-                        <li><a href="wealth-services.html">Wealth Management</a></li>
-                        <li><a href="compliance.html">Compliance Services</a></li>
-                    </ul>
-                </li>
-                <li><a href="about.html">About Us</a></li>
-                <li class="dropdown">
-                    <a href="#" class="active">Solutions</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="investment.html" class="active">Investment Planning</a></li>
-                        <li><a href="retirement.html">Retirement Planning</a></li>
-                        <li><a href="tax-planning.html">Tax Planning</a></li>
-                        <li><a href="business-setup.html">Business Setup</a></li>
-                    </ul>
-                </li>
-                <li><a href="insights.html">Insights</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <button class="mobile-menu-btn">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </nav>
-
-        <div class="hero-content" data-aos="fade-up">
-            <h1 class="main-heading">
-                <span class="gradient-text">Investment Planning</span>
-                <span class="emphasis-text">Secure Your Financial Future</span>
-            </h1>
-            <p class="hero-tagline">
-                Expert guidance for smart investment decisions and wealth creation
-            </p>
+    <header class="bg-primary text-white text-center py-5">
+        <div class="container">
+            <h1 class="display-4">Investment Solutions</h1>
+            <p class="lead">Smart investment strategies for your financial growth</p>
+            <a href="#contact" class="btn btn-light btn-lg">Get Started</a>
         </div>
     </header>
+
+    <!-- Market Ticker Section -->
+    <div class="container-fluid bg-dark text-white py-2">
+        <div class="ticker-wrap">
+            <div class="ticker">
+                <div class="ticker-item">
+                    NIFTY: <span id="nifty-value">Loading...</span>
+                    <span id="nifty-change" class="ms-2">Loading...</span>
+                </div>
+                <div class="ticker-item">
+                    SENSEX: <span id="sensex-value">Loading...</span>
+                    <span id="sensex-change" class="ms-2">Loading...</span>
+                </div>
+                <div class="ticker-item">
+                    USD/INR: <span id="usdinr-value">Loading...</span>
+                    <span id="usdinr-change" class="ms-2">Loading...</span>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Investment Content Section -->
     <section class="investment-content" data-aos="fade-up">
@@ -306,5 +320,44 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="scripts.js"></script>
+
+    <!-- Add this JavaScript before the closing body tag -->
+    <script>
+        function updateMarketData() {
+            // Simulated market data (replace with actual API calls)
+            const marketData = {
+                nifty: {
+                    value: Math.floor(19000 + Math.random() * 1000),
+                    change: (Math.random() * 2 - 1).toFixed(2)
+                },
+                sensex: {
+                    value: Math.floor(63000 + Math.random() * 2000),
+                    change: (Math.random() * 2 - 1).toFixed(2)
+                },
+                usdinr: {
+                    value: (82 + Math.random()).toFixed(2),
+                    change: (Math.random() * 0.4 - 0.2).toFixed(2)
+                }
+            };
+
+            // Update DOM elements
+            updateTickerItem('nifty', marketData.nifty);
+            updateTickerItem('sensex', marketData.sensex);
+            updateTickerItem('usdinr', marketData.usdinr);
+        }
+
+        function updateTickerItem(id, data) {
+            const valueElement = document.getElementById(`${id}-value`);
+            const changeElement = document.getElementById(`${id}-change`);
+            
+            valueElement.textContent = data.value;
+            changeElement.textContent = `${data.change > 0 ? '+' : ''}${data.change}%`;
+            changeElement.className = `ms-2 ${data.change > 0 ? 'value-up' : 'value-down'}`;
+        }
+
+        // Update every 2 seconds
+        updateMarketData();
+        setInterval(updateMarketData, 2000);
+    </script>
 </body>
 </html> 
