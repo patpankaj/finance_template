@@ -1,0 +1,102 @@
+/* Responsive Styles */
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+    .container {
+        max-width: 960px;
+    }
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+    .container {
+        max-width: 720px;
+    }
+    .nav-wrapper {
+        padding: 15px;
+    }
+    .menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        padding: 20px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .menu.active {
+        display: block;
+    }
+    .mobile-menu-btn {
+        display: block;
+    }
+    .hero-content {
+        padding: 60px 20px;
+    }
+    .main-heading {
+        font-size: 2.5rem;
+    }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+    .container {
+        max-width: 540px;
+    }
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    .service-card {
+        margin-bottom: 20px;
+    }
+    .hero-content {
+        padding: 40px 15px;
+    }
+    .main-heading {
+        font-size: 2rem;
+    }
+    .section-title {
+        font-size: 1.8rem;
+    }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .container {
+        width: 100%;
+        padding: 0 15px;
+    }
+    .hero-content {
+        padding: 30px 10px;
+    }
+    .main-heading {
+        font-size: 1.8rem;
+    }
+    .section-title {
+        font-size: 1.5rem;
+    }
+    .service-features li {
+        font-size: 0.9rem;
+    }
+}
+
+/* Ensure dropdown menus work on mobile */
+@media (max-width: 991.98px) {
+    .dropdown-menu {
+        position: static;
+        display: none;
+        width: 100%;
+        background: #f8f9fa;
+        box-shadow: none;
+        padding: 10px;
+    }
+    .dropdown.active .dropdown-menu {
+        display: block;
+    }
+} 

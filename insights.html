@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Stay updated with the latest financial insights, market trends, and expert analysis">
+    <meta name="keywords" content="financial insights, market analysis, investment tips, financial news, market trends">
+    <title>Financial Insights - IndianMoney Master</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Animation Libraries -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Market Ticker -->
+    <div class="market-ticker">
+        <div class="ticker-wrapper">
+            <div class="ticker-track">
+                <div class="ticker-item">
+                    <span class="stock">NIFTY 50</span>
+                    <span class="price up">21,853.80</span>
+                    <span class="change up">+0.95%</span>
+                </div>
+                <div class="ticker-item">
+                    <span class="stock">SENSEX</span>
+                    <span class="price up">72,186.09</span>
+                    <span class="change up">+1.10%</span>
+                </div>
+                <div class="ticker-item">
+                    <span class="stock">BANK NIFTY</span>
+                    <span class="price up">45,923.45</span>
+                    <span class="change up">+0.75%</span>
+                </div>
+                <div class="ticker-item">
+                    <span class="stock">USD/INR</span>
+                    <span class="price down">82.96</span>
+                    <span class="change down">-0.12%</span>
+                </div>
+                <div class="ticker-item">
+                    <span class="stock">GOLD</span>
+                    <span class="price up">₹62,580</span>
+                    <span class="change up">+0.65%</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Section -->
+    <header class="hero-section" style="background-image: url('images/142.jpg');">
+        <nav class="nav-wrapper">
+            <div class="logo">Indian<span>Money</span>Master</div>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="services.html">Services</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="tax-services.html">Tax Services</a></li>
+                        <li><a href="business-services.html">Business Services</a></li>
+                        <li><a href="investment.html">Investment Planning</a></li>
+                        <li><a href="wealth-management.html">Wealth Management</a></li>
+                        <li><a href="retirement.html">Retirement Planning</a></li>
+                    </ul>
+                </li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="insights.html" class="active">Insights</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+
+        <div class="hero-content" data-aos="fade-up">
+            <h1 class="main-heading">
+                <span class="gradient-text">Financial Insights</span>
+                <span class="emphasis-text">Expert Analysis & Market Updates</span>
+            </h1>
+            <p class="hero-tagline">Stay ahead with our expert analysis and comprehensive market coverage</p>
+        </div>
+    </header>
+
+    <!-- Featured Articles Slider -->
+    <section class="featured-slider section-padding" data-aos="fade-up">
+        <div class="container">
+            <div class="swiper featured-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="featured-article">
+                            <div class="article-image">
+                                <img src="images/143.jpg" alt="Market Analysis">
+                                <div class="article-overlay">
+                                    <span class="article-category">Featured</span>
+                                    <h2>Understanding Market Dynamics in 2024</h2>
+                                    <p>Get insights into the key factors driving market trends and learn how to position your investments for optimal returns.</p>
+                                    <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="featured-article">
+                            <div class="article-image">
+                                <img src="images/144.jpg" alt="Investment Strategies">
+                                <div class="article-overlay">
+                                    <span class="article-category">Investment</span>
+                                    <h2>Top Investment Strategies for 2024</h2>
+                                    <p>Discover the most effective investment strategies to help you achieve your financial goals in the current market scenario.</p>
+                                    <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment Strategies Section -->
+    <section class="investment-strategies section-padding" data-aos="fade-up">
+        <div class="container">
+            <h2 class="section-title">Top Investment Strategies 2024</h2>
+            <div class="strategy-grid">
+                <div class="strategy-card" data-aos="fade-up">
+                    <div class="strategy-image">
+                        <img src="images/82.jpg" alt="Equity Investment">
+                        <div class="strategy-overlay">
+                            <span class="strategy-tag">Equity</span>
+                        </div>
+                    </div>
+                    <div class="strategy-content">
+                        <h3>Strategic Equity Investment</h3>
+                        <p>Master the art of equity investment with our comprehensive guide to stock selection and portfolio management.</p>
+                        <ul class="strategy-points">
+                            <li><i class="fas fa-check-circle"></i> Fundamental Analysis</li>
+                            <li><i class="fas fa-check-circle"></i> Technical Indicators</li>
+                            <li><i class="fas fa-check-circle"></i> Risk Management</li>
+                        </ul>
+                        <a href="#" class="strategy-btn">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="strategy-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="strategy-image">
+                        <img src="images/84.jpg" alt="Mutual Funds">
+                        <div class="strategy-overlay">
+                            <span class="strategy-tag">Mutual Funds</span>
+                        </div>
+                    </div>
+                    <div class="strategy-content">
+                        <h3>Smart Mutual Fund Investing</h3>
+                        <p>Discover the power of systematic investment in mutual funds for long-term wealth creation.</p>
+                        <ul class="strategy-points">
+                            <li><i class="fas fa-check-circle"></i> SIP Planning</li>
+                            <li><i class="fas fa-check-circle"></i> Fund Selection</li>
+                            <li><i class="fas fa-check-circle"></i> Portfolio Diversification</li>
+                        </ul>
+                        <a href="#" class="strategy-btn">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="strategy-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="strategy-image">
+                        <img src="images/86.jpg" alt="Real Estate">
+                        <div class="strategy-overlay">
+                            <span class="strategy-tag">Real Estate</span>
+                        </div>
+                    </div>
+                    <div class="strategy-content">
+                        <h3>Real Estate Investment</h3>
+                        <p>Explore lucrative opportunities in real estate investment with our expert guidance and market insights.</p>
+                        <ul class="strategy-points">
+                            <li><i class="fas fa-check-circle"></i> Location Analysis</li>
+                            <li><i class="fas fa-check-circle"></i> ROI Calculation</li>
+                            <li><i class="fas fa-check-circle"></i> Legal Due Diligence</li>
+                        </ul>
+                        <a href="#" class="strategy-btn">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Articles Grid -->
+    <section class="latest-articles section-padding bg-light" data-aos="fade-up">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Latest Insights</h2>
+                <div class="insights-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="tax">Tax Planning</button>
+                    <button class="filter-btn" data-filter="investment">Investment</button>
+                    <button class="filter-btn" data-filter="market">Market Analysis</button>
+                </div>
+            </div>
+            <div class="articles-grid">
+                <article class="article-card" data-category="tax" data-aos="fade-up">
+                    <div class="article-image">
+                        <img src="images/145.jpg" alt="Tax Planning">
+                        <span class="article-date"><i class="far fa-calendar-alt"></i> Jan 25, 2024</span>
+                        <div class="article-overlay">
+                            <span class="article-category">Tax Planning</span>
+                            <div class="article-actions">
+                                <a href="#" class="action-btn"><i class="far fa-bookmark"></i></a>
+                                <a href="#" class="action-btn"><i class="far fa-share-square"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="article-content">
+                        <h3>Essential Tax Planning Tips</h3>
+                        <p>Learn about the latest tax-saving instruments and strategies to optimize your tax planning for the financial year.</p>
+                        <div class="article-meta">
+                            <div class="meta-left">
+                                <span><i class="fas fa-user-circle"></i> By Admin</span>
+                                <span><i class="far fa-clock"></i> 5 min read</span>
+                            </div>
+                            <div class="meta-right">
+                                <span class="article-stats"><i class="far fa-eye"></i> 1.2K</span>
+                                <span class="article-stats"><i class="far fa-comment"></i> 8</span>
+                            </div>
+                        </div>
+                        <a href="#" class="read-more">
+                            Read Full Article
+                            <span class="read-more-icon">
+                                <i class="fas fa-arrow-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="article-card" data-category="investment" data-aos="fade-up" data-aos-delay="100">
+                    <div class="article-image">
+                        <img src="images/146.jpg" alt="Retirement Planning">
+                        <span class="article-date"><i class="far fa-calendar-alt"></i> Jan 24, 2024</span>
+                        <div class="article-overlay">
+                            <span class="article-category">Retirement</span>
+                            <div class="article-actions">
+                                <a href="#" class="action-btn"><i class="far fa-bookmark"></i></a>
+                                <a href="#" class="action-btn"><i class="far fa-share-square"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="article-content">
+                        <h3>Building a Strong Retirement Portfolio</h3>
+                        <p>Expert advice on creating a diversified retirement portfolio that ensures financial security in your golden years.</p>
+                        <div class="article-meta">
+                            <div class="meta-left">
+                                <span><i class="fas fa-user-circle"></i> By Admin</span>
+                                <span><i class="far fa-clock"></i> 7 min read</span>
+                            </div>
+                            <div class="meta-right">
+                                <span class="article-stats"><i class="far fa-eye"></i> 2.5K</span>
+                                <span class="article-stats"><i class="far fa-comment"></i> 12</span>
+                            </div>
+                        </div>
+                        <a href="#" class="read-more">
+                            Read Full Article
+                            <span class="read-more-icon">
+                                <i class="fas fa-arrow-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="article-card" data-category="market" data-aos="fade-up" data-aos-delay="200">
+                    <div class="article-image">
+                        <img src="images/147.jpg" alt="Market Analysis">
+                        <span class="article-date"><i class="far fa-calendar-alt"></i> Jan 23, 2024</span>
+                        <div class="article-overlay">
+                            <span class="article-category">Market Analysis</span>
+                            <div class="article-actions">
+                                <a href="#" class="action-btn"><i class="far fa-bookmark"></i></a>
+                                <a href="#" class="action-btn"><i class="far fa-share-square"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="article-content">
+                        <h3>Global Market Trends 2024</h3>
+                        <p>A comprehensive analysis of global market trends and their impact on Indian investors.</p>
+                        <div class="article-meta">
+                            <div class="meta-left">
+                                <span><i class="fas fa-user-circle"></i> By Admin</span>
+                                <span><i class="far fa-clock"></i> 6 min read</span>
+                            </div>
+                            <div class="meta-right">
+                                <span class="article-stats"><i class="far fa-eye"></i> 1.8K</span>
+                                <span class="article-stats"><i class="far fa-comment"></i> 15</span>
+                            </div>
+                        </div>
+                        <a href="#" class="read-more">
+                            Read Full Article
+                            <span class="read-more-icon">
+                                <i class="fas fa-arrow-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                </article>
+            </div>
+            <div class="articles-footer" data-aos="fade-up">
+                <button class="load-more-btn">
+                    <span>Load More Articles</span>
+                    <i class="fas fa-sync-alt"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Market Updates Dashboard -->
+    <section class="market-dashboard section-padding" data-aos="fade-up">
+        <div class="container">
+            <h2 class="section-title">Market Pulse</h2>
+            <div class="dashboard-grid">
+                <div class="dashboard-card" data-aos="zoom-in">
+                    <div class="card-header">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Stock Market</h3>
+                    </div>
+                    <div class="card-content">
+                        <ul class="market-updates">
+                            <li class="up"><i class="fas fa-arrow-up"></i> Nifty hits new all-time high</li>
+                            <li class="up"><i class="fas fa-arrow-up"></i> IT sector shows strong momentum</li>
+                            <li class="neutral"><i class="fas fa-minus"></i> Banking stocks remain stable</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="dashboard-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="card-header">
+                        <i class="fas fa-coins"></i>
+                        <h3>Commodities</h3>
+                    </div>
+                    <div class="card-content">
+                        <ul class="market-updates">
+                            <li class="up"><i class="fas fa-arrow-up"></i> Gold prices continue upward trend</li>
+                            <li class="down"><i class="fas fa-arrow-down"></i> Crude oil shows volatility</li>
+                            <li class="neutral"><i class="fas fa-minus"></i> Silver remains range-bound</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="dashboard-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="card-header">
+                        <i class="fas fa-globe"></i>
+                        <h3>Global Markets</h3>
+                    </div>
+                    <div class="card-content">
+                        <ul class="market-updates">
+                            <li class="neutral"><i class="fas fa-minus"></i> US Fed maintains interest rates</li>
+                            <li class="up"><i class="fas fa-arrow-up"></i> European markets show recovery</li>
+                            <li class="neutral"><i class="fas fa-minus"></i> Asian markets trade mixed</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section parallax" data-aos="fade-up" style="background-image: url('images/148.jpg');">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Stay Ahead of the Market</h2>
+                <p>Subscribe to our newsletter for expert insights and market analysis delivered to your inbox</p>
+                <form class="newsletter-form">
+                    <div class="form-group">
+                        <input type="email" placeholder="Enter your email address" required>
+                        <button type="submit" class="btn-primary">
+                            <i class="fas fa-paper-plane"></i> Subscribe
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Us</h3>
+                    <p>IndianMoney Master is your trusted partner for comprehensive financial planning and wealth management services.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="investment.html">Investment Planning</a></li>
+                        <li><a href="retirement.html">Retirement Planning</a></li>
+                        <li><a href="tax-planning.html">Tax Planning</a></li>
+                        <li><a href="business-setup.html">Business Setup</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p>Email: info@indianmoneymaster.com</p>
+                    <p>Phone: +91 1234567890</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 IndianMoney Master. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
+
