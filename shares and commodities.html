@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shares & Commodities - Indian Money Master</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/shares-commodities.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.svg" alt="Indian Money Master" class="logo-img">
+                    <span class="logo-text">Indian Money Master</span>
+                </a>
+            </div>
+            
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="taxes-accounts.html">Taxes & Accounts</a></li>
+                <li><a href="registration.html">Registration</a></li>
+                <li><a href="finance.html">Finance</a></li>
+                <li><a href="investment.html">Investment</a></li>
+                <li><a href="shares-commodities.html" class="active">Shares & Commodities</a></li>
+                <li><a href="insurance.html">Insurance Plans</a></li>
+                <li><a href="clients.html">Our Clients</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Shares & Commodities Trading</h1>
+                <p>Advanced tools for stock and commodity trading analysis</p>
+            </div>
+        </section>
+
+        <section class="trading-tools">
+            <div class="container">
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="stocks">Stock Calculator</button>
+                    <button class="tab-btn" data-tab="position">Position Size</button>
+                    <button class="tab-btn" data-tab="commodity">Commodity Trading</button>
+                    <button class="tab-btn" data-tab="analysis">Market Analysis</button>
+                </div>
+
+                <!-- Stock Calculator -->
+                <div class="tab-content active" id="stocks-calculator">
+                    <div class="calculator-card">
+                        <h2>Stock Returns Calculator</h2>
+                        <form id="stock-calculator-form" class="calculator-form">
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="stock-buy-price">Buy Price (₹)</label>
+                                    <input type="number" id="stock-buy-price" step="0.01" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="stock-quantity">Quantity</label>
+                                    <input type="number" id="stock-quantity" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="stock-sell-price">Sell Price (₹)</label>
+                                    <input type="number" id="stock-sell-price" step="0.01" required>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Calculate Returns</button>
+                        </form>
+                        <div class="result-container">
+                            <div class="result-summary" id="stock-result"></div>
+                            <canvas id="stock-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Position Size Calculator -->
+                <div class="tab-content" id="position-calculator">
+                    <div class="calculator-card">
+                        <h2>Position Size Calculator</h2>
+                        <form id="position-calculator-form" class="calculator-form">
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="trading-capital">Trading Capital (₹)</label>
+                                    <input type="number" id="trading-capital" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="risk-percentage">Risk Percentage (%)</label>
+                                    <input type="number" id="risk-percentage" step="0.1" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="entry-price">Entry Price (₹)</label>
+                                    <input type="number" id="entry-price" step="0.01" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="stop-loss">Stop Loss (₹)</label>
+                                    <input type="number" id="stop-loss" step="0.01" required>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Calculate Position</button>
+                        </form>
+                        <div class="result-container">
+                            <div class="result-grid" id="position-result"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Commodity Trading Calculator -->
+                <div class="tab-content" id="commodity-calculator">
+                    <div class="calculator-card">
+                        <h2>Commodity Trading Calculator</h2>
+                        <form id="commodity-calculator-form" class="calculator-form">
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="commodity-type">Select Commodity</label>
+                                    <select id="commodity-type" required>
+                                        <option value="">Select...</option>
+                                        <option value="gold">Gold</option>
+                                        <option value="silver">Silver</option>
+                                        <option value="crude">Crude Oil</option>
+                                        <option value="copper">Copper</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lot-size">Lot Size</label>
+                                    <input type="number" id="lot-size" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="commodity-buy-price">Buy Price (₹)</label>
+                                    <input type="number" id="commodity-buy-price" step="0.01" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="commodity-target">Target Price (₹)</label>
+                                    <input type="number" id="commodity-target" step="0.01" required>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Calculate Trade</button>
+                        </form>
+                        <div class="result-container">
+                            <div class="result-summary" id="commodity-result"></div>
+                            <canvas id="commodity-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Market Analysis -->
+                <div class="tab-content" id="market-analysis">
+                    <div class="analysis-grid">
+                        <div class="analysis-card">
+                            <h3>Technical Analysis</h3>
+                            <ul class="analysis-list">
+                                <li>Moving Averages</li>
+                                <li>RSI Indicator</li>
+                                <li>MACD Analysis</li>
+                                <li>Volume Analysis</li>
+                            </ul>
+                            <button class="btn btn-primary">Open Analysis</button>
+                        </div>
+
+                        <div class="analysis-card">
+                            <h3>Fundamental Analysis</h3>
+                            <ul class="analysis-list">
+                                <li>Company Financials</li>
+                                <li>Ratio Analysis</li>
+                                <li>Industry Analysis</li>
+                                <li>News Impact</li>
+                            </ul>
+                            <button class="btn btn-primary">View Details</button>
+                        </div>
+
+                        <div class="analysis-card">
+                            <h3>Market Sentiment</h3>
+                            <ul class="analysis-list">
+                                <li>Market Breadth</li>
+                                <li>VIX Analysis</li>
+                                <li>FII/DII Data</li>
+                                <li>Sector Rotation</li>
+                            </ul>
+                            <button class="btn btn-primary">Check Sentiment</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>Indian Money Master</h3>
+                    <p>Your trusted partner in financial services and consulting</p>
+                    <div class="contact-info">
+                        <p>📞 +91 9867673434</p>
+                        <p>📍 Mumbai - Thane - Pune</p>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="taxes-accounts.html">Taxes & Accounts</a></li>
+                        <li><a href="registration.html">Registration</a></li>
+                        <li><a href="finance.html">Finance</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="investment.html">Investment</a></li>
+                        <li><a href="shares-commodities.html">Shares & Commodities</a></li>
+                        <li><a href="insurance.html">Insurance Plans</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Office Hours</h4>
+                    <p>Monday - Saturday</p>
+                    <p>10:00 AM - 7:00 PM</p>
+                    <a href="contact.html" class="btn btn-primary">Contact Us</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Indian Money Master. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/shares-commodities.js"></script>
+</body>
+</html>

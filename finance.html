@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Services - Indian Money Master</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/finance.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.svg" alt="Indian Money Master" class="logo-img">
+                    <span class="logo-text">Indian Money Master</span>
+                </a>
+            </div>
+            
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="taxes-accounts.html">Taxes & Accounts</a></li>
+                <li><a href="registration.html">Registration</a></li>
+                <li><a href="finance.html" class="active">Finance</a></li>
+                <li><a href="investment.html">Investment</a></li>
+                <li><a href="shares-commodities.html">Shares & Commodities</a></li>
+                <li><a href="insurance.html">Insurance Plans</a></li>
+                <li><a href="clients.html">Our Clients</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Financial Services</h1>
+                <p>Calculate loans, plan investments, and manage your finances</p>
+            </div>
+        </section>
+
+        <!-- Calculator Section -->
+        <section class="calculators">
+            <div class="container">
+                <div class="calculator-tabs">
+                    <button class="tab-btn active" data-tab="loan">Loan EMI</button>
+                    <button class="tab-btn" data-tab="fd">Fixed Deposit</button>
+                    <button class="tab-btn" data-tab="rd">Recurring Deposit</button>
+                    <button class="tab-btn" data-tab="goal">Goal Planning</button>
+                </div>
+
+                <!-- Loan EMI Calculator -->
+                <div class="calculator-content active" id="loan-calculator">
+                    <h2>Loan EMI Calculator</h2>
+                    <div class="calculator-grid">
+                        <div class="calculator-form">
+                            <div class="form-group">
+                                <label for="loan-amount">Loan Amount (₹)</label>
+                                <input type="number" id="loan-amount" value="1000000">
+                            </div>
+                            <div class="form-group">
+                                <label for="loan-interest">Interest Rate (%)</label>
+                                <input type="number" id="loan-interest" value="8.5" step="0.1">
+                            </div>
+                            <div class="form-group">
+                                <label for="loan-tenure">Loan Tenure (Years)</label>
+                                <input type="number" id="loan-tenure" value="20">
+                            </div>
+                            <button class="btn btn-primary" onclick="calculateLoanEMI()">Calculate EMI</button>
+                        </div>
+                        <div class="calculator-result">
+                            <div class="result-summary">
+                                <div class="result-item">
+                                    <h4>Monthly EMI</h4>
+                                    <p id="monthly-emi">₹0</p>
+                                </div>
+                                <div class="result-item">
+                                    <h4>Total Interest</h4>
+                                    <p id="total-interest">₹0</p>
+                                </div>
+                                <div class="result-item">
+                                    <h4>Total Payment</h4>
+                                    <p id="total-payment">₹0</p>
+                                </div>
+                            </div>
+                            <canvas id="loan-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fixed Deposit Calculator -->
+                <div class="calculator-content" id="fd-calculator">
+                    <h2>Fixed Deposit Calculator</h2>
+                    <div class="calculator-grid">
+                        <div class="calculator-form">
+                            <div class="form-group">
+                                <label for="fd-amount">Principal Amount (₹)</label>
+                                <input type="number" id="fd-amount" value="100000">
+                            </div>
+                            <div class="form-group">
+                                <label for="fd-interest">Interest Rate (%)</label>
+                                <input type="number" id="fd-interest" value="6.5" step="0.1">
+                            </div>
+                            <div class="form-group">
+                                <label for="fd-tenure">Tenure (Years)</label>
+                                <input type="number" id="fd-tenure" value="5">
+                            </div>
+                            <button class="btn btn-primary" onclick="calculateFD()">Calculate Returns</button>
+                        </div>
+                        <div class="calculator-result">
+                            <div class="result-summary">
+                                <div class="result-item">
+                                    <h4>Maturity Amount</h4>
+                                    <p id="fd-maturity">₹0</p>
+                                </div>
+                                <div class="result-item">
+                                    <h4>Total Interest</h4>
+                                    <p id="fd-interest-earned">₹0</p>
+                                </div>
+                            </div>
+                            <canvas id="fd-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recurring Deposit Calculator -->
+                <div class="calculator-content" id="rd-calculator">
+                    <h2>Recurring Deposit Calculator</h2>
+                    <div class="calculator-grid">
+                        <div class="calculator-form">
+                            <div class="form-group">
+                                <label for="rd-amount">Monthly Investment (₹)</label>
+                                <input type="number" id="rd-amount" value="5000">
+                            </div>
+                            <div class="form-group">
+                                <label for="rd-interest">Interest Rate (%)</label>
+                                <input type="number" id="rd-interest" value="5.5" step="0.1">
+                            </div>
+                            <div class="form-group">
+                                <label for="rd-tenure">Tenure (Years)</label>
+                                <input type="number" id="rd-tenure" value="3">
+                            </div>
+                            <button class="btn btn-primary" onclick="calculateRD()">Calculate Returns</button>
+                        </div>
+                        <div class="calculator-result">
+                            <div class="result-summary">
+                                <div class="result-item">
+                                    <h4>Maturity Amount</h4>
+                                    <p id="rd-maturity">₹0</p>
+                                </div>
+                                <div class="result-item">
+                                    <h4>Total Investment</h4>
+                                    <p id="rd-investment">₹0</p>
+                                </div>
+                                <div class="result-item">
+                                    <h4>Total Interest</h4>
+                                    <p id="rd-interest-earned">₹0</p>
+                                </div>
+                            </div>
+                            <canvas id="rd-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Financial Goal Planning Calculator -->
+                <div class="calculator-content" id="goal-calculator">
+                    <h2>Financial Goal Planning</h2>
+                    <div class="calculator-grid">
+                        <div class="calculator-form">
+                            <div class="form-group">
+                                <label for="goal-amount">Target Amount (₹)</label>
+                                <input type="number" id="goal-amount" value="1000000">
+                            </div>
+                            <div class="form-group">
+                                <label for="goal-years">Time to Goal (Years)</label>
+                                <input type="number" id="goal-years" value="10">
+                            </div>
+                            <div class="form-group">
+                                <label for="goal-returns">Expected Returns (%)</label>
+                                <input type="number" id="goal-returns" value="12" step="0.1">
+                            </div>
+                            <button class="btn btn-primary" onclick="calculateGoal()">Plan Goal</button>
+                        </div>
+                        <div class="calculator-result">
+                            <div class="result-summary">
+                                <div class="result-item">
+                                    <h4>Monthly Investment Required</h4>
+                                    <p id="monthly-investment">₹0</p>
+                                </div>
+                                <div class="result-item">
+                                    <h4>Total Investment</h4>
+                                    <p id="total-investment">₹0</p>
+                                </div>
+                                <div class="result-item">
+                                    <h4>Wealth Gained</h4>
+                                    <p id="wealth-gained">₹0</p>
+                                </div>
+                            </div>
+                            <canvas id="goal-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Financial Services Section -->
+        <section class="financial-services">
+            <div class="container">
+                <h2>Our Financial Services</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <h3>Personal Loans</h3>
+                        <ul>
+                            <li>Competitive Interest Rates</li>
+                            <li>Quick Approval</li>
+                            <li>Minimal Documentation</li>
+                            <li>Flexible Tenure</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">Apply Now</a>
+                    </div>
+
+                    <div class="service-card">
+                        <h3>Business Loans</h3>
+                        <ul>
+                            <li>MSME Loans</li>
+                            <li>Working Capital</li>
+                            <li>Equipment Financing</li>
+                            <li>Business Expansion</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">Get Details</a>
+                    </div>
+
+                    <div class="service-card">
+                        <h3>Home Loans</h3>
+                        <ul>
+                            <li>Low Interest Rates</li>
+                            <li>Long Tenure Options</li>
+                            <li>Property Consultation</li>
+                            <li>Quick Processing</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+
+                    <div class="service-card">
+                        <h3>Financial Planning</h3>
+                        <ul>
+                            <li>Retirement Planning</li>
+                            <li>Tax Planning</li>
+                            <li>Estate Planning</li>
+                            <li>Wealth Management</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">Start Planning</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>Indian Money Master</h3>
+                    <p>Your trusted partner in financial services and consulting</p>
+                    <div class="contact-info">
+                        <p>📞 +91 9867673434</p>
+                        <p>📍 Mumbai - Thane - Pune</p>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="taxes-accounts.html">Taxes & Accounts</a></li>
+                        <li><a href="registration.html">Registration</a></li>
+                        <li><a href="finance.html">Finance</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="investment.html">Investment</a></li>
+                        <li><a href="shares-commodities.html">Shares & Commodities</a></li>
+                        <li><a href="insurance.html">Insurance Plans</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Office Hours</h4>
+                    <p>Monday - Saturday</p>
+                    <p>10:00 AM - 7:00 PM</p>
+                    <a href="contact.html" class="btn btn-primary">Contact Us</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Indian Money Master. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/finance.js"></script>
+</body>
+</html>

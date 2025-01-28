@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Plans & Calculators - Indian Money Master</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/insurance.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Header section from main template -->
+    <header>
+        <!-- Navigation content -->
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Insurance Solutions & Planning</h1>
+                    <p>Comprehensive insurance solutions with smart calculators to help you make informed decisions</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Links -->
+        <section class="quick-links">
+            <div class="container">
+                <div class="links-grid">
+                    <a href="#calculators" class="quick-link-card">
+                        <div class="icon">🧮</div>
+                        <h3>Insurance Calculators</h3>
+                        <p>Calculate premiums and coverage</p>
+                    </a>
+                    <a href="#plans" class="quick-link-card">
+                        <div class="icon">📋</div>
+                        <h3>Insurance Plans</h3>
+                        <p>Explore our range of policies</p>
+                    </a>
+                    <a href="#contact" class="quick-link-card">
+                        <div class="icon">📞</div>
+                        <h3>Get Assistance</h3>
+                        <p>Talk to our experts</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Insurance Calculators Section -->
+        <section id="calculators" class="insurance-calculators">
+            <div class="container">
+                <h2>Insurance Calculators</h2>
+                <p class="section-desc">Use our advanced calculators to estimate your insurance needs and premiums</p>
+
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="life">Life Insurance</button>
+                    <button class="tab-btn" data-tab="health">Health Insurance</button>
+                    <button class="tab-btn" data-tab="term">Term Insurance</button>
+                    <button class="tab-btn" data-tab="car">Car Insurance</button>
+                </div>
+
+                <!-- Calculator content remains the same -->
+                <div id="life-calculator" class="tab-content active">
+                    <!-- Life Insurance Calculator Form -->
+                    <div class="calculator-card">
+                        <h3>Life Insurance Calculator</h3>
+                        <form id="life-insurance-form" class="calculator-form">
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="life-age">Your Age</label>
+                                    <input type="number" id="life-age" required min="18" max="70">
+                                </div>
+                                <div class="form-group">
+                                    <label for="life-income">Annual Income</label>
+                                    <input type="number" id="life-income" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="life-dependents">Number of Dependents</label>
+                                    <input type="number" id="life-dependents" required min="0" max="10">
+                                </div>
+                                <div class="form-group">
+                                    <label for="life-savings">Current Savings</label>
+                                    <input type="number" id="life-savings" required>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Calculate Coverage</button>
+                        </form>
+                        <div id="life-result"></div>
+                        <canvas id="life-chart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Other calculator tabs remain the same -->
+            </div>
+        </section>
+
+        <!-- Insurance Plans Section -->
+        <section id="plans" class="insurance-plans">
+            <div class="container">
+                <h2>Our Insurance Plans</h2>
+                <p class="section-desc">Insurance plans designed for individuals from newborn to elderly, meeting needs from Birth to Death. We provide personalized solutions for every client.</p>
+
+                <!-- Featured Plans Slider -->
+                <div class="featured-plans">
+                    <div class="featured-plan-card">
+                        <div class="plan-badge">Most Popular</div>
+                        <h3>Health Plus (ULIP with Mediclaim)</h3>
+                        <p>Comprehensive health coverage with investment benefits</p>
+                        <ul class="plan-highlights">
+                            <li>Investment + Health Coverage</li>
+                            <li>Tax Benefits</li>
+                            <li>Flexible Premium Options</li>
+                        </ul>
+                        <button class="btn btn-primary">Learn More</button>
+                    </div>
+                </div>
+
+                <!-- Plan Categories -->
+                <div class="plan-categories">
+                    <!-- Child Plans -->
+                    <div class="plan-category">
+                        <div class="category-header">
+                            <h3>Child Insurance Plans</h3>
+                            <p>Secure your child's future with our specialized plans</p>
+                        </div>
+                        <div class="plans-grid">
+                            <div class="plan-card">
+                                <div class="plan-icon">👶</div>
+                                <h4>Jeevan Anurag</h4>
+                                <p>Education and future security</p>
+                                <ul class="plan-features">
+                                    <li>Education Benefits</li>
+                                    <li>Flexible Premium</li>
+                                </ul>
+                                <button class="btn btn-outline">View Details</button>
+                            </div>
+                            <!-- Other child plans -->
+                        </div>
+                    </div>
+
+                    <!-- ULIP Plans -->
+                    <div class="plan-category">
+                        <div class="category-header">
+                            <h3>ULIP Plans</h3>
+                            <p>Market-linked insurance plans for better returns</p>
+                        </div>
+                        <div class="plans-grid">
+                            <!-- ULIP plan cards -->
+                        </div>
+                    </div>
+
+                    <!-- Traditional Plans -->
+                    <div class="plan-category">
+                        <div class="category-header">
+                            <h3>Traditional Plans</h3>
+                            <p>Time-tested insurance plans with guaranteed returns</p>
+                        </div>
+                        <div class="plans-grid">
+                            <!-- Traditional plan cards -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h2>Need Help Choosing?</h2>
+                        <p>Our insurance experts are here to help you find the perfect plan</p>
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <div class="icon">📞</div>
+                                <h4>Call Us</h4>
+                                <p>+91 9867673434</p>
+                            </div>
+                            <div class="contact-method">
+                                <div class="icon">📧</div>
+                                <h4>Email Us</h4>
+                                <p>info@indianmoneymaster.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <h3>Request a Callback</h3>
+                        <form id="callback-form">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="insurance-type">Insurance Type</label>
+                                <select id="insurance-type" required>
+                                    <option value="">Select Insurance Type</option>
+                                    <option value="life">Life Insurance</option>
+                                    <option value="health">Health Insurance</option>
+                                    <option value="term">Term Insurance</option>
+                                    <option value="car">Car Insurance</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Request Callback</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Footer content -->
+    </footer>
+
+    <script src="js/insurance.js"></script>
+</body>
+</html>

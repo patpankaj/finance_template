@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taxes & Accounts - Indian Money Master</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/taxes.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+</head>
+<body>
+    <!-- Same Header as index.html -->
+    <header class="header">
+        <!-- Navigation content (same as index.html) -->
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1>Taxes & Accounts</h1>
+                <p>Professional tax services and comprehensive accounting solutions</p>
+            </div>
+        </section>
+
+        <!-- Services Grid -->
+        <section class="tax-services">
+            <div class="container">
+                <div class="services-grid">
+                    <div class="service-card">
+                        <h3>Income Tax Returns</h3>
+                        <ul>
+                            <li>Individual Tax Returns</li>
+                            <li>Business Tax Returns</li>
+                            <li>Professional Tax Returns</li>
+                            <li>Tax Planning</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">Calculate Tax</a>
+                    </div>
+
+                    <div class="service-card">
+                        <h3>GST Services</h3>
+                        <ul>
+                            <li>GST Registration</li>
+                            <li>GST Returns Filing</li>
+                            <li>GST Compliance</li>
+                            <li>GST Consultancy</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">GST Calculator</a>
+                    </div>
+
+                    <div class="service-card">
+                        <h3>Accounting Services</h3>
+                        <ul>
+                            <li>Bookkeeping</li>
+                            <li>Financial Statements</li>
+                            <li>Payroll Services</li>
+                            <li>Audit Support</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+
+                    <div class="service-card">
+                        <h3>TDS Services</h3>
+                        <ul>
+                            <li>TDS Returns</li>
+                            <li>TDS Certificates</li>
+                            <li>TDS Planning</li>
+                            <li>Compliance</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">Calculate TDS</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tax Calculator Section -->
+        <section class="tax-calculator">
+            <div class="container">
+                <h2>Income Tax Calculator</h2>
+                <div class="calculator-container">
+                    <form id="tax-calculator-form" class="calculator-form">
+                        <div class="form-group">
+                            <label for="income">Annual Income</label>
+                            <input type="number" id="income" name="income" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="age">Age</label>
+                            <select id="age" name="age" required>
+                                <option value="below60">Below 60 years</option>
+                                <option value="60to80">60 to 80 years</option>
+                                <option value="above80">Above 80 years</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="regime">Tax Regime</label>
+                            <select id="regime" name="regime" required>
+                                <option value="old">Old Regime</option>
+                                <option value="new">New Regime</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Calculate Tax</button>
+                    </form>
+
+                    <div id="tax-result" class="calculator-result">
+                        <h3>Tax Calculation Result</h3>
+                        <div class="result-grid">
+                            <!-- Results will be populated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Same Footer as index.html -->
+    <footer class="footer">
+        <!-- Footer content (same as index.html) -->
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/tax-calculator.js"></script>
+</body>
+</html>

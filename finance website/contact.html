@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional Wealth Management Website">
+    <meta name="author" content="Your Name">
+    <title>Contact Us - Indian Money Master</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- JavaScript Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="scripts.js" defer></script>
+</head>
+
+<body>
+    <!-- Market Ticker -->
+    <div class="market-ticker">
+        <div class="ticker-wrapper">
+            <div class="ticker-track">
+                <div class="ticker-item">
+                    <span class="stock">NIFTY</span>
+                    <span class="price up">19,425.35</span>
+                    <span class="change up">+0.85%</span>
+                </div>
+                <div class="ticker-item">
+                    <span class="stock">SENSEX</span>
+                    <span class="price up">64,383.47</span>
+                    <span class="change up">+0.92%</span>
+                </div>
+                <div class="ticker-item">
+                    <span class="stock">USD/INR</span>
+                    <span class="price down">82.45</span>
+                    <span class="change down">-0.15%</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Section -->
+    <header class="hero-section">
+        <nav class="nav-wrapper">
+            <div class="logo">IndianMoney<span>Master</span></div>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li class="dropdown">
+                    <a href="#">Wealth Management</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="investment.html">Investment</a></li>
+                        <li><a href="retirement.html">Retirement</a></li>
+                        <li><a href="taxplanning.html">Tax Planning</a></li>
+                    </ul>
+                </li>
+                <li><a href="insights.html">Insights</a></li>
+            </ul>
+            <a href="contact.html" class="cta-button">Contact Us</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1>Contact Us</h1>
+            <p>Get in touch with our expert team for personalized financial solutions</p>
+        </section>
+
+        <section class="contact-content">
+            <div class="contact-info">
+                <h2>Our Office</h2>
+                <p>123 Financial Street, Mumbai 400001, India</p>
+                <p>Email: info@indianmoneymaster.com</p>
+                <p>Phone: +91 123-456-7890</p>
+                <p>Working Hours: Monday to Friday, 9:00 AM to 6:00 PM</p>
+            </div>
+
+            <form class="contact-form" id="contactForm">
+                <h2>Send Us a Message</h2>
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Indian Money Master</h3>
+                <p>Your trusted partner in wealth management and financial services.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="insights.html">Insights</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@indianmoneymaster.com</p>
+                <p>Phone: +91 123-456-7890</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 Indian Money Master. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>

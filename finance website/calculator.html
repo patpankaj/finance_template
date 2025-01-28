@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Calculator - MoneyMatter</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>MoneyMatter</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="calculator.html" class="active">Calculator</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <button class="login-btn">Login</button>
+                <button class="signup-btn">Sign Up</button>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Calculator Section -->
+    <section class="calculator-section">
+        <div class="calculator-container">
+            <div class="calculator-tabs">
+                <button class="tab-btn active" data-tab="loan">Loan Calculator</button>
+                <button class="tab-btn" data-tab="investment">Investment Calculator</button>
+                <button class="tab-btn" data-tab="mortgage">Mortgage Calculator</button>
+            </div>
+
+            <!-- Loan Calculator -->
+            <div class="calculator-content active" id="loan-calculator">
+                <h2>Loan Calculator</h2>
+                <div class="calculator-form">
+                    <div class="form-group">
+                        <label>Loan Amount ($)</label>
+                        <input type="number" id="loan-amount" placeholder="Enter loan amount">
+                    </div>
+                    <div class="form-group">
+                        <label>Interest Rate (%)</label>
+                        <input type="number" id="loan-interest" placeholder="Enter interest rate">
+                    </div>
+                    <div class="form-group">
+                        <label>Loan Term (Years)</label>
+                        <input type="number" id="loan-term" placeholder="Enter loan term">
+                    </div>
+                    <button class="calculate-btn" onclick="calculateLoan()">Calculate</button>
+                    <div class="result" id="loan-result">
+                        <h3>Monthly Payment: <span>$0</span></h3>
+                        <h3>Total Payment: <span>$0</span></h3>
+                        <h3>Total Interest: <span>$0</span></h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Investment Calculator -->
+            <div class="calculator-content" id="investment-calculator">
+                <h2>Investment Calculator</h2>
+                <div class="calculator-form">
+                    <div class="form-group">
+                        <label>Initial Investment ($)</label>
+                        <input type="number" id="investment-initial" placeholder="Enter initial amount">
+                    </div>
+                    <div class="form-group">
+                        <label>Monthly Contribution ($)</label>
+                        <input type="number" id="investment-monthly" placeholder="Enter monthly contribution">
+                    </div>
+                    <div class="form-group">
+                        <label>Annual Return Rate (%)</label>
+                        <input type="number" id="investment-return" placeholder="Enter expected return rate">
+                    </div>
+                    <div class="form-group">
+                        <label>Investment Period (Years)</label>
+                        <input type="number" id="investment-period" placeholder="Enter investment period">
+                    </div>
+                    <button class="calculate-btn" onclick="calculateInvestment()">Calculate</button>
+                    <div class="result" id="investment-result">
+                        <h3>Final Amount: <span>$0</span></h3>
+                        <h3>Total Contributions: <span>$0</span></h3>
+                        <h3>Total Interest Earned: <span>$0</span></h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mortgage Calculator -->
+            <div class="calculator-content" id="mortgage-calculator">
+                <h2>Mortgage Calculator</h2>
+                <div class="calculator-form">
+                    <div class="form-group">
+                        <label>Home Price ($)</label>
+                        <input type="number" id="mortgage-price" placeholder="Enter home price">
+                    </div>
+                    <div class="form-group">
+                        <label>Down Payment ($)</label>
+                        <input type="number" id="mortgage-down" placeholder="Enter down payment">
+                    </div>
+                    <div class="form-group">
+                        <label>Interest Rate (%)</label>
+                        <input type="number" id="mortgage-interest" placeholder="Enter interest rate">
+                    </div>
+                    <div class="form-group">
+                        <label>Loan Term (Years)</label>
+                        <input type="number" id="mortgage-term" placeholder="Enter loan term">
+                    </div>
+                    <button class="calculate-btn" onclick="calculateMortgage()">Calculate</button>
+                    <div class="result" id="mortgage-result">
+                        <h3>Monthly Payment: <span>$0</span></h3>
+                        <h3>Total Payment: <span>$0</span></h3>
+                        <h3>Total Interest: <span>$0</span></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>MoneyMatter</h3>
+                <p>Your trusted financial partner for a secure future.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 MoneyMatter. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="calculator.js"></script>
+</body>
+</html>

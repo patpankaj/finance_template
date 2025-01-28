@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Investment Planning Services - Indian Money Master">
+    <title>Investment Planning - Indian Money Master</title>
+
+    <!-- Stylesheets -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="../assets/css/main.css">
+
+    <!-- JavaScript Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+    <script type="module" src="../assets/js/main.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav-wrapper container">
+        <a href="../index.html" class="logo">IndianMoney<span>Master</span></a>
+        <button class="mobile-menu-btn" aria-label="Toggle menu">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul class="menu">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li class="dropdown">
+                <a href="#" class="active">Wealth Management</a>
+                <ul class="dropdown-menu">
+                    <li><a href="investment.html" class="active">Investment</a></li>
+                    <li><a href="retirement.html">Retirement</a></li>
+                    <li><a href="taxplanning.html">Tax Planning</a></li>
+                </ul>
+            </li>
+            <li><a href="insights.html">Insights</a></li>
+            <li><a href="contact.html" class="btn btn-accent">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Investment Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1>Investment Planning</h1>
+            <p>Strategic investment solutions for your financial growth</p>
+        </div>
+    </header>
+
+    <!-- Investment Calculator -->
+    <section class="calculator-section section">
+        <div class="container">
+            <h2 class="text-center">Investment Calculator</h2>
+            <p class="text-center text-muted mb-4">Plan your investments and visualize your returns</p>
+            
+            <div class="calculator-grid">
+                <div class="calculator-form" data-aos="fade-right">
+                    <div class="form-group">
+                        <label for="initial-investment">Initial Investment (₹)</label>
+                        <input type="number" id="initial-investment" class="form-control" placeholder="Enter amount" min="0">
+                    </div>
+                    <div class="form-group">
+                        <label for="monthly-investment">Monthly Investment (₹)</label>
+                        <input type="number" id="monthly-investment" class="form-control" placeholder="Enter amount" min="0">
+                    </div>
+                    <div class="form-group">
+                        <label for="investment-period">Investment Period (Years)</label>
+                        <input type="number" id="investment-period" class="form-control" placeholder="Enter years" min="1" max="50">
+                    </div>
+                    <div class="form-group">
+                        <label for="expected-return">Expected Annual Return (%)</label>
+                        <input type="number" id="expected-return" class="form-control" placeholder="Enter percentage" min="1" max="100">
+                    </div>
+                    <button id="calculate-investment" class="btn btn-primary">Calculate Returns</button>
+                </div>
+                
+                <div class="calculator-result" data-aos="fade-left">
+                    <div class="result-chart">
+                        <canvas id="investmentGrowthChart"></canvas>
+                    </div>
+                    <div class="result-summary">
+                        <div class="summary-item">
+                            <h4>Total Investment</h4>
+                            <p id="total-investment">₹0</p>
+                        </div>
+                        <div class="summary-item">
+                            <h4>Expected Returns</h4>
+                            <p id="expected-returns">₹0</p>
+                        </div>
+                        <div class="summary-item">
+                            <h4>Final Amount</h4>
+                            <p id="final-amount">₹0</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment Options -->
+    <section class="investment-options section bg-light">
+        <div class="container">
+            <h2 class="text-center">Investment Options</h2>
+            <div class="options-grid">
+                <div class="option-card" data-aos="fade-up">
+                    <div class="option-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Mutual Funds</h3>
+                    <p>Professional management and diversified portfolio options</p>
+                    <ul class="option-features">
+                        <li>Equity Funds</li>
+                        <li>Debt Funds</li>
+                        <li>Hybrid Funds</li>
+                        <li>Index Funds</li>
+                    </ul>
+                    <div class="option-footer">
+                        <span class="risk-level medium">Medium Risk</span>
+                        <span class="returns">12-15% Returns</span>
+                    </div>
+                </div>
+
+                <div class="option-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="option-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Stocks</h3>
+                    <p>Direct equity investments in leading companies</p>
+                    <ul class="option-features">
+                        <li>Blue Chip Stocks</li>
+                        <li>Mid Cap Stocks</li>
+                        <li>Small Cap Stocks</li>
+                        <li>IPO Investments</li>
+                    </ul>
+                    <div class="option-footer">
+                        <span class="risk-level high">High Risk</span>
+                        <span class="returns">15-20% Returns</span>
+                    </div>
+                </div>
+
+                <div class="option-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="option-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Fixed Income</h3>
+                    <p>Stable returns with lower risk investments</p>
+                    <ul class="option-features">
+                        <li>Fixed Deposits</li>
+                        <li>Government Bonds</li>
+                        <li>Corporate Bonds</li>
+                        <li>PPF</li>
+                    </ul>
+                    <div class="option-footer">
+                        <span class="risk-level low">Low Risk</span>
+                        <span class="returns">6-8% Returns</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment Process -->
+    <section class="investment-process section">
+        <div class="container">
+            <h2 class="text-center">Our Investment Process</h2>
+            <div class="process-timeline">
+                <div class="process-step" data-aos="fade-right">
+                    <div class="step-number">1</div>
+                    <h3>Financial Assessment</h3>
+                    <p>Comprehensive evaluation of your financial status and goals</p>
+                </div>
+                <div class="process-step" data-aos="fade-right" data-aos-delay="100">
+                    <div class="step-number">2</div>
+                    <h3>Strategy Development</h3>
+                    <p>Creating a customized investment strategy aligned with your objectives</p>
+                </div>
+                <div class="process-step" data-aos="fade-right" data-aos-delay="200">
+                    <div class="step-number">3</div>
+                    <h3>Portfolio Creation</h3>
+                    <p>Building a diversified portfolio based on your risk profile</p>
+                </div>
+                <div class="process-step" data-aos="fade-right" data-aos-delay="300">
+                    <div class="step-number">4</div>
+                    <h3>Regular Monitoring</h3>
+                    <p>Continuous tracking and rebalancing of your investments</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>About Us</h3>
+                    <p>Indian Money Master is your trusted partner for comprehensive financial services and wealth management solutions.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="investment.html">Investment Planning</a></li>
+                        <li><a href="retirement.html">Retirement Planning</a></li>
+                        <li><a href="taxplanning.html">Tax Planning</a></li>
+                        <li><a href="#">Business Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-phone"></i> +91 1234567890</li>
+                        <li><i class="fas fa-envelope"></i> info@indianmoneymaster.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Mumbai, Maharashtra, India</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Indian Money Master. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

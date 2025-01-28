@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional Wealth Management Website">
+    <meta name="author" content="Your Name">
+    <title>Indian Money Master</title>
+
+    <!-- Stylesheets -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <!-- JavaScript Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+    <script type="module" src="assets/js/main.js"></script>
+</head>
+
+<body>
+    <!-- Market Ticker -->
+    <div class="market-ticker">
+        <div class="ticker-wrapper">
+            <div class="ticker-track">
+                <div class="ticker-item">
+                    <span class="stock">NIFTY</span>
+                    <span class="price up">19,425.35</span>
+                    <span class="change up">+0.85%</span>
+                </div>
+                <div class="ticker-item">
+                    <span class="stock">SENSEX</span>
+                    <span class="price up">64,383.47</span>
+                    <span class="change up">+0.92%</span>
+                </div>
+                <div class="ticker-item">
+                    <span class="stock">USD/INR</span>
+                    <span class="price down">82.45</span>
+                    <span class="change down">-0.15%</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Section -->
+    <header class="hero-section">
+        <nav class="nav-wrapper container">
+            <a href="index.html" class="logo">IndianMoney<span>Master</span></a>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="pages/services.html">Services</a></li>
+                <li><a href="pages/about.html">About Us</a></li>
+                <li class="dropdown">
+                    <a href="#">Wealth Management</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="pages/investment.html">Investment</a></li>
+                        <li><a href="pages/retirement.html">Retirement</a></li>
+                        <li><a href="pages/taxplanning.html">Tax Planning</a></li>
+                    </ul>
+                </li>
+                <li><a href="pages/insights.html">Insights</a></li>
+                <li><a href="pages/contact.html" class="btn btn-accent">Contact Us</a></li>
+            </ul>
+        </nav>
+
+        <div class="hero-content container">
+            <h1 class="text-3xl">Your Trusted Wealth Management Partner</h1>
+            <p class="text-lg mb-4">Providing tailored solutions to help you achieve financial freedom and security.</p>
+            <a href="pages/services.html" class="btn btn-primary">Explore Our Services</a>
+        </div>
+    </header>
+
+    <!-- Key Services Section -->
+    <section class="featured-services section">
+        <div class="container">
+            <h2 class="text-2xl text-center mb-4">Our Key Services</h2>
+            <div class="grid grid-3">
+                <div class="service-card">
+                    <img src="assets/images/startup.jpg" alt="Business Start-up" loading="lazy">
+                    <h3>Business Start-up and Formation</h3>
+                    <p>Complete guidance for company registration, documentation, and compliance.</p>
+                    <a href="pages/services.html#startup" class="btn btn-secondary">Learn More</a>
+                </div>
+                <div class="service-card">
+                    <img src="assets/images/tax.jpg" alt="Tax Management" loading="lazy">
+                    <h3>Tax Management</h3>
+                    <p>Expert tax planning, filing, and compliance services for individuals and businesses.</p>
+                    <a href="pages/services.html#tax" class="btn btn-secondary">Learn More</a>
+                </div>
+                <div class="service-card">
+                    <img src="assets/images/financial.jpg" alt="Financial Services" loading="lazy">
+                    <h3>Financial Services</h3>
+                    <p>Comprehensive financial planning, investment advice, and wealth management.</p>
+                    <a href="pages/services.html#financial" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Finance Calculator Section -->
+    <section class="finance-calculator section bg-light">
+        <div class="container">
+            <h2 class="text-2xl text-center">Finance Calculator</h2>
+            <p class="text-center mb-4">Plan your financial future with our easy-to-use calculator</p>
+            
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="amount">Initial Amount (₹)</label>
+                    <input type="number" id="amount" name="amount" placeholder="Enter amount" class="form-input">
+                </div>
+                <div class="form-group">
+                    <label for="rate">Interest Rate (%)</label>
+                    <input type="number" id="rate" name="rate" step="0.1" placeholder="Enter rate" class="form-input">
+                </div>
+                <div class="form-group">
+                    <label for="years">Time Period (Years)</label>
+                    <input type="number" id="years" name="years" placeholder="Enter years" class="form-input">
+                </div>
+            </div>
+            
+            <button id="calculate-btn" class="btn btn-primary">Calculate</button>
+            <div id="calculator-result" class="result-box"></div>
+        </div>
+    </section>
+
+    <!-- Registration Section -->
+    <section class="registration section bg-gradient">
+        <div class="container">
+            <h2 class="text-2xl text-center text-light">Register for Consultation</h2>
+            <form id="registration-form" class="form">
+                <div class="form-group">
+                    <input type="text" placeholder="Full Name" required class="form-input">
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Email Address" required class="form-input">
+                </div>
+                <div class="form-group">
+                    <input type="tel" placeholder="Phone Number" required class="form-input">
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Preferred Service" required class="form-input">
+                </div>
+                <button type="submit" class="btn btn-accent">Register Now</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Insurance Section -->
+    <section class="insurance section bg-light">
+        <div class="container">
+            <h2 class="text-2xl text-center">Insurance Plans</h2>
+            <div class="grid grid-3">
+                <div class="insurance-card">
+                    <h3>Life Insurance</h3>
+                    <p>Secure your family's future with our comprehensive life insurance plans.</p>
+                    <button class="btn btn-secondary">View Plans</button>
+                </div>
+                <div class="insurance-card">
+                    <h3>Health Insurance</h3>
+                    <p>Get the best medical coverage for you and your family.</p>
+                    <button class="btn btn-secondary">View Plans</button>
+                </div>
+                <div class="insurance-card">
+                    <h3>Vehicle Insurance</h3>
+                    <p>Protect your vehicle with our affordable insurance plans.</p>
+                    <button class="btn btn-secondary">View Plans</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Insights Section -->
+    <section class="insights-section section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="text-2xl text-center">Financial Insights</h2>
+                <p class="text-center text-muted">Make informed decisions with our comprehensive financial analysis</p>
+            </div>
+            
+            <div class="insights-grid">
+                <div class="insight-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="insight-header">
+                        <h3>Investment Growth</h3>
+                        <div class="insight-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="investmentChart"></canvas>
+                    </div>
+                    <div class="insight-content">
+                        <p>Track your investment performance and growth over time with our detailed analytics</p>
+                        <ul class="insight-stats">
+                            <li><span class="stat">15%</span> Annual Growth</li>
+                            <li><span class="stat">₹2.5L</span> Avg. Returns</li>
+                        </ul>
+                        <a href="pages/insights.html#investment" class="btn btn-outline">View Details</a>
+                    </div>
+                </div>
+
+                <div class="insight-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="insight-header">
+                        <h3>Retirement Planning</h3>
+                        <div class="insight-icon">
+                            <i class="fas fa-piggy-bank"></i>
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="retirementChart"></canvas>
+                    </div>
+                    <div class="insight-content">
+                        <p>Plan your retirement with confidence using our expert guidance and tools</p>
+                        <ul class="insight-stats">
+                            <li><span class="stat">30+</span> Years Projected</li>
+                            <li><span class="stat">₹5Cr</span> Target Corpus</li>
+                        </ul>
+                        <a href="pages/insights.html#retirement" class="btn btn-outline">View Details</a>
+                    </div>
+                </div>
+
+                <div class="insight-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="insight-header">
+                        <h3>Tax Analysis</h3>
+                        <div class="insight-icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="taxChart"></canvas>
+                    </div>
+                    <div class="insight-content">
+                        <p>Optimize your tax planning strategy with our comprehensive tax analysis</p>
+                        <ul class="insight-stats">
+                            <li><span class="stat">25%</span> Tax Savings</li>
+                            <li><span class="stat">₹1L</span> Avg. Refund</li>
+                        </ul>
+                        <a href="pages/insights.html#tax" class="btn btn-outline">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials section bg-gradient">
+        <div class="container">
+            <h2 class="text-2xl text-center text-light">What Our Clients Say</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial">
+                    <p>"The financial guidance provided by IndianMoney Master has been invaluable. They helped me plan my retirement effectively."</p>
+                    <span>- Rajesh Kumar, Business Owner</span>
+                </div>
+                <div class="testimonial">
+                    <p>"Excellent tax planning services! Helped me save significantly on my tax returns while staying compliant."</p>
+                    <span>- Priya Sharma, IT Professional</span>
+                </div>
+                <div class="testimonial">
+                    <p>"Their investment advice has helped me grow my portfolio substantially. Highly recommended!"</p>
+                    <span>- Amit Patel, Investor</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light">
+        <div class="container">
+            <div class="footer-content grid grid-3">
+                <div class="footer-section">
+                    <h3>Indian Money Master</h3>
+                    <p>Your trusted partner in wealth management and financial services.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="pages/services.html">Services</a></li>
+                        <li><a href="pages/about.html">About Us</a></li>
+                        <li><a href="pages/insights.html">Insights</a></li>
+                        <li><a href="pages/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p>Email: info@indianmoneymaster.com</p>
+                    <p>Phone: +91 123-456-7890</p>
+                </div>
+            </div>
+            <div class="footer-bottom text-center mt-4 pt-4">
+                &copy; 2025 Indian Money Master. All rights reserved.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment Services - Indian Money Master</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/investment.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.svg" alt="Indian Money Master" class="logo-img">
+                    <span class="logo-text">Indian Money Master</span>
+                </a>
+            </div>
+            
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="taxes-accounts.html">Taxes & Accounts</a></li>
+                <li><a href="registration.html">Registration</a></li>
+                <li><a href="finance.html">Finance</a></li>
+                <li><a href="investment.html" class="active">Investment</a></li>
+                <li><a href="shares-commodities.html">Shares & Commodities</a></li>
+                <li><a href="insurance.html">Insurance Plans</a></li>
+                <li><a href="clients.html">Our Clients</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Investment Planning</h1>
+                <p>Plan your investments wisely with our expert tools and guidance</p>
+            </div>
+        </section>
+
+        <!-- Investment Calculators Section -->
+        <section class="calculators">
+            <div class="container">
+                <div class="calculator-tabs">
+                    <button class="tab-btn active" data-tab="sip">SIP Calculator</button>
+                    <button class="tab-btn" data-tab="lumpsum">Lump Sum</button>
+                    <button class="tab-btn" data-tab="portfolio">Portfolio Analysis</button>
+                    <button class="tab-btn" data-tab="returns">Returns Calculator</button>
+                </div>
+
+                <!-- SIP Calculator -->
+                <div class="calculator-content active" id="sip-calculator">
+                    <h2>SIP Investment Calculator</h2>
+                    <div class="calculator-grid">
+                        <div class="calculator-form">
+                            <div class="form-group">
+                                <label for="sip-amount">Monthly Investment (₹)</label>
+                                <input type="number" id="sip-amount" value="10000">
+                            </div>
+                            <div class="form-group">
+                                <label for="sip-years">Investment Period (Years)</label>
+                                <input type="number" id="sip-years" value="10">
+                            </div>
+                            <div class="form-group">
+                                <label for="sip-returns">Expected Returns (%)</label>
+                                <input type="number" id="sip-returns" value="12" step="0.1">
+                            </div>
+                            <button class="btn btn-primary" onclick="calculateSIP()">Calculate Returns</button>
+                        </div>
+                        <div class="calculator-result">
+                            <div class="result-summary">
+                                <div class="result-item">
+                                    <h4>Invested Amount</h4>
+                                    <p id="sip-invested">₹0</p>
+                                </div>
+                                <div class="result-item">
+                                    <h4>Est. Returns</h4>
+                                    <p id="sip-returns-value">₹0</p>
+                                </div>
+                                <div class="result-item">
+                                    <h4>Total Value</h4>
+                                    <p id="sip-total">₹0</p>
+                                </div>
+                            </div>
+                            <canvas id="sip-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lump Sum Calculator -->
+                <div class="calculator-content" id="lumpsum-calculator">
+                    <h2>Lump Sum Investment Calculator</h2>
+                    <div class="calculator-grid">
+                        <div class="calculator-form">
+                            <div class="form-group">
+                                <label for="lumpsum-amount">Investment Amount (₹)</label>
+                                <input type="number" id="lumpsum-amount" value="100000">
+                            </div>
+                            <div class="form-group">
+                                <label for="lumpsum-years">Investment Period (Years)</label>
+                                <input type="number" id="lumpsum-years" value="5">
+                            </div>
+                            <div class="form-group">
+                                <label for="lumpsum-returns">Expected Returns (%)</label>
+                                <input type="number" id="lumpsum-returns" value="12" step="0.1">
+                            </div>
+                            <button class="btn btn-primary" onclick="calculateLumpsum()">Calculate Returns</button>
+                        </div>
+                        <div class="calculator-result">
+                            <div class="result-summary">
+                                <div class="result-item">
+                                    <h4>Invested Amount</h4>
+                                    <p id="lumpsum-invested">₹0</p>
+                                </div>
+                                <div class="result-item">
+                                    <h4>Est. Returns</h4>
+                                    <p id="lumpsum-returns-value">₹0</p>
+                                </div>
+                                <div class="result-item">
+                                    <h4>Total Value</h4>
+                                    <p id="lumpsum-total">₹0</p>
+                                </div>
+                            </div>
+                            <canvas id="lumpsum-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Analysis -->
+                <div class="calculator-content" id="portfolio-calculator">
+                    <h2>Portfolio Analysis</h2>
+                    <div class="portfolio-grid">
+                        <div class="portfolio-form">
+                            <div class="portfolio-inputs">
+                                <div class="form-group">
+                                    <label for="investment-type">Investment Type</label>
+                                    <select id="investment-type">
+                                        <option value="equity">Equity</option>
+                                        <option value="debt">Debt</option>
+                                        <option value="gold">Gold</option>
+                                        <option value="real-estate">Real Estate</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="investment-value">Value (₹)</label>
+                                    <input type="number" id="investment-value">
+                                </div>
+                                <button class="btn btn-outline" onclick="addPortfolioItem()">Add Investment</button>
+                            </div>
+                            <div class="portfolio-list">
+                                <h3>Current Portfolio</h3>
+                                <div id="portfolio-items"></div>
+                            </div>
+                        </div>
+                        <div class="portfolio-analysis">
+                            <div class="result-summary">
+                                <div class="result-item">
+                                    <h4>Total Portfolio Value</h4>
+                                    <p id="portfolio-total">₹0</p>
+                                </div>
+                            </div>
+                            <canvas id="portfolio-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Returns Calculator -->
+                <div class="calculator-content" id="returns-calculator">
+                    <h2>Investment Returns Calculator</h2>
+                    <div class="calculator-grid">
+                        <div class="calculator-form">
+                            <div class="form-group">
+                                <label for="initial-investment">Initial Investment (₹)</label>
+                                <input type="number" id="initial-investment" value="100000">
+                            </div>
+                            <div class="form-group">
+                                <label for="current-value">Current Value (₹)</label>
+                                <input type="number" id="current-value" value="150000">
+                            </div>
+                            <div class="form-group">
+                                <label for="investment-period">Time Period (Years)</label>
+                                <input type="number" id="investment-period" value="3">
+                            </div>
+                            <button class="btn btn-primary" onclick="calculateReturns()">Calculate Returns</button>
+                        </div>
+                        <div class="calculator-result">
+                            <div class="result-summary">
+                                <div class="result-item">
+                                    <h4>Absolute Returns</h4>
+                                    <p id="absolute-returns">0%</p>
+                                </div>
+                                <div class="result-item">
+                                    <h4>CAGR</h4>
+                                    <p id="cagr-returns">0%</p>
+                                </div>
+                                <div class="result-item">
+                                    <h4>Total Gain</h4>
+                                    <p id="total-gain">₹0</p>
+                                </div>
+                            </div>
+                            <canvas id="returns-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Investment Services Section -->
+        <section class="investment-services">
+            <div class="container">
+                <h2>Our Investment Services</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <h3>Mutual Funds</h3>
+                        <ul>
+                            <li>Expert Fund Selection</li>
+                            <li>Portfolio Diversification</li>
+                            <li>Regular Monitoring</li>
+                            <li>Tax-Saving Options</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">Invest Now</a>
+                    </div>
+
+                    <div class="service-card">
+                        <h3>Stock Market</h3>
+                        <ul>
+                            <li>Share Trading</li>
+                            <li>Market Research</li>
+                            <li>Technical Analysis</li>
+                            <li>Portfolio Management</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">Start Trading</a>
+                    </div>
+
+                    <div class="service-card">
+                        <h3>Fixed Income</h3>
+                        <ul>
+                            <li>Fixed Deposits</li>
+                            <li>Bonds</li>
+                            <li>Government Securities</li>
+                            <li>Corporate Deposits</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+
+                    <div class="service-card">
+                        <h3>Alternative Investments</h3>
+                        <ul>
+                            <li>Real Estate</li>
+                            <li>Gold & Precious Metals</li>
+                            <li>Private Equity</li>
+                            <li>Structured Products</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">Explore Options</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <!-- Footer content same as other pages -->
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/investment.js"></script>
+</body>
+</html>
