@@ -11,8 +11,8 @@
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="responsive.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
@@ -26,85 +26,8 @@
         <div class="loader"></div>
     </div>
 
-    <!-- Market Ticker -->
-    <div class="market-ticker">
-        <div class="ticker-wrapper">
-            <div class="ticker-track">
-                <div class="ticker-item">
-                    <span class="stock">NIFTY 50</span>
-                    <span class="price up">21,853.80</span>
-                    <span class="change up">+0.95%</span>
-                </div>
-                <div class="ticker-item">
-                    <span class="stock">SENSEX</span>
-                    <span class="price up">72,186.09</span>
-                    <span class="change up">+1.10%</span>
-                </div>
-                <div class="ticker-item">
-                    <span class="stock">BANK NIFTY</span>
-                    <span class="price up">45,923.45</span>
-                    <span class="change up">+0.75%</span>
-                </div>
-                <div class="ticker-item">
-                    <span class="stock">USD/INR</span>
-                    <span class="price down">82.96</span>
-                    <span class="change down">-0.12%</span>
-                </div>
-                <div class="ticker-item">
-                    <span class="stock">GOLD</span>
-                    <span class="price up">₹62,580</span>
-                    <span class="change up">+0.65%</span>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Header Section -->
-    <header class="hero-section" style="background-image: url('../images/139.jpg');">
-        <nav class="nav-wrapper">
-            <div class="logo">Indian<span>Money</span>Master</div>
-            <ul class="menu">
-                <li><a href="index.html">Home</a></li>
-                <li class="dropdown">
-                    <a href="#">Services</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="tax-services.html">Tax Services</a></li>
-                        <li><a href="business-services.html">Business Services</a></li>
-                        <li><a href="wealth-services.html">Wealth Management</a></li>
-                        <li><a href="compliance.html">Compliance Services</a></li>
-                    </ul>
-                </li>
-                <li><a href="about.html">About Us</a></li>
-                <li class="dropdown">
-                    <a href="#" class="active">Solutions</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="investment.html">Investment Planning</a></li>
-                        <li><a href="retirement.html" class="active">Retirement Planning</a></li>
-                        <li><a href="tax-planning.html">Tax Planning</a></li>
-                        <li><a href="business-setup.html">Business Setup</a></li>
-                    </ul>
-                </li>
-                <li><a href="insights.html">Insights</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <button class="mobile-menu-btn">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </nav>
-
-        <div class="hero-content" data-aos="fade-up">
-            <h1 class="main-heading">
-                <span class="gradient-text">Retirement Planning</span>
-                <span class="emphasis-text">Your Path to a Secure Future</span>
-            </h1>
-            <p class="hero-tagline">
-                Plan today for a comfortable and worry-free retirement tomorrow
-            </p>
-        </div>
-    </header>
-
+    
+    
     <!-- Retirement Content Section -->
     <section class="investment-content" data-aos="fade-up">
         <div class="container">
@@ -269,66 +192,23 @@
                     </div>
                 </div>
             </section>
-
-            <!-- CTA Section -->
-            <section class="cta-section parallax" data-aos="fade-up" style="background-image: url('../images/142.jpg');">
-                <div class="container">
-                    <h2>Start Planning Your Retirement Today</h2>
-                    <p>Get expert guidance for a secure and comfortable retirement</p>
-                    <div class="cta-buttons">
-                        <a href="contact.html" class="btn-primary">Schedule Consultation <i class="fas fa-arrow-right"></i></a>
-                        <a href="tel:+911234567890" class="btn-secondary"><i class="fas fa-phone"></i> Call Us Now</a>
-                    </div>
-                </div>
-            </section>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>About Us</h3>
-                    <p>Founded in 2002, IndianMoney Master is your trusted partner in wealth creation and financial planning. We provide comprehensive financial solutions tailored to your needs with a focus on quality, transparency, and customer satisfaction.</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Our Services</h3>
-                    <ul>
-                        <li><a href="tax-services.html">Tax Services</a></li>
-                        <li><a href="business-services.html">Business Services</a></li>
-                        <li><a href="wealth-services.html">Wealth Management</a></li>
-                        <li><a href="compliance.html">Compliance Services</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Contact Info</h3>
-                    <p>
-                        <i class="fas fa-phone"></i> +91 1234567890<br>
-                        <i class="fas fa-envelope"></i> info@indianmoneymaster.com<br>
-                        <i class="fas fa-map-marker-alt"></i> Mumbai, Maharashtra, India
-                    </p>
-                </div>
-                <div class="footer-section">
-                    <h3>Follow Us</h3>
-                    <div class="social-icons">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 IndianMoney Master. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+    <!-- CTA Container -->
+    <div class="cta-container">
+        <!-- CTA will be loaded here by script -->
+    </div>
+
+    <!-- Footer Container -->
+    <div class="footer-container">
+        <!-- Footer will be loaded here by script -->
+    </div>
 
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="scripts.js"></script>
+    <script defer src="js/script.js"></script>
 </body>
 </html> 

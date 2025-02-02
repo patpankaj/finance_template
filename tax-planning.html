@@ -3,340 +3,186 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Expert tax planning services to optimize your tax savings and ensure compliance">
-    <meta name="keywords" content="tax planning, tax optimization, tax saving, tax compliance, financial planning">
-    <title>Tax Planning Services - IndianMoney Master</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <style>
-        .ticker-wrap {
-            overflow: hidden;
-            background-color: #212529;
-        }
-        
-        .ticker {
-            display: flex;
-            animation: ticker 30s linear infinite;
-            white-space: nowrap;
-        }
-        
-        .ticker-item {
-            padding: 0 2rem;
-            color: white;
-        }
-        
-        @keyframes ticker {
-            0% { transform: translateX(100%); }
-            100% { transform: translateX(-100%); }
-        }
-        
-        .value-up {
-            color: #28a745;
-        }
-        
-        .value-down {
-            color: #dc3545;
-        }
-    </style>
-</head>
-<body>
-    <!-- Add this at the top of the body section -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">Finance Template</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="investment.html">Investment</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="tax-planning.html">Tax Planning</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="insurance.html">Insurance</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <meta name="description" content="Expert Tax Planning Services - IndianMoney Master">
+    <meta name="keywords" content="tax planning, tax services, financial planning, tax saving">
+    <title>Tax Planning - IndianMoney Master</title>
 
-    <!-- Market Ticker -->
-    <div class="container-fluid bg-dark text-white py-2">
-        <div class="ticker-wrap">
-            <div class="ticker">
-                <div class="ticker-item">
-                    NIFTY: <span id="nifty-value">Loading...</span>
-                    <span id="nifty-change" class="ms-2">Loading...</span>
-                </div>
-                <div class="ticker-item">
-                    SENSEX: <span id="sensex-value">Loading...</span>
-                    <span id="sensex-change" class="ms-2">Loading...</span>
-                </div>
-                <div class="ticker-item">
-                    USD/INR: <span id="usdinr-value">Loading...</span>
-                    <span id="usdinr-change" class="ms-2">Loading...</span>
-                </div>
-                <!-- Add more ticker items as needed -->
-            </div>
-        </div>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader"></div>
     </div>
 
-    <!-- Header -->
-    <header class="bg-primary text-white text-center py-5">
+    <!-- Enhanced Tax Planning Benefits Section -->
+    <section class="tax-benefits-section" data-aos="fade-up" style="background-image: url('images/tax-bg.jpg'); background-attachment: fixed; background-size: cover; position: relative;">
+        <div class="overlay"></div>
         <div class="container">
-            <h1 class="display-4">Tax Planning Services</h1>
-            <p class="lead">Strategic tax planning solutions to optimize your financial future</p>
-            <a href="#contact" class="btn btn-light btn-lg">Get Started</a>
-        </div>
-    </header>
-
-    <!-- Tax Planning Content -->
-    <section class="service-content tax-planning">
-        <div class="container">
-            <!-- Hero Section -->
-            <section class="service-hero" data-aos="fade-up">
-                <div class="hero-content">
-                    <h1>Strategic Tax Planning Solutions</h1>
-                    <p>Optimize your tax savings with our expert guidance and comprehensive tax planning strategies</p>
-                </div>
-            </section>
-
-            <!-- Overview Section -->
-            <section class="overview-section" data-aos="fade-up">
-                <div class="overview-grid">
-                    <div class="overview-content">
-                        <h2>Comprehensive Tax Planning</h2>
-                        <p>Our tax planning services help you minimize tax liability while ensuring full compliance with tax laws. We provide personalized strategies tailored to your financial situation.</p>
-                        <div class="key-points">
-                            <div class="point">
-                                <i class="fas fa-chart-pie"></i>
-                                <span>Tax Optimization</span>
-                            </div>
-                            <div class="point">
-                                <i class="fas fa-shield-alt"></i>
-                                <span>Legal Compliance</span>
-                            </div>
-                            <div class="point">
-                                <i class="fas fa-hand-holding-usd"></i>
-                                <span>Maximum Savings</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="overview-image">
-                        <img src="../images/132.jpg" alt="Tax Planning Services">
-                    </div>
-                </div>
-            </section>
-
-            <!-- Services Section -->
-            <section class="services-section" data-aos="fade-up">
-                <h2>Our Tax Planning Services</h2>
-                <div class="services-grid">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-calculator"></i>
-                        </div>
-                        <h3>Income Tax Planning</h3>
-                        <ul>
-                            <li>Tax liability assessment</li>
-                            <li>Deduction optimization</li>
-                            <li>Investment planning for tax benefits</li>
-                            <li>Advance tax planning</li>
-                        </ul>
-                    </div>
-
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-building"></i>
-                        </div>
-                        <h3>Business Tax Planning</h3>
-                        <ul>
-                            <li>Corporate tax strategies</li>
-                            <li>GST planning</li>
-                            <li>Business structure optimization</li>
-                            <li>Tax-efficient operations</li>
-                        </ul>
-                    </div>
-
-                    <div class="service-card">
-                        <div class="service-icon">
+            <h2 class="section-title text-center mega-gradient-heading">Strategic Tax Planning Benefits</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card premium" data-aos="fade-up" data-aos-delay="100">
+                    <div class="benefit-icon-wrapper">
+                        <div class="benefit-icon">
                             <i class="fas fa-chart-line"></i>
                         </div>
-                        <h3>Investment Tax Planning</h3>
-                        <ul>
-                            <li>Tax-saving investments</li>
-                            <li>Capital gains planning</li>
-                            <li>Retirement tax planning</li>
-                            <li>Estate tax planning</li>
-                        </ul>
                     </div>
-                </div>
-            </section>
-
-            <!-- Benefits Section -->
-            <section class="benefits-section" data-aos="fade-up">
-                <h2>Why Choose Our Tax Planning Services?</h2>
-                <div class="benefits-grid">
-                    <div class="benefit-card">
-                        <i class="fas fa-user-tie"></i>
-                        <h3>Expert Guidance</h3>
-                        <p>Our team of tax experts provides professional advice tailored to your needs</p>
+                    <div class="image-item">
+                        <img src="images/3.png" alt="Maximize Savings">
                     </div>
-                    <div class="benefit-card">
-                        <i class="fas fa-clock"></i>
-                        <h3>Timely Service</h3>
-                        <p>Stay ahead of deadlines with our proactive tax planning approach</p>
-                    </div>
-                    <div class="benefit-card">
-                        <i class="fas fa-check-circle"></i>
-                        <h3>Compliance Assured</h3>
-                        <p>Full compliance with latest tax laws and regulations</p>
-                    </div>
-                    <div class="benefit-card">
-                        <i class="fas fa-coins"></i>
-                        <h3>Maximum Savings</h3>
-                        <p>Optimize your tax savings through legal and efficient strategies</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Tax Calculator Section -->
-            <section class="calculator-section" data-aos="fade-up" style="background-image: url('../images/141.jpg');">
-                <div class="container">
-                    <h2>Tax Calculator</h2>
-                    <p>Estimate your tax liability and plan your savings</p>
-                    
-                    <div class="calculator-wrapper">
-                        <div class="calculator-tabs">
-                            <button class="tab-btn active" data-tab="old">Old Regime</button>
-                            <button class="tab-btn" data-tab="new">New Regime</button>
+                    <h3 class="benefit-title">Maximize Savings</h3>
+                    <p class="benefit-description">Optimize your tax liability through strategic planning and expert guidance.</p>
+                    <div class="benefit-stats">
+                        <div class="stat">
+                            <img src="images/15.png" alt="Average saving">
+                            <span class="stat-value">30%</span>
+                            <span class="stat-label">Average Savings</span>
                         </div>
-
-                        <form id="taxForm" class="calculator-form">
-                            <div class="form-group">
-                                <label for="annual-income">Annual Income (₹)</label>
-                                <input type="number" id="annual-income" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="investments">Total Investments (₹)</label>
-                                <input type="number" id="investments" required>
-                            </div>
-                            <button type="submit" class="calculate-btn">Calculate Tax</button>
-                        </form>
-                        <div id="taxResult" class="calculator-result"></div>
                     </div>
                 </div>
-            </section>
-
-            <!-- CTA Section -->
-            <section class="cta-section" data-aos="fade-up">
-                <div class="container">
-                    <h2>Start Planning Your Taxes Today</h2>
-                    <p>Get expert guidance for optimal tax planning</p>
-                    <a href="contact.html" class="btn-primary">Schedule Consultation</a>
+                <div class
+                ="benefit-card premium" data-aos="fade-up" data-aos-delay="200">
+                    <div class="benefit-icon-wrapper">
+                        <div class="benefit-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                    </div>
+                    <h3 class="benefit-title">Legal Compliance</h3>
+                    <p class="benefit-description">Stay compliant with latest tax regulations while maximizing benefits.</p>
+                    <div class="benefit-stats">
+                        <div class="stat">
+                            <span class="stat-value">100%</span>
+                            <span class="stat-label">Compliance Rate</span>
+                        </div>
+                    </div>
                 </div>
-            </section>
+                <div class="benefit-card premium" data-aos="fade-up" data-aos-delay="300">
+                    <div class="benefit-icon-wrapper">
+                        <div class="benefit-icon">
+                            <i class="fas fa-hand-holding-usd"></i>
+                        </div>
+                    </div>
+                    <h3 class="benefit-title">Wealth Growth</h3>
+                    <p class="benefit-description">Strategic tax planning for long-term wealth accumulation.</p>
+                    <div class="benefit-stats">
+                        <div class="stat">
+                            <span class="stat-value">25%+</span>
+                            <span class="stat-label">Growth Rate</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
+    <!-- Tax Planning Services -->
+    <section class="tax-services-section" data-aos="fade-up">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>About Us</h3>
-                    <p>IndianMoney Master is your trusted partner for comprehensive financial planning and wealth management services.</p>
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="tax-content">
+                        <h2 class="gradient-heading">Comprehensive Tax Planning Solutions</h2>
+                        <div class="service-list">
+                            <div class="service-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Personal Tax Planning</span>
+                            </div>
+                            <div class="service-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Business Tax Strategy</span>
+                            </div>
+                            <div class="service-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Investment Tax Planning</span>
+                            </div>
+                            <div class="service-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Estate Tax Planning</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Services</h3>
-                    <ul>
-                        <li><a href="investment.html">Investment Planning</a></li>
-                        <li><a href="retirement.html">Retirement Planning</a></li>
-                        <li><a href="taxplanning.html">Tax Planning</a></li>
-                        <li><a href="insurance.html">Insurance</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Contact Us</h3>
-                    <p>Email: info@indianmoneymaster.com</p>
-                    <p>Phone: +91 1234567890</p>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="tax-image-grid">
+                        <div class="image-item">
+                            <img src="images/26.jpg" alt="Personal Tax Planning"
+                            <p>Personal Tax Planning</p>
+                        </div>
+                        <div class="image-item">
+                            <img src="images/27.jpg" alt="Business Tax Strategy">
+                        </div>
+                        <div class="image-item">
+                            <img src="images/16.jpg" alt="Investment Planning">
+                        </div>
+                        <div class="image-item">
+                            <img src="images/30.jpg" alt="Estate Planning">
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 IndianMoney Master. All rights reserved.</p>
+        </div>
+    </section>
+
+    <!-- Tax Saving Calculator -->
+    <section class="calculator-section" data-aos="fade-up">
+        <div class="container">
+            <h2 class="section-title text-center gradient-heading">Tax Saving Calculator</h2>
+            <div class="calculator-wrapper">
+                <div class="calculator-form">
+                    <div class="form-group">
+                        <label>Annual Income</label>
+                        <input type="number" id="annual-income" placeholder="Enter your annual income">
+                    </div>
+                    <div class="form-group">
+                        <label>Investments (80C)</label>
+                        <input type="number" id="investments" placeholder="Enter your investments">
+                    </div>
+                    <button class="calculate-btn">Calculate Savings</button>
+                    <div class="result-display">
+                        <h3>Potential Tax Savings</h3>
+                        <span id="tax-savings">₹0</span>
+                    </div>
+                </div>
             </div>
         </div>
-    </footer>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose-section" data-aos="fade-up">
+        <div class="container">
+            <h2 class="section-title text-center gradient-heading">Why Choose Our Tax Planning Services</h2>
+            <div class="features-grid">
+                <div class="feature-card" data-aos="zoom-in" data-aos-delay="100">
+                    <i class="fas fa-user-tie"></i>
+                    <h3>Expert Advisors</h3>
+                    <p>Experienced professionals dedicated to your financial success.</p>
+                </div>
+                <div class="feature-card" data-aos="zoom-in" data-aos-delay="200">
+                    <i class="fas fa-clock"></i>
+                    <h3>Timely Service</h3>
+                    <p>Prompt and efficient tax planning solutions.</p>
+                </div>
+                <div class="feature-card" data-aos="zoom-in" data-aos-delay="300">
+                    <i class="fas fa-chart-pie"></i>
+                    <h3>Customized Plans</h3>
+                    <p>Tailored strategies for your unique financial situation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
 
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="scripts.js"></script>
-    <script>
-        function updateMarketData() {
-            // Simulated market data (replace with actual API calls)
-            const marketData = {
-                nifty: {
-                    value: Math.floor(19000 + Math.random() * 1000),
-                    change: (Math.random() * 2 - 1).toFixed(2)
-                },
-                sensex: {
-                    value: Math.floor(63000 + Math.random() * 2000),
-                    change: (Math.random() * 2 - 1).toFixed(2)
-                },
-                usdinr: {
-                    value: (82 + Math.random()).toFixed(2),
-                    change: (Math.random() * 0.4 - 0.2).toFixed(2)
-                }
-            };
-
-            // Update DOM elements
-            updateTickerItem('nifty', marketData.nifty);
-            updateTickerItem('sensex', marketData.sensex);
-            updateTickerItem('usdinr', marketData.usdinr);
-        }
-
-        function updateTickerItem(id, data) {
-            const valueElement = document.getElementById(`${id}-value`);
-            const changeElement = document.getElementById(`${id}-change`);
-            
-            valueElement.textContent = data.value;
-            changeElement.textContent = `${data.change > 0 ? '+' : ''}${data.change}%`;
-            changeElement.className = `ms-2 ${data.change > 0 ? 'value-up' : 'value-down'}`;
-        }
-
-        // Update every 2 seconds
-        updateMarketData();
-        setInterval(updateMarketData, 2000);
-    </script>
+    <script src="js/script.js"></script>
 </body>
 </html> 

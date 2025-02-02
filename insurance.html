@@ -1,98 +1,171 @@
-<header class="bg-primary text-white text-center py-5">
-    <div class="container">
-        <h1 class="display-4">Insurance Services</h1>
-        <p class="lead">Protect your future with comprehensive insurance solutions</p>
-        <a href="#contact" class="btn btn-light btn-lg">Get Started</a>
-    </div>
-</header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Comprehensive Insurance Solutions - IndianMoney Master">
+    <meta name="keywords" content="insurance planning, life insurance, health insurance, financial planning">
+    <title>Insurance Services - IndianMoney Master</title>
 
-<!-- Market Ticker Section -->
-<div class="container-fluid bg-dark text-white py-2">
-    <div class="ticker-wrap">
-        <div class="ticker">
-            <div class="ticker-item">
-                NIFTY: <span id="nifty-value">Loading...</span>
-                <span id="nifty-change" class="ms-2">Loading...</span>
-            </div>
-            <div class="ticker-item">
-                SENSEX: <span id="sensex-value">Loading...</span>
-                <span id="sensex-change" class="ms-2">Loading...</span>
-            </div>
-            <div class="ticker-item">
-                USD/INR: <span id="usdinr-value">Loading...</span>
-                <span id="usdinr-change" class="ms-2">Loading...</span>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Insurance Solutions Section -->
+    <section class="insurance-hero-section" data-aos="fade-up" style="background-image: url('images/82.jpg');">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="insurance-grid">
+                <div class="insurance-card premium" data-aos="fade-up" data-aos-delay="100">
+                    <div class="insurance-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <div class="insurance-image">
+                        <img src="images/84.jpg" alt="Health Insurance">
+                    </div>
+                    <h3>Health Insurance</h3>
+                    <p>Comprehensive health coverage for you and your family</p>
+                    <div class="insurance-features">
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Cashless Treatment</li>
+                            <li><i class="fas fa-check-circle"></i> Pre-existing Coverage</li>
+                            <li><i class="fas fa-check-circle"></i> No Claim Bonus</li>
+                        </ul>
+                    </div>
+                    <a href="#" class="insurance-btn">Learn More</a>
+                </div>
+
+                <div class="insurance-card premium" data-aos="fade-up" data-aos-delay="200">
+                    <div class="insurance-icon">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <div class="insurance-image">
+                        <img src="images/86.jpg" alt="Life Insurance">
+                    </div>
+                    <h3>Life Insurance</h3>
+                    <p>Secure your family's future with comprehensive life coverage</p>
+                    <div class="insurance-features">
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Term Life Plans</li>
+                            <li><i class="fas fa-check-circle"></i> Investment Benefits</li>
+                            <li><i class="fas fa-check-circle"></i> Tax Benefits</li>
+                        </ul>
+                    </div>
+                    <a href="#" class="insurance-btn">Learn More</a>
+                </div>
+
+                <div class="insurance-card premium" data-aos="fade-up" data-aos-delay="300">
+                    <div class="insurance-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <div class="insurance-image">
+                        <img src="images/88.jpg" alt="Vehicle Insurance">
+                    </div>
+                    <h3>Vehicle Insurance</h3>
+                    <p>Comprehensive coverage for your vehicles</p>
+                    <div class="insurance-features">
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Accident Coverage</li>
+                            <li><i class="fas fa-check-circle"></i> Third Party Liability</li>
+                            <li><i class="fas fa-check-circle"></i> Zero Depreciation</li>
+                        </ul>
+                    </div>
+                    <a href="#" class="insurance-btn">Learn More</a>
+                </div>
             </div>
         </div>
+    </section>
+
+    <!-- Insurance Benefits Section -->
+    <section class="insurance-benefits" data-aos="fade-up">
+        <div class="container">
+            <h2 class="section-title gradient-heading text-center">Why Choose Our Insurance Services</h2>
+            <div class="benefits-container">
+                <div class="benefit-item" data-aos="fade-right">
+                    <div class="benefit-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Complete Protection</h3>
+                    <p>Comprehensive coverage for all aspects of your life and assets</p>
+                </div>
+                <div class="benefit-item" data-aos="fade-up">
+                    <div class="benefit-icon">
+                        <i class="fas fa-hand-holding-usd"></i>
+                    </div>
+                    <h3>Affordable Premiums</h3>
+                    <p>Competitive rates with flexible payment options</p>
+                </div>
+                <div class="benefit-item" data-aos="fade-left">
+                    <div class="benefit-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Quick Claims</h3>
+                    <p>Hassle-free and quick claim settlement process</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Insurance Calculator Section -->
+    <section class="calculator-section insurance-calculator" data-aos="fade-up">
+        <div class="container">
+            <h2 class="section-title gradient-heading text-center">Insurance Premium Calculator</h2>
+            <div class="calculator-wrapper">
+                <div class="calculator-form">
+                    <div class="form-group">
+                        <label>Type of Insurance</label>
+                        <select id="insurance-type">
+                            <option value="health">Health Insurance</option>
+                            <option value="life">Life Insurance</option>
+                            <option value="vehicle">Vehicle Insurance</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Coverage Amount</label>
+                        <input type="number" id="coverage-amount" placeholder="Enter coverage amount">
+                    </div>
+                    <button class="calculate-btn">Calculate Premium</button>
+                    <div class="result-display">
+                        <h3>Estimated Premium</h3>
+                        <span id="premium-amount">₹0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Container -->
+    <div class="cta-container">
+        <!-- CTA will be loaded here by script -->
     </div>
-</div>
 
-<!-- Add this CSS in the head section -->
-<style>
-    .ticker-wrap {
-        overflow: hidden;
-        background-color: #212529;
-    }
-    
-    .ticker {
-        display: flex;
-        animation: ticker 30s linear infinite;
-        white-space: nowrap;
-    }
-    
-    .ticker-item {
-        padding: 0 2rem;
-        color: white;
-    }
-    
-    @keyframes ticker {
-        0% { transform: translateX(100%); }
-        100% { transform: translateX(-100%); }
-    }
-    
-    .value-up {
-        color: #28a745;
-    }
-    
-    .value-down {
-        color: #dc3545;
-    }
-</style>
+    <!-- Footer Container -->
+    <div class="footer-container">
+        <!-- Footer will be loaded here by script -->
+    </div>
 
-<!-- Add this JavaScript before the closing body tag -->
-<script>
-    function updateMarketData() {
-        // Simulated market data (replace with actual API calls)
-        const marketData = {
-            nifty: {
-                value: Math.floor(19000 + Math.random() * 1000),
-                change: (Math.random() * 2 - 1).toFixed(2)
-            },
-            sensex: {
-                value: Math.floor(63000 + Math.random() * 2000),
-                change: (Math.random() * 2 - 1).toFixed(2)
-            },
-            usdinr: {
-                value: (82 + Math.random()).toFixed(2),
-                change: (Math.random() * 0.4 - 0.2).toFixed(2)
-            }
-        };
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="js/script.js"></script>
 
-        // Update DOM elements
-        updateTickerItem('nifty', marketData.nifty);
-        updateTickerItem('sensex', marketData.sensex);
-        updateTickerItem('usdinr', marketData.usdinr);
-    }
-
-    function updateTickerItem(id, data) {
-        const valueElement = document.getElementById(`${id}-value`);
-        const changeElement = document.getElementById(`${id}-change`);
-        
-        valueElement.textContent = data.value;
-        changeElement.textContent = `${data.change > 0 ? '+' : ''}${data.change}%`;
-        changeElement.className = `ms-2 ${data.change > 0 ? 'value-up' : 'value-down'}`;
-    }
-
-    // Update every 2 seconds
-    updateMarketData();
-    setInterval(updateMarketData, 2000);
-</script> 
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
