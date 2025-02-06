@@ -4029,7 +4029,7 @@ img {
     overflow: hidden;
 }
 
-.hero-video {
+/* .hero-video {
     position: absolute;
     top: 0;
     left: 0;
@@ -4048,7 +4048,7 @@ img {
     background: rgba(0, 0, 0, 0.5);
     z-index: 0;
 }
-
+ */
 .hero-content {
     text-align: center;
     z-index: 1;
