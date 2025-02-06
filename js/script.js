@@ -1,4 +1,3 @@
-
 // ==================== Global Constants ====================
 const COMPONENT_PATHS = {
     header: 'header.html',
@@ -451,5 +450,77 @@ document.addEventListener("DOMContentLoaded", function () {
                 parentLi.classList.toggle("active");
             }
         });
+    });
+});
+
+// Insights Page Scripts
+document.addEventListener('DOMContentLoaded', function() {
+    // Check if we're on the insights page
+    if (document.querySelector('.newsSwiper')) {
+        // Initialize Swiper for News Slider
+        const newsSwiper = new Swiper('.newsSwiper', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            centeredSlides: true,
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 1,
+                },
+                768: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 3,
+                },
+            }
+        });
+    }
+
+    // Initialize AOS if not already initialized
+    if (typeof AOS === 'object' && !AOS.instance) {
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    }
+
+    // Initialize Featured Slider
+    const featuredSwiper = new Swiper('.featuredSwiper', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            768: {
+                slidesPerView: 2,
+            },
+            1024: {
+                slidesPerView: 3,
+            }
+        }
     });
 });
