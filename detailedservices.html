@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional Wealth Management and Financial Services">
+    <title>Detailed Services - IndianMoney Master</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Fancybox CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        .services-gallery {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+
+        .gallery-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .gallery-header h2 {
+            color: #333;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-transform: capitalize;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            width: 100%;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery-image-wrapper {
+            position: relative;
+            width: 100%;
+            padding-top: 75%; /* 4:3 Aspect Ratio */
+            overflow: hidden;
+        }
+
+        .gallery-image-wrapper img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* This ensures image covers the entire area */
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-image-wrapper img {
+            transform: scale(1.1);
+        }
+
+        .gallery-caption {
+            display: none;
+        }
+
+        /* Service Name Label (Always Visible) */
+        .service-label {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 15px 20px;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7));
+            color: #ffffff;
+            text-align: center;
+            font-weight: 700;
+            font-size: 1.25rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            font-family: 'Poppins', sans-serif;
+            z-index: 2;
+        }
+
+        /* Hover effect for label */
+        .gallery-item:hover .service-label {
+            background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8));
+        }
+
+        /* Fancybox Customization */
+        .fancybox__container {
+            --fancybox-bg: rgba(0, 0, 0, 0.95);
+        }
+
+        .fancybox__toolbar {
+            --fancybox-color: #fff;
+        }
+
+        .fancybox__nav {
+            --fancybox-color: #fff;
+        }
+
+        /* Slider navigation arrows */
+        .fancybox__nav .carousel__button {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            width: 48px;
+            height: 48px;
+        }
+
+        .fancybox__nav .carousel__button:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Thumbnail styling */
+        .fancybox__thumbs {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        .fancybox__thumb {
+            width: 96px;
+            height: 72px;
+        }
+
+        /* Zoom animation */
+        .fancybox-zoomIn {
+            animation: fcbZoomIn .3s ease-in-out;
+        }
+
+        .fancybox-zoomOut {
+            animation: fcbZoomOut .3s ease-in-out;
+        }
+
+        @keyframes fcbZoomIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes fcbZoomOut {
+            from {
+                opacity: 1;
+                transform: scale(1);
+            }
+            to {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                gap: 20px;
+            }
+            
+            .gallery-caption h4 {
+                font-size: 1.1rem;
+            }
+            
+            .gallery-caption p {
+                font-size: 0.85rem;
+            }
+
+            .service-label {
+                font-size: 1.1rem;
+                padding: 12px 15px;
+            }
+        }
+
+        /* Container styles for header, footer, and CTA */
+        .header-container,
+        .footer-container,
+        .cta-container {
+            width: 100%;
+        }
+
+        /* Ensure proper spacing */
+        .services-gallery {
+            padding: 80px 0;
+            margin-top: 20px; /* Space after header */
+            margin-bottom: 20px; /* Space before CTA */
+        }
+
+        /* Market ticker styles */
+        #market-ticker {
+            width: 100%;
+            background: #f8f9fa;
+            padding: 10px 0;
+            margin-bottom: 20px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .services-gallery {
+                padding: 40px 0;
+            }
+        }
+
+        /* Ensure smooth loading */
+        .header-container,
+        .footer-container,
+        .cta-container {
+            min-height: 50px; /* Prevents content jump */
+            position: relative;
+        }
+
+        /* Loading indicator styles */
+        .loading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40px;
+            height: 40px;
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #3498db;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: translate(-50%, -50%) rotate(0deg); }
+            100% { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+        /* Header specific styles */
+        .header-section {
+            width: 100%;
+            position: relative;
+            z-index: 1000;
+        }
+
+        /* Ensure header loads properly */
+        .header-section:empty {
+            min-height: 80px;
+            background: #ffffff;
+        }
+
+        /* Prevent content jump during header load */
+        .services-gallery {
+            margin-top: 80px; /* Adjust based on your header height */
+        }
+
+        /* If your header is fixed, add these styles */
+        .header-section .fixed-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: #ffffff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Integration -->
+    <header class="header-section">
+        <script>
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.querySelector('.header-section').innerHTML = data;
+                    
+                    // Reinitialize any header-specific scripts
+                    if (typeof initializeHeader === 'function') {
+                        initializeHeader();
+                    }
+                })
+                .catch(error => console.error('Error loading header:', error));
+        </script>
+    </header>
+
+    <!-- Market Ticker will be loaded by script -->
+    <!-- <div id="market-ticker"></div> -->
+
+    <section class="services-gallery">
+        <div class="container">
+            <div class="gallery-header">
+                <h2 data-aos="fade-down">Our Detailed Services</h2>
+                <p data-aos="fade-up" data-aos-delay="200">Explore our comprehensive range of financial solutions</p>
+            </div>
+            
+            <div class="gallery-grid">
+                <!-- Services from pages-2.pdf -->
+
+                <!-- Income Tax Return Filing -->
+                <div class="gallery-item" data-aos="fade-up">
+                    <a href="images/18.jpg" data-fancybox="gallery">
+                        <div class="gallery-image-wrapper">
+                            <img src="images/18.jpg" alt="Income Tax Return Filing">
+                            <div class="service-label">Income Tax Return Filing</div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- GST Registration -->
+                <div class="gallery-item" data-aos="fade-up">
+                    <a href="images/21.jpg" data-fancybox="gallery">
+                        <div class="gallery-image-wrapper">
+                            <img src="images/21.jpg" alt="GST Registration">
+                            <div class="service-label">GST Registration</div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Company Registration -->
+                <div class="gallery-item" data-aos="fade-up">
+                    <a href="images/24.jpg" data-fancybox="gallery">
+                        <div class="gallery-image-wrapper">
+                            <img src="images/24.jpg" alt="Company Registration">
+                            <div class="service-label">Company Registration</div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- MSME Registration -->
+                <div class="gallery-item" data-aos="fade-up">
+                    <a href="images/26.jpg" data-fancybox="gallery">
+                        <div class="gallery-image-wrapper">
+                            <img src="images/26.jpg" alt="MSME Registration">
+                            <div class="service-label">MSME Registration</div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Trademark Registration -->
+                <div class="gallery-item" data-aos="fade-up">
+                    <a href="images/39.jpg" data-fancybox="gallery">
+                        <div class="gallery-image-wrapper">
+                            <img src="images/39.jpg" alt="Trademark Registration">
+                            <div class="service-label">Trademark Registration</div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Food License -->
+                <div class="gallery-item" data-aos="fade-up">
+                    <a href="images/30.jpg" data-fancybox="gallery">
+                        <div class="gallery-image-wrapper">
+                            <img src="images/30.jpg" alt="Food License">
+                            <div class="service-label">Food License</div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Import Export Code -->
+                <div class="gallery-item" data-aos="fade-up">
+                    <a href="images/33.jpg" data-fancybox="gallery">
+                        <div class="gallery-image-wrapper">
+                            <img src="images/33.jpg" alt="Import Export Code">
+                            <div class="service-label">Import Export Code</div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Digital Signature -->
+                <div class="gallery-item" data-aos="fade-up">
+                    <a href="images/36.jpg" data-fancybox="gallery">
+                        <div class="gallery-image-wrapper">
+                            <img src="images/36.jpg" alt="Digital Signature">
+                            <div class="service-label">Digital Signature</div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Professional Tax -->
+                <div class="gallery-item" data-aos="fade-up">
+                    <a href="images/27.jpg" data-fancybox="gallery">
+                        <div class="gallery-image-wrapper">
+                            <img src="images/27.jpg" alt="Professional Tax">
+                            <div class="service-label">Professional Tax</div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Shop Act License -->
+                <div class="gallery-item" data-aos="fade-up">
+                    <a href="images/42.jpg" data-fancybox="gallery">
+                        <div class="gallery-image-wrapper">
+                            <img src="images/42.jpg" alt="Shop Act License">
+                            <div class="service-label">Shop Act License</div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Services from pages-3.pdf -->
+
+                <!-- ROC Annual Filing -->
+                <div class="gallery-item" data-aos="fade-up">
+                    <a href="images/45.jpg" data-fancybox="gallery">
+                        <div class="gallery-image-wrapper">
+                            <img src="images/45.jpg" alt="ROC Annual Filing">
+                            <div class="service-label">ROC Annual Filing</div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Accounting Services -->
+                <div class="gallery-item" data-aos="fade-up">
+                    <a href="images/48.jpg" data-fancybox="gallery">
+                        <div class="gallery-image-wrapper">
+                            <img src="images/48.jpg" alt="Accounting Services">
+                            <div class="service-label">Accounting Services</div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Project Report -->
+                <div class="gallery-item" data-aos="fade-up">
+                    <a href="images/51.jpg" data-fancybox="gallery">
+                        <div class="gallery-image-wrapper">
+                            <img src="images/51.jpg" alt="Project Report">
+                            <div class="service-label">Project Report</div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Services from pages-4.pdf -->
+
+                <!-- Business Advisory -->
+                <div class="gallery-item" data-aos="fade-up">
+                    <a href="images/54.jpg" data-fancybox="gallery">
+                        <div class="gallery-image-wrapper">
+                            <img src="images/54.jpg" alt="Business Advisory">
+                            <div class="service-label">Business Advisory</div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Compliance Management -->
+                <div class="gallery-item" data-aos="fade-up">
+                    <a href="images/57.jpg" data-fancybox="gallery">
+                        <div class="gallery-image-wrapper">
+                            <img src="images/57.jpg" alt="Compliance Management">
+                            <div class="service-label">Compliance Management</div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Audit & Assurance -->
+                <div class="gallery-item" data-aos="fade-up">
+                    <a href="images/60.jpg" data-fancybox="gallery">
+                        <div class="gallery-image-wrapper">
+                            <img src="images/60.jpg" alt="Audit & Assurance">
+                            <div class="service-label">Audit & Assurance</div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Additional Services from PDFs -->
+
+                <!-- ISO Registration -->
+                <div class="gallery-item" data-aos="fade-up">
+                    <a href="images/63.jpg" data-fancybox="gallery">
+                        <div class="gallery-image-wrapper">
+                            <img src="images/63.jpg" alt="ISO Registration">
+                            <div class="service-label">ISO Registration</div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- NGO Registration -->
+                <div class="gallery-item" data-aos="fade-up">
+                    <a href="images/66.jpg" data-fancybox="gallery">
+                        <div class="gallery-image-wrapper">
+                            <img src="images/66.jpg" alt="NGO Registration">
+                            <div class="service-label">NGO Registration</div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Trust Registration -->
+                <div class="gallery-item" data-aos="fade-up">
+                    <a href="images/69.jpg" data-fancybox="gallery">
+                        <div class="gallery-image-wrapper">
+                            <img src="images/69.jpg" alt="Trust Registration">
+                            <div class="service-label">Trust Registration</div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Society Registration -->
+                <div class="gallery-item" data-aos="fade-up">
+                    <a href="images/72.jpg" data-fancybox="gallery">
+                        <div class="gallery-image-wrapper">
+                            <img src="images/72.jpg" alt="Society Registration">
+                            <div class="service-label">Society Registration</div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Patent Registration -->
+                <div class="gallery-item" data-aos="fade-up">
+                    <a href="images/75.jpg" data-fancybox="gallery">
+                        <div class="gallery-image-wrapper">
+                            <img src="images/75.jpg" alt="Patent Registration">
+                            <div class="service-label">Patent Registration</div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Copyright Registration -->
+                <div class="gallery-item" data-aos="fade-up">
+                    <a href="images/78.jpg" data-fancybox="gallery">
+                        <div class="gallery-image-wrapper">
+                            <img src="images/78.jpg" alt="Copyright Registration">
+                            <div class="service-label">Copyright Registration</div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Business Consultant -->
+                <div class="gallery-item" data-aos="fade-up">
+                    <a href="images/81.jpg" data-fancybox="gallery">
+                        <div class="gallery-image-wrapper">
+                            <img src="images/81.jpg" alt="Business Consultant">
+                            <div class="service-label">Business Consultant</div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Financial Consultant -->
+                <div class="gallery-item" data-aos="fade-up">
+                    <a href="images/84.jpg" data-fancybox="gallery">
+                        <div class="gallery-image-wrapper">
+                            <img src="images/84.jpg" alt="Financial Consultant">
+                            <div class="service-label">Financial Consultant</div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Legal Consultant -->
+                <div class="gallery-item" data-aos="fade-up">
+                    <a href="images/87.jpg" data-fancybox="gallery">
+                        <div class="gallery-image-wrapper">
+                            <img src="images/87.jpg" alt="Legal Consultant">
+                            <div class="service-label">Legal Consultant</div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Adding more services -->
+
+                <!-- Tax Consultant -->
+                <div class="gallery-item" data-aos="fade-up">
+                    <a href="images/90.jpg" data-fancybox="gallery">
+                        <div class="gallery-image-wrapper">
+                            <img src="images/90.jpg" alt="Tax Consultant">
+                            <div class="service-label">Tax Consultant</div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Startup India Registration -->
+                <div class="gallery-item" data-aos="fade-up">
+                    <a href="images/93.jpg" data-fancybox="gallery">
+                        <div class="gallery-image-wrapper">
+                            <img src="images/93.jpg" alt="Startup India Registration">
+                            <div class="service-label">Startup India Registration</div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Partnership Firm Registration -->
+                <div class="gallery-item" data-aos="fade-up">
+                    <a href="images/96.jpg" data-fancybox="gallery">
+                        <div class="gallery-image-wrapper">
+                            <img src="images/96.jpg" alt="Partnership Firm Registration">
+                            <div class="service-label">Partnership Firm Registration</div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- LLP Registration -->
+                <div class="gallery-item" data-aos="fade-up">
+                    <a href="images/99.jpg" data-fancybox="gallery">
+                        <div class="gallery-image-wrapper">
+                            <img src="images/99.jpg" alt="LLP Registration">
+                            <div class="service-label">LLP Registration</div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- One Person Company Registration -->
+                <div class="gallery-item" data-aos="fade-up">
+                    <a href="images/102.jpg" data-fancybox="gallery">
+                        <div class="gallery-image-wrapper">
+                            <img src="images/102.jpg" alt="One Person Company Registration">
+                            <div class="service-label">One Person Company Registration</div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Section 8 Company Registration -->
+                <div class="gallery-item" data-aos="fade-up">
+                    <a href="images/105.jpg" data-fancybox="gallery">
+                        <div class="gallery-image-wrapper">
+                            <img src="images/105.jpg" alt="Section 8 Company Registration">
+                            <div class="service-label">Section 8 Company Registration</div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Producer Company Registration -->
+                <div class="gallery-item" data-aos="fade-up">
+                    <a href="images/108.jpg" data-fancybox="gallery">
+                        <div class="gallery-image-wrapper">
+                            <img src="images/108.jpg" alt="Producer Company Registration">
+                            <div class="service-label">Producer Company Registration</div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Nidhi Company Registration -->
+                <div class="gallery-item" data-aos="fade-up">
+                    <a href="images/111.jpg" data-fancybox="gallery">
+                        <div class="gallery-image-wrapper">
+                            <img src="images/111.jpg" alt="Nidhi Company Registration">
+                            <div class="service-label">Nidhi Company Registration</div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- ESI Registration -->
+                <div class="gallery-item" data-aos="fade-up">
+                    <a href="images/114.jpg" data-fancybox="gallery">
+                        <div class="gallery-image-wrapper">
+                            <img src="images/114.jpg" alt="ESI Registration">
+                            <div class="service-label">ESI Registration</div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- PF Registration -->
+                <div class="gallery-item" data-aos="fade-up">
+                    <a href="images/45.jpg" data-fancybox="gallery">
+                        <div class="gallery-image-wrapper">
+                            <img src="images/45.jpg" alt="PF Registration">
+                            <div class="service-label">PF Registration</div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- FCRA Registration -->
+                <div class="gallery-item" data-aos="fade-up">
+                    <a href="images/120.jpg" data-fancybox="gallery">
+                        <div class="gallery-image-wrapper">
+                            <img src="images/120.jpg" alt="FCRA Registration">
+                            <div class="service-label">FCRA Registration</div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 12A & 80G Registration -->
+                <div class="gallery-item" data-aos="fade-up">
+                    <a href="images/123.jpg" data-fancybox="gallery">
+                        <div class="gallery-image-wrapper">
+                            <img src="images/123.jpg" alt="12A & 80G Registration">
+                            <div class="service-label">12A & 80G Registration</div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Adding 2 more services -->
+
+                <!-- GST Return Filing -->
+                <div class="gallery-item" data-aos="fade-up">
+                    <a href="images/126.jpg" data-fancybox="gallery">
+                        <div class="gallery-image-wrapper">
+                            <img src="images/126.jpg" alt="GST Return Filing">
+                            <div class="service-label">GST Return Filing</div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Business Valuation -->
+                <div class="gallery-item" data-aos="fade-up">
+                    <a href="images/129.jpg" data-fancybox="gallery">
+                        <div class="gallery-image-wrapper">
+                            <img src="images/129.jpg" alt="Business Valuation">
+                            <div class="service-label">Business Valuation</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section Integration -->
+    <div class="cta-container">
+        <iframe src="cta.html" onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"></iframe>
+    </div>
+
+    <!-- Footer Integration -->
+    <div class="footer-container">
+        <iframe src="footer.html" onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"></iframe>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+        
+        // Initialize Fancybox with enhanced slider options
+        Fancybox.bind('[data-fancybox="gallery"]', {
+            // Carousel sliding effect
+            Carousel: {
+                friction: 0.8,
+                Dots: false
+            },
+            
+            // Animation effects
+            animated: true,
+            showClass: "fancybox-zoomIn",
+            hideClass: "fancybox-zoomOut",
+            
+            // Navigation arrows
+            Navigation: {
+                prevTpl: '<svg><path d="M10 22L0 12L10 2" /></svg>',
+                nextTpl: '<svg><path d="M0 22L10 12L0 2" /></svg>'
+            },
+            
+            // Toolbar options
+            Toolbar: {
+                display: [
+                    "zoom",
+                    "slideshow",
+                    "fullscreen",
+                    "thumbs",
+                    "close"
+                ]
+            },
+            
+            // Image options
+            Image: {
+                zoom: true,
+                click: "close",
+                wheel: "slide",
+                fit: "contain"
+            },
+            
+            // Thumbnails
+            Thumbs: {
+                autoStart: true,
+                type: "classic"
+            }
+        });
+
+        // Function to load external HTML content
+        function loadExternalContent(url, containerId) {
+            fetch(url)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById(containerId).innerHTML = data;
+                })
+                .catch(error => console.error('Error loading content:', error));
+        }
+
+        // Load header, footer, and CTA when document is ready
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load market ticker
+            loadExternalContent('market-ticker.html', 'market-ticker');
+        });
+    </script>
+</body>
+</html> 

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Stay updated with the latest financial insights, market trends, and expert analysis">
     <meta name="keywords" content="financial insights, market analysis, investment tips, financial news, market trends">
-    <title>Financial Insights - IndianMoney Master</title>
+    <title>Market Insights & Analysis</title>
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
@@ -19,6 +19,15 @@
     <!-- Animation Libraries -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Add this to verify styles are loading -->
+    
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
@@ -28,303 +37,158 @@
     </div>
 
     
-    <!-- Featured Articles Slider -->
-    <section class="featured-slider section-padding" data-aos="fade-up">
+    <!-- Modern Hero Section with Video Background -->
+    <section class="insights-hero">
+        <div class="hero-video-overlay"></div>
+        <video autoplay muted loop class="hero-video">
+            <source src="videos/market-bg.mp4" type="video/mp4">
+        </video>
         <div class="container">
-            <div class="swiper featured-swiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="featured-article">
-                            <div class="article-image">
-                                <img src="images/143.jpg" alt="Market Analysis">
-                                <div class="article-overlay">
-                                    <span class="article-category">Featured</span>
-                                    <h2>Understanding Market Dynamics in 2024</h2>
-                                    <p>Get insights into the key factors driving market trends and learn how to position your investments for optimal returns.</p>
-                                    <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
+            <div class="hero-content" data-aos="fade-up">
+                <h1>Market Intelligence Hub</h1>
+                <p class="hero-subtitle">Transforming Business Through Data-Driven Insights</p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="500">0</span>+
+                        <span class="stat-label">Market Reports</span>
                     </div>
-                    <div class="swiper-slide">
-                        <div class="featured-article">
-                            <div class="article-image">
-                                <img src="images/144.jpg" alt="Investment Strategies">
-                                <div class="article-overlay">
-                                    <span class="article-category">Investment</span>
-                                    <h2>Top Investment Strategies for 2024</h2>
-                                    <p>Discover the most effective investment strategies to help you achieve your financial goals in the current market scenario.</p>
-                                    <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="98">0</span>%
+                        <span class="stat-label">Accuracy Rate</span>
                     </div>
-                </div>
-                <div class="swiper-pagination"></div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Investment Strategies Section -->
-    <section class="investment-strategies section-padding" data-aos="fade-up">
-        <div class="container">
-            <h2 class="section-title">Top Investment Strategies 2024</h2>
-            <div class="strategy-grid">
-                <div class="strategy-card" data-aos="fade-up">
-                    <div class="strategy-image">
-                        <img src="images/82.jpg" alt="Equity Investment">
-                        <div class="strategy-overlay">
-                            <span class="strategy-tag">Equity</span>
-                        </div>
-                    </div>
-                    <div class="strategy-content">
-                        <h3>Strategic Equity Investment</h3>
-                        <p>Master the art of equity investment with our comprehensive guide to stock selection and portfolio management.</p>
-                        <ul class="strategy-points">
-                            <li><i class="fas fa-check-circle"></i> Fundamental Analysis</li>
-                            <li><i class="fas fa-check-circle"></i> Technical Indicators</li>
-                            <li><i class="fas fa-check-circle"></i> Risk Management</li>
-                        </ul>
-                        <a href="#" class="strategy-btn">Learn More <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-
-                <div class="strategy-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="strategy-image">
-                        <img src="images/84.jpg" alt="Mutual Funds">
-                        <div class="strategy-overlay">
-                            <span class="strategy-tag">Mutual Funds</span>
-                        </div>
-                    </div>
-                    <div class="strategy-content">
-                        <h3>Smart Mutual Fund Investing</h3>
-                        <p>Discover the power of systematic investment in mutual funds for long-term wealth creation.</p>
-                        <ul class="strategy-points">
-                            <li><i class="fas fa-check-circle"></i> SIP Planning</li>
-                            <li><i class="fas fa-check-circle"></i> Fund Selection</li>
-                            <li><i class="fas fa-check-circle"></i> Portfolio Diversification</li>
-                        </ul>
-                        <a href="#" class="strategy-btn">Learn More <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-
-                <div class="strategy-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="strategy-image">
-                        <img src="images/86.jpg" alt="Real Estate">
-                        <div class="strategy-overlay">
-                            <span class="strategy-tag">Real Estate</span>
-                        </div>
-                    </div>
-                    <div class="strategy-content">
-                        <h3>Real Estate Investment</h3>
-                        <p>Explore lucrative opportunities in real estate investment with our expert guidance and market insights.</p>
-                        <ul class="strategy-points">
-                            <li><i class="fas fa-check-circle"></i> Location Analysis</li>
-                            <li><i class="fas fa-check-circle"></i> ROI Calculation</li>
-                            <li><i class="fas fa-check-circle"></i> Legal Due Diligence</li>
-                        </ul>
-                        <a href="#" class="strategy-btn">Learn More <i class="fas fa-arrow-right"></i></a>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="50">0</span>K+
+                        <span class="stat-label">Data Points</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Latest Articles Grid -->
-    <section class="latest-articles section-padding bg-light" data-aos="fade-up">
+    <!-- Featured Insights Slider -->
+    <section class="featured-insights">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
-                <h2 class="section-title">Latest Insights</h2>
-                <div class="insights-filters">
-                    <button class="filter-btn active" data-filter="all">All</button>
-                    <button class="filter-btn" data-filter="tax">Tax Planning</button>
-                    <button class="filter-btn" data-filter="investment">Investment</button>
-                    <button class="filter-btn" data-filter="market">Market Analysis</button>
+                <h2>Featured Insights</h2>
+                <p>Latest market trends and analysis</p>
+            </div>
+            <div class="swiper featuredSwiper" data-aos="fade-up">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="featured-card">
+                            <img src="images/82.jpg" alt="Market Analysis">
+                            <div class="card-overlay">
+                                <span class="category">Market Analysis</span>
+                                <h3>Global Market Trends 2024</h3>
+                                <p>Comprehensive analysis of emerging market opportunities.</p>
+                                <a href="#" class="read-more">Read More →</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add more slides -->
                 </div>
-            </div>
-            <div class="articles-grid">
-                <article class="article-card" data-category="tax" data-aos="fade-up">
-                    <div class="article-image">
-                        <img src="images/145.jpg" alt="Tax Planning">
-                        <span class="article-date"><i class="far fa-calendar-alt"></i> Jan 25, 2024</span>
-                        <div class="article-overlay">
-                            <span class="article-category">Tax Planning</span>
-                            <div class="article-actions">
-                                <a href="#" class="action-btn"><i class="far fa-bookmark"></i></a>
-                                <a href="#" class="action-btn"><i class="far fa-share-square"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="article-content">
-                        <h3>Essential Tax Planning Tips</h3>
-                        <p>Learn about the latest tax-saving instruments and strategies to optimize your tax planning for the financial year.</p>
-                        <div class="article-meta">
-                            <div class="meta-left">
-                                <span><i class="fas fa-user-circle"></i> By Admin</span>
-                                <span><i class="far fa-clock"></i> 5 min read</span>
-                            </div>
-                            <div class="meta-right">
-                                <span class="article-stats"><i class="far fa-eye"></i> 1.2K</span>
-                                <span class="article-stats"><i class="far fa-comment"></i> 8</span>
-                            </div>
-                        </div>
-                        <a href="#" class="read-more">
-                            Read Full Article
-                            <span class="read-more-icon">
-                                <i class="fas fa-arrow-right"></i>
-                            </span>
-                        </a>
-                    </div>
-                </article>
-
-                <article class="article-card" data-category="investment" data-aos="fade-up" data-aos-delay="100">
-                    <div class="article-image">
-                        <img src="images/146.jpg" alt="Retirement Planning">
-                        <span class="article-date"><i class="far fa-calendar-alt"></i> Jan 24, 2024</span>
-                        <div class="article-overlay">
-                            <span class="article-category">Retirement</span>
-                            <div class="article-actions">
-                                <a href="#" class="action-btn"><i class="far fa-bookmark"></i></a>
-                                <a href="#" class="action-btn"><i class="far fa-share-square"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="article-content">
-                        <h3>Building a Strong Retirement Portfolio</h3>
-                        <p>Expert advice on creating a diversified retirement portfolio that ensures financial security in your golden years.</p>
-                        <div class="article-meta">
-                            <div class="meta-left">
-                                <span><i class="fas fa-user-circle"></i> By Admin</span>
-                                <span><i class="far fa-clock"></i> 7 min read</span>
-                            </div>
-                            <div class="meta-right">
-                                <span class="article-stats"><i class="far fa-eye"></i> 2.5K</span>
-                                <span class="article-stats"><i class="far fa-comment"></i> 12</span>
-                            </div>
-                        </div>
-                        <a href="#" class="read-more">
-                            Read Full Article
-                            <span class="read-more-icon">
-                                <i class="fas fa-arrow-right"></i>
-                            </span>
-                        </a>
-                    </div>
-                </article>
-
-                <article class="article-card" data-category="market" data-aos="fade-up" data-aos-delay="200">
-                    <div class="article-image">
-                        <img src="images/147.jpg" alt="Market Analysis">
-                        <span class="article-date"><i class="far fa-calendar-alt"></i> Jan 23, 2024</span>
-                        <div class="article-overlay">
-                            <span class="article-category">Market Analysis</span>
-                            <div class="article-actions">
-                                <a href="#" class="action-btn"><i class="far fa-bookmark"></i></a>
-                                <a href="#" class="action-btn"><i class="far fa-share-square"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="article-content">
-                        <h3>Global Market Trends 2024</h3>
-                        <p>A comprehensive analysis of global market trends and their impact on Indian investors.</p>
-                        <div class="article-meta">
-                            <div class="meta-left">
-                                <span><i class="fas fa-user-circle"></i> By Admin</span>
-                                <span><i class="far fa-clock"></i> 6 min read</span>
-                            </div>
-                            <div class="meta-right">
-                                <span class="article-stats"><i class="far fa-eye"></i> 1.8K</span>
-                                <span class="article-stats"><i class="far fa-comment"></i> 15</span>
-                            </div>
-                        </div>
-                        <a href="#" class="read-more">
-                            Read Full Article
-                            <span class="read-more-icon">
-                                <i class="fas fa-arrow-right"></i>
-                            </span>
-                        </a>
-                    </div>
-                </article>
-            </div>
-            <div class="articles-footer" data-aos="fade-up">
-                <button class="load-more-btn">
-                    <span>Load More Articles</span>
-                    <i class="fas fa-sync-alt"></i>
-                </button>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-navigation">
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Market Updates Dashboard -->
-    <section class="market-dashboard section-padding" data-aos="fade-up">
+    <!-- Market Performance Dashboard -->
+    <section class="market-dashboard">
         <div class="container">
-            <h2 class="section-title">Market Pulse</h2>
+            <div class="section-header" data-aos="fade-up">
+                <h2>Market Performance</h2>
+                <p>Real-time market metrics and analysis</p>
+            </div>
             <div class="dashboard-grid">
-                <div class="dashboard-card" data-aos="zoom-in">
+                <div class="dashboard-card" data-aos="fade-right">
                     <div class="card-header">
-                        <i class="fas fa-chart-line"></i>
-                        <h3>Stock Market</h3>
+                        <h3>Growth Trajectory</h3>
+                        <select class="time-filter">
+                            <option>Last 6 Months</option>
+                            <option>Last Year</option>
+                        </select>
                     </div>
-                    <div class="card-content">
-                        <ul class="market-updates">
-                            <li class="up"><i class="fas fa-arrow-up"></i> Nifty hits new all-time high</li>
-                            <li class="up"><i class="fas fa-arrow-up"></i> IT sector shows strong momentum</li>
-                            <li class="neutral"><i class="fas fa-minus"></i> Banking stocks remain stable</li>
-                        </ul>
-                    </div>
+                    <canvas id="growthChart"></canvas>
                 </div>
-
-                <div class="dashboard-card" data-aos="zoom-in" data-aos-delay="100">
+                <div class="dashboard-card" data-aos="fade-left">
                     <div class="card-header">
-                        <i class="fas fa-coins"></i>
-                        <h3>Commodities</h3>
+                        <h3>Sector Distribution</h3>
                     </div>
-                    <div class="card-content">
-                        <ul class="market-updates">
-                            <li class="up"><i class="fas fa-arrow-up"></i> Gold prices continue upward trend</li>
-                            <li class="down"><i class="fas fa-arrow-down"></i> Crude oil shows volatility</li>
-                            <li class="neutral"><i class="fas fa-minus"></i> Silver remains range-bound</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="dashboard-card" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="card-header">
-                        <i class="fas fa-globe"></i>
-                        <h3>Global Markets</h3>
-                    </div>
-                    <div class="card-content">
-                        <ul class="market-updates">
-                            <li class="neutral"><i class="fas fa-minus"></i> US Fed maintains interest rates</li>
-                            <li class="up"><i class="fas fa-arrow-up"></i> European markets show recovery</li>
-                            <li class="neutral"><i class="fas fa-minus"></i> Asian markets trade mixed</li>
-                        </ul>
-                    </div>
+                    <canvas id="sectorChart"></canvas>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Newsletter Section -->
-    <section class="newsletter-section parallax" data-aos="fade-up" style="background-image: url('images/148.jpg');">
+    <!-- Latest Updates Grid -->
+    <section class="latest-updates">
         <div class="container">
-            <div class="newsletter-content">
-                <h2>Stay Ahead of the Market</h2>
-                <p>Subscribe to our newsletter for expert insights and market analysis delivered to your inbox</p>
-                <form class="newsletter-form">
-                    <div class="form-group">
-                        <input type="email" placeholder="Enter your email address" required>
-                        <button type="submit" class="btn-primary">
-                            <i class="fas fa-paper-plane"></i> Subscribe
-                        </button>
+            <div class="section-header" data-aos="fade-up">
+                <h2>Latest Updates</h2>
+                <p>Stay informed with our latest insights</p>
+            </div>
+            <div class="updates-grid">
+                <!-- Featured Update -->
+                <div class="update-card featured" data-aos="fade-up">
+                    <div class="card-image">
+                        <img src="images/84.jpg" alt="Featured Update">
+                        <span class="featured-badge">Featured</span>
                     </div>
-                </form>
+                    <div class="card-content">
+                        <span class="date">March 15, 2024</span>
+                        <h3>Business Growth Strategies</h3>
+                        <p>Expert insights on business expansion and growth opportunities.</p>
+                        <a href="#" class="read-more">Read Full Analysis →</a>
+                    </div>
+                </div>
+                
+                <!-- Regular Updates -->
+                <div class="update-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-image">
+                        <img src="images/87.jpg" alt="Market Update">
+                    </div>
+                    <div class="card-content">
+                        <span class="date">March 14, 2024</span>
+                        <h3>Market Trends Analysis</h3>
+                        <p>Latest updates on market developments and trends.</p>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </div>
+                
+                <div class="update-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-image">
+                        <img src="images/90.jpg" alt="Industry Update">
+                    </div>
+                    <div class="card-content">
+                        <span class="date">March 13, 2024</span>
+                        <h3>Industry Insights</h3>
+                        <p>Deep dive into industry-specific trends and analysis.</p>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Container -->
+    <!-- Market Trends Timeline -->
+    <section class="market-timeline">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Market Evolution</h2>
+                <p>Track the journey of market developments</p>
+            </div>
+            <div class="timeline" data-aos="fade-up">
+                <!-- Timeline items -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    
     <div class="cta-container">
         <!-- CTA will be loaded here by script -->
     </div>
@@ -334,12 +198,11 @@
         <!-- Footer will be loaded here by script -->
     </div>
 
+
     <!-- Scripts -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script defer src="js/script.js"></script>
 </body>
-</html>
-
+</html> 
