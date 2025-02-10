@@ -524,3 +524,63 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+document.addEventListener('lazybeforeunveil', function(e){
+    // Force load images after DOM load
+    const img = e.target;
+    img.src = img.getAttribute('data-src');
+    img.classList.remove('lazyload');
+    img.classList.add('lazyloaded');
+});
+
+// Initialize lazysizes properly
+document.addEventListener('DOMContentLoaded', function() {
+    window.lazySizesConfig = window.lazySizesConfig || {};
+    lazySizesConfig.loadMode = 1;
+    lazySizesConfig.expand = 200;
+    lazySizesConfig.loadHidden = true;
+    
+    // Load the script dynamically
+    const lsScript = document.createElement('script');
+    lsScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js';
+    lsScript.integrity = 'sha512-q583ppKrCRc7N5O0n2nzUiJ+suUv7Et1JGels4bXOaMFQcamPk9HjdUknZuuFjBNs7tsMuadge5k9RzdmO+1GQ==';
+    lsScript.crossOrigin = 'anonymous';
+    lsScript.onload = () => lazySizes.init();
+    document.body.appendChild(lsScript);
+});
+
+// Scroll to top functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const scrollButton = document.querySelector('.scroll-top');
+    
+    if (scrollButton) {
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollButton.classList.add('show');
+            } else {
+                scrollButton.classList.remove('show');
+            }
+        });
+        
+        scrollButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+});
+
+// Add at the end of your script.js
+document.addEventListener('lazyloaded', function(e){
+    console.log('Image loaded:', e.target.dataset.src);
+});
+
+// Check if images are in viewport
+function checkImageVisibility() {
+    document.querySelectorAll('.lazyload').forEach(img => {
+        const rect = img.getBoundingClientRect();
+        console.log('Image position:', rect.top, window.innerHeight);
+    });
+}
+window.addEventListener('load', checkImageVisibility);
