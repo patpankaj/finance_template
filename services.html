@@ -5,19 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Financial Services - IndianMoney Master">
     <meta name="keywords" content="financial services, investment, tax planning, insurance">
+    <meta name="og:title" content="Our Financial Services - IndianMoney Master">
+    <meta name="og:image" content="images/og-image.jpg">
     <title>Our Services - IndianMoney Master</title>
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="css/style.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> 
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- // Add this to your HTML header -->
+     <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>  -->
+
+<!-- // Add this canvas element where you want the chart -->
+    <!-- <canvas id="marketInsightsChart" width="400" height="200"></canvas> -->
 
 </head>
 
@@ -26,6 +39,9 @@
     <div class="preloader">
         <div class="loader"></div>
     </div>
+
+    <!-- Add Header Container -->
+    <div id="header-container"></div>
 
     <!-- Services Hero Section -->
     <section class="services-hero" data-aos="fade-up">
@@ -43,532 +59,487 @@
     </section>
 
     <!-- Main Services Section -->
-    <section class="main-services" data-aos="fade-up">
-        <div class="container">
-            <div class="services-grid">
-                <!-- Tax Planning -->
-                <div class="service-card" data-aos="fade-up">
-                    <div class="service-image">
-                        <img 
-                            class="lazyload"
-                            data-src="images/income-tax-return.jpg"
-                            src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" 
-                            alt="Tax Planning"
-                            loading="lazy"
-                        >
-                        <div class="service-overlay">
-                            <i class="fas fa-calculator"></i>
+    <main>
+        <section class="main-services" data-aos="fade-up">
+            <div class="container">
+                <div class="services-grid">
+                    <!-- Tax Planning -->
+                    <div class="service-card" data-aos="fade-up">
+                        <div class="service-image-container">
+                            <img 
+                                class="lazyload service-image"
+                                data-src="images/tax"
+                                src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" 
+                                alt="Tax Planning"
+                                loading="lazy"
+                            >
+                            <div class="service-overlay">
+                                <i class="fas fa-calculator"></i>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3>Tax Management & Compliance</h3>
+                            <div class="service-scroll-container">
+                                <ul class="service-features">
+                                    <li><i class="fas fa-check-circle"></i> PAN & TAN Services</li>
+                                    <li><i class="fas fa-check-circle"></i> Income Tax Return Filing (Individual/Company/Firm)</li>
+                                    <li><i class="fas fa-check-circle"></i> GST Registration, Returns & Assessment</li>
+                                    <li><i class="fas fa-check-circle"></i> Tax Audit Services</li>
+                                    <li><i class="fas fa-check-circle"></i> Professional Tax Registration</li>
+                                    <li><i class="fas fa-check-circle"></i> Corporate Tax Consultancy</li>
+                                    <li><i class="fas fa-check-circle"></i> Wealth & Property Tax Consultancy</li>
+                                    <li><i class="fas fa-check-circle"></i> Tax Appeals & Assessments</li>
+                                    <li><i class="fas fa-check-circle"></i> Housing Society & Company Audit</li>
+                                    <li><i class="fas fa-check-circle"></i> Settlement of Tax Dues & Penalties</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                    <div class="service-content">
-                        <h3>Tax Management & Compliance</h3>
-                        <p>Comprehensive tax planning and compliance solutions for individuals and businesses</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check-circle"></i> PAN & TAN Services</li>
-                            <li><i class="fas fa-check-circle"></i> Income Tax Return Filing (Individual/Company/Firm)</li>
-                            <li><i class="fas fa-check-circle"></i> GST Registration, Returns & Assessment</li>
-                            <li><i class="fas fa-check-circle"></i> Tax Audit Services</li>
-                            <li><i class="fas fa-check-circle"></i> Professional Tax Registration</li>
-                            <li><i class="fas fa-check-circle"></i> Corporate Tax Consultancy</li>
-                            <li><i class="fas fa-check-circle"></i> Wealth & Property Tax Consultancy</li>
-                            <li><i class="fas fa-check-circle"></i> Tax Appeals & Assessments</li>
-                            <li><i class="fas fa-check-circle"></i> Housing Society & Company Audit</li>
-                            <li><i class="fas fa-check-circle"></i> Settlement of Tax Dues & Penalties</li>
-                        </ul>
-                        <!-- <a href="tax-services.html" class="service-btn">Learn More <i class="fas fa-arrow-right"></i></a> -->
-                    </div>
-                </div>
 
-                <!-- Investment Planning -->
-                <!-- <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="service-image">
-                        <img src="images/83.jpg" alt="Investment Planning">
-                        <div class="service-overlay">
-                            <i class="fas fa-chart-line"></i>
+                    <!-- Insurance Services -->
+                    <div class="service-card" data-aos="fade-up">
+                        <div class="service-image-container">
+                            <img src="images/motor-insurance.jpg" alt="Insurance & Risk Management">
+                            <div class="service-overlay">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3>Insurance & Risk Management</h3>
+                            <div class="service-scroll-container">
+                                <ul class="service-features">
+                                    <li><i class="fas fa-check-circle"></i> Life Insurance Planning</li>
+                                    <li><i class="fas fa-check-circle"></i> Health & Medical Insurance</li>
+                                    <li><i class="fas fa-check-circle"></i> Retirement & Pension Plans</li>
+                                    <li><i class="fas fa-check-circle"></i> Property & Asset Insurance</li>
+                                    <li><i class="fas fa-check-circle"></i> Motor Vehicle Insurance</li>
+                                    <li><i class="fas fa-check-circle"></i> Risk Assessment Services</li>
+                                    <li><i class="fas fa-check-circle"></i> Claims Assistance</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                    <div class="service-content">
-                        <h3>Investment Planning</h3>
-                        <p>Expert investment strategies for wealth creation and growth</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check-circle"></i> Mutual Funds</li>
-                            <li><i class="fas fa-check-circle"></i> Stock Market</li>
-                            <li><i class="fas fa-check-circle"></i> Portfolio Management</li>
-                        </ul>
-                        <a href="investment.html" class="service-btn">Learn More <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div> -->
 
-                <!-- Insurance Services -->
-                <div class="service-card" data-aos="fade-up">
-                    <div class="service-image">
-                        <img src="images/motor-insurance.jpg" alt="Insurance & Risk Management">
-                        <div class="service-overlay">
-                            <i class="fas fa-shield-alt"></i>
+                    <!-- Business Start-up and Formation -->
+                    <div class="service-card" data-aos="fade-up">
+                        <div class="service-image-container">
+                            <img src="images/startup.jpg" alt="Business Start-up and Formation">
+                            <div class="service-overlay">
+                                <i class="fas fa-building"></i>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3>Business Start-up and Formation</h3>
+                            <div class="service-scroll-container">
+                                <ul class="service-features">
+                                    <li><i class="fas fa-check-circle"></i> New Business Setup Consultancy</li>
+                                    <li><i class="fas fa-check-circle"></i> Company Registration (Proprietorship/Partnership/Pvt Ltd)</li>
+                                    <li><i class="fas fa-check-circle"></i> Trademark & IP Registration</li>
+                                    <li><i class="fas fa-check-circle"></i> Franchise Setup & Management</li>
+                                    <li><i class="fas fa-check-circle"></i> International Business Setup</li>
+                                    <li><i class="fas fa-check-circle"></i> Business Funding Solutions</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                    <div class="service-content">
-                        <h3>Insurance & Risk Management</h3>
-                        <p>Comprehensive insurance solutions to protect what matters most</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check-circle"></i> Life Insurance Planning</li>
-                            <li><i class="fas fa-check-circle"></i> Health & Medical Insurance</li>
-                            <li><i class="fas fa-check-circle"></i> Retirement & Pension Plans</li>
-                            <li><i class="fas fa-check-circle"></i> Property & Asset Insurance</li>
-                            <li><i class="fas fa-check-circle"></i> Motor Vehicle Insurance</li>
-                            <li><i class="fas fa-check-circle"></i> Risk Assessment Services</li>
-                            <li><i class="fas fa-check-circle"></i> Claims Assistance</li>
-                        </ul>
-                        <!-- <a href="insurance-services.html" class="service-btn">Learn More <i class="fas fa-arrow-right"></i></a> -->
-                    </div>
-                </div>
 
-                <!-- Business Services -->
-                <!-- <div class="service-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="service-image">
-                        <img src="images/0.jpg" alt="Business Services">
-                        <div class="service-overlay">
-                            <i class="fas fa-briefcase"></i>
+                    <!-- Company Law, ROC & MCA Compliances -->
+                    <div class="service-card" data-aos="fade-up">
+                        <div class="service-image-container">
+                            <img src="images/roc-return.jpg" alt="Company Law & ROC Services">
+                            <div class="service-overlay">
+                                <i class="fas fa-file-contract"></i>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3>Company Law, ROC & MCA Compliances</h3>
+                            <div class="service-scroll-container">
+                                <ul class="service-features">
+                                    <li><i class="fas fa-check-circle"></i> Company Incorporation Services</li>
+                                    <li><i class="fas fa-check-circle"></i> ROC Annual Returns Filing</li>
+                                    <li><i class="fas fa-check-circle"></i> ROC Amendment Services</li>
+                                    <li><i class="fas fa-check-circle"></i> ROC Compliance Management</li>
+                                    <li><i class="fas fa-check-circle"></i> E-Forms Filing & Updates</li>
+                                    <li><i class="fas fa-check-circle"></i> MCA Portal Compliances</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                    <div class="service-content">
-                        <h3>Business Services</h3>
-                        <p>Complete business solutions for growth and success</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check-circle"></i> Business Setup</li>
-                            <li><i class="fas fa-check-circle"></i> Business Consulting</li>
-                            <li><i class="fas fa-check-circle"></i> Compliance Services</li>
-                        </ul>
-                         <a href="business-services.html" class="service-btn">Learn More <i class="fas fa-arrow-right"></i></a> -->
-                    <!-- </div>
-                </div> -->
 
-                <!-- Business Start-up and Formation -->
-                <div class="service-card" data-aos="fade-up">
-                    <div class="service-image">
-                        <img src="images/new-business-startup.jpg" alt="Business Start-up and Formation">
-                        <div class="service-overlay">
-                            <i class="fas fa-building"></i>
+                    <!-- Government Registration & Licenses -->
+                    <div class="service-card" data-aos="fade-up">
+                        <div class="service-image-container">
+                            <img src="images/registration-liaison.jpg" alt="Government Registration & Licenses">
+                            <div class="service-overlay">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3>Government Registration & Licenses</h3>
+                            <div class="service-scroll-container">
+                                <ul class="service-features">
+                                    <li><i class="fas fa-check-circle"></i> Company Registration (Pvt. Ltd., Ltd., OPC)</li>
+                                    <li><i class="fas fa-check-circle"></i> Partnership & LLP Registration</li>
+                                    <li><i class="fas fa-check-circle"></i> Trust & NGO Registration</li>
+                                    <li><i class="fas fa-check-circle"></i> Housing Society Registration</li>
+                                    <li><i class="fas fa-check-circle"></i> DSC Services (Class 1, 2 & 3)</li>
+                                    <li><i class="fas fa-check-circle"></i> Shop & Money Lender License</li>
+                                    <li><i class="fas fa-check-circle"></i> RBI, FEMA & FERA Registration</li>
+                                    <li><i class="fas fa-check-circle"></i> NBFC & FDI Registration</li>
+                                    <li><i class="fas fa-check-circle"></i> Food & Drug Licenses</li>
+                                    <li><i class="fas fa-check-circle"></i> Legal Documentation Services</li>
+                                    <li><i class="fas fa-check-circle"></i> Company Wind-up Services</li>
+                                    <li><i class="fas fa-check-circle"></i> Trade Union Registration</li>
+                                    <li><i class="fas fa-check-circle"></i> RERA Registration</li>
+                                    <li><i class="fas fa-check-circle"></i> Factory License & MSME Registration</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                    <div class="service-content">
-                        <h3>Business Start-up and Formation</h3>
-                        <p>Comprehensive business setup solutions for entrepreneurs and enterprises</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check-circle"></i> New Business Setup Consultancy</li>
-                            <li><i class="fas fa-check-circle"></i> Company Registration (Proprietorship/Partnership/Pvt Ltd)</li>
-                            <li><i class="fas fa-check-circle"></i> Trademark & IP Registration</li>
-                            <li><i class="fas fa-check-circle"></i> Franchise Setup & Management</li>
-                            <li><i class="fas fa-check-circle"></i> International Business Setup</li>
-                            <li><i class="fas fa-check-circle"></i> Business Funding Solutions</li>
-                        </ul>
-                        <!-- <a href="business-startup.html" class="service-btn">Learn More <i class="fas fa-arrow-right"></i></a> -->
-                    </div>
-                </div>
 
-                <!-- Company Law, ROC & MCA Compliances -->
-                <div class="service-card" data-aos="fade-up">
-                    <div class="service-image">
-                        <img src="images/roc-return.jpg" alt="Company Law & ROC Services">
-                        <div class="service-overlay">
-                            <i class="fas fa-file-contract"></i>
+                    <!-- Capital Market Services -->
+                    <div class="service-card" data-aos="fade-up">
+                        <div class="service-image-container">
+                            <img src="images/share-market-trading.jpg" alt="Capital Market Services">
+                            <div class="service-overlay">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3>Capital Market Services</h3>
+                            <div class="service-scroll-container">
+                                <ul class="service-features">
+                                    <li><i class="fas fa-check-circle"></i> BSE & NSE Cash Market Trading</li>
+                                    <li><i class="fas fa-check-circle"></i> Demat Account Services</li>
+                                    <li><i class="fas fa-check-circle"></i> Derivatives & F&O Trading</li>
+                                    <li><i class="fas fa-check-circle"></i> Commodities Trading</li>
+                                    <li><i class="fas fa-check-circle"></i> Forex & Currency Trading</li>
+                                    <li><i class="fas fa-check-circle"></i> Mutual Fund Advisory</li>
+                                    <li><i class="fas fa-check-circle"></i> SIP Planning & Management</li>
+                                    <li><i class="fas fa-check-circle"></i> Portfolio Management (PMS)</li>
+                                    <li><i class="fas fa-check-circle"></i> M&A Consultancy</li>
+                                    <li><i class="fas fa-check-circle"></i> IPO Listing Services</li>
+                                    <li><i class="fas fa-check-circle"></i> SEBI Compliance Advisory</li>
+                                    <li><i class="fas fa-check-circle"></i> Equity Research</li>
+                                    <li><i class="fas fa-check-circle"></i> Technical Analysis</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                    <div class="service-content">
-                        <h3>Company Law, ROC & MCA Compliances</h3>
-                        <p>Professional assistance for all your corporate compliance requirements</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check-circle"></i> Company Incorporation Services</li>
-                            <li><i class="fas fa-check-circle"></i> ROC Annual Returns Filing</li>
-                            <li><i class="fas fa-check-circle"></i> ROC Amendment Services</li>
-                            <li><i class="fas fa-check-circle"></i> ROC Compliance Management</li>
-                            <li><i class="fas fa-check-circle"></i> E-Forms Filing & Updates</li>
-                            <li><i class="fas fa-check-circle"></i> MCA Portal Compliances</li>
-                        </ul>
-                        <!-- <a href="company-law-services.html" class="service-btn">Learn More <i class="fas fa-arrow-right"></i></a> -->
-                    </div>
-                </div>
 
-                <!-- Government Registration & Licenses -->
-                <div class="service-card" data-aos="fade-up">
-                    <div class="service-image">
-                        <img src="images/registration-liaison.jpg" alt="Government Registration & Licenses">
-                        <div class="service-overlay">
-                            <i class="fas fa-certificate"></i>
+                    <!-- Financial Accounting & Management -->
+                    <div class="service-card" data-aos="fade-up">
+                        <div class="service-image-container">
+                            <img src="images/financial-accounting.jpg" alt="Financial Accounting Services">
+                            <div class="service-overlay">
+                                <i class="fas fa-book-open"></i>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3>Financial Accounting & Management</h3>
+                            <div class="service-scroll-container">
+                                <ul class="service-features">
+                                    <li><i class="fas fa-check-circle"></i> Computerized Daily Accounting</li>
+                                    <li><i class="fas fa-check-circle"></i> Monthly Account Management</li>
+                                    <li><i class="fas fa-check-circle"></i> In-house & Outsourced Accounting</li>
+                                    <li><i class="fas fa-check-circle"></i> Yearly Account Finalization</li>
+                                    <li><i class="fas fa-check-circle"></i> Inventory Management Systems</li>
+                                    <li><i class="fas fa-check-circle"></i> Financial Supervision Services</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                    <div class="service-content">
-                        <h3>Government Registration & Licenses</h3>
-                        <p>Comprehensive registration and licensing solutions for all business entities</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check-circle"></i> Company Registration (Pvt. Ltd., Ltd., OPC)</li>
-                            <li><i class="fas fa-check-circle"></i> Partnership & LLP Registration</li>
-                            <li><i class="fas fa-check-circle"></i> Trust & NGO Registration</li>
-                            <li><i class="fas fa-check-circle"></i> Housing Society Registration</li>
-                            <li><i class="fas fa-check-circle"></i> DSC Services (Class 1, 2 & 3)</li>
-                            <li><i class="fas fa-check-circle"></i> Shop & Money Lender License</li>
-                            <li><i class="fas fa-check-circle"></i> RBI, FEMA & FERA Registration</li>
-                            <li><i class="fas fa-check-circle"></i> NBFC & FDI Registration</li>
-                            <li><i class="fas fa-check-circle"></i> Food & Drug Licenses</li>
-                            <li><i class="fas fa-check-circle"></i> Legal Documentation Services</li>
-                            <li><i class="fas fa-check-circle"></i> Company Wind-up Services</li>
-                            <li><i class="fas fa-check-circle"></i> Trade Union Registration</li>
-                            <li><i class="fas fa-check-circle"></i> RERA Registration</li>
-                            <li><i class="fas fa-check-circle"></i> Factory License & MSME Registration</li>
-                        </ul>
-                        <!-- <a href="govt-registration-services.html" class="service-btn">Learn More <i class="fas fa-arrow-right"></i></a> -->
-                    </div>
-                </div>
 
-                <!-- Capital Market Services -->
-                <div class="service-card" data-aos="fade-up">
-                    <div class="service-image">
-                        <img src="images/share-market-trading.jpg" alt="Capital Market Services">
-                        <div class="service-overlay">
-                            <i class="fas fa-chart-line"></i>
+                    <!-- Loan & Finance Management -->
+                    <div class="service-card" data-aos="fade-up">
+                        <div class="service-image-container">
+                            <img src="images/loan.jpg" alt="Loan & Finance Management">
+                            <div class="service-overlay">
+                                <i class="fas fa-hand-holding-usd"></i>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3>Loan & Finance Management</h3>
+                            <div class="service-scroll-container">
+                                <ul class="service-features">
+                                    <li><i class="fas fa-check-circle"></i> Personal & Housing Loans</li>
+                                    <li><i class="fas fa-check-circle"></i> Business & Property Loans</li>
+                                    <li><i class="fas fa-check-circle"></i> Education & Auto Loans</li>
+                                    <li><i class="fas fa-check-circle"></i> Gold Loan Services</li>
+                                    <li><i class="fas fa-check-circle"></i> Project Report Preparation</li>
+                                    <li><i class="fas fa-check-circle"></i> Project Finance Solutions</li>
+                                    <li><i class="fas fa-check-circle"></i> Working Capital & OD/CC Facilities</li>
+                                    <li><i class="fas fa-check-circle"></i> CIBIL Score Improvement</li>
+                                    <li><i class="fas fa-check-circle"></i> Credit Rating Advisory</li>
+                                    <li><i class="fas fa-check-circle"></i> Joint Venture Consultancy</li>
+                                    <li><i class="fas fa-check-circle"></i> Venture Capital Solutions</li>
+                                    <li><i class="fas fa-check-circle"></i> Private Placement Services</li>
+                                    <li><i class="fas fa-check-circle"></i> Angel Fund Assistance</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                    <div class="service-content">
-                        <h3>Capital Market Services</h3>
-                        <p>Expert guidance for shares, commodities, and forex trading investments</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check-circle"></i> BSE & NSE Cash Market Trading</li>
-                            <li><i class="fas fa-check-circle"></i> Demat Account Services</li>
-                            <li><i class="fas fa-check-circle"></i> Derivatives & F&O Trading</li>
-                            <li><i class="fas fa-check-circle"></i> Commodities Trading</li>
-                            <li><i class="fas fa-check-circle"></i> Forex & Currency Trading</li>
-                            <li><i class="fas fa-check-circle"></i> Mutual Fund Advisory</li>
-                            <li><i class="fas fa-check-circle"></i> SIP Planning & Management</li>
-                            <li><i class="fas fa-check-circle"></i> Portfolio Management (PMS)</li>
-                            <li><i class="fas fa-check-circle"></i> M&A Consultancy</li>
-                            <li><i class="fas fa-check-circle"></i> IPO Listing Services</li>
-                            <li><i class="fas fa-check-circle"></i> SEBI Compliance Advisory</li>
-                            <li><i class="fas fa-check-circle"></i> Equity Research</li>
-                            <li><i class="fas fa-check-circle"></i> Technical Analysis</li>
-                        </ul>
-                        <!-- <a href="capital-market-services.html" class="service-btn">Learn More <i class="fas fa-arrow-right"></i></a> -->
-                    </div>
-                </div>
 
-                <!-- Financial Accounting & Management -->
-                <div class="service-card" data-aos="fade-up">
-                    <div class="service-image">
-                        <img src="images/financial-accounting.jpg" alt="Financial Accounting Services">
-                        <div class="service-overlay">
-                            <i class="fas fa-book-open"></i>
+                    <!-- Small Savings & Investments -->
+                    <div class="service-card" data-aos="fade-up">
+                        <div class="service-image-container">
+                            <img src="images/small-saving.jpg" alt="Small Savings & Investments">
+                            <div class="service-overlay">
+                                <i class="fas fa-piggy-bank"></i>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3>Small Savings & Investments</h3>
+                            <div class="service-scroll-container">
+                                <ul class="service-features">
+                                    <li><i class="fas fa-check-circle"></i> Investment Advisory Services</li>
+                                    <li><i class="fas fa-check-circle"></i> Kisan Vikas Patra (KVP)</li>
+                                    <li><i class="fas fa-check-circle"></i> Public Provident Fund (PPF)</li>
+                                    <li><i class="fas fa-check-circle"></i> Fixed & Recurring Deposits</li>
+                                    <li><i class="fas fa-check-circle"></i> Government Securities & Bonds</li>
+                                    <li><i class="fas fa-check-circle"></i> Monthly Income Scheme (MIS)</li>
+                                    <li><i class="fas fa-check-circle"></i> Non-Convertible Debentures (NCD)</li>
+                                    <li><i class="fas fa-check-circle"></i> Corporate Deposit Planning</li>
+                                    <li><i class="fas fa-check-circle"></i> National Pension Scheme (NPS)</li>
+                                    <li><i class="fas fa-check-circle"></i> National Savings Certificate (NSC)</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                    <div class="service-content">
-                        <h3>Financial Accounting & Management</h3>
-                        <p>Professional accounting solutions for streamlined business operations</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check-circle"></i> Computerized Daily Accounting</li>
-                            <li><i class="fas fa-check-circle"></i> Monthly Account Management</li>
-                            <li><i class="fas fa-check-circle"></i> In-house & Outsourced Accounting</li>
-                            <li><i class="fas fa-check-circle"></i> Yearly Account Finalization</li>
-                            <li><i class="fas fa-check-circle"></i> Inventory Management Systems</li>
-                            <li><i class="fas fa-check-circle"></i> Financial Supervision Services</li>
-                        </ul>
-                        <!-- <a href="financial-accounting-services.html" class="service-btn">Learn More <i class="fas fa-arrow-right"></i></a> -->
-                    </div>
-                </div>
 
-                <!-- Loan & Finance Management -->
-                <div class="service-card" data-aos="fade-up">
-                    <div class="service-image">
-                        <img src="images/loan.jpg" alt="Loan & Finance Management">
-                        <div class="service-overlay">
-                            <i class="fas fa-hand-holding-usd"></i>
+                    <!-- MSME Registration & Subsidies -->
+                    <div class="service-card" data-aos="fade-up">
+                        <div class="service-image-container">
+                            <img src="images/msme-registration.jpg" alt="MSME Registration & Subsidies">
+                            <div class="service-overlay">
+                                <i class="fas fa-industry"></i>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3>MSME Registration & Subsidies</h3>
+                            <div class="service-scroll-container">
+                                <ul class="service-features">
+                                    <li><i class="fas fa-check-circle"></i> SSI Registration Services</li>
+                                    <li><i class="fas fa-check-circle"></i> SME Registration & Compliance</li>
+                                    <li><i class="fas fa-check-circle"></i> MSME Registration Support</li>
+                                    <li><i class="fas fa-check-circle"></i> Government Subsidy Consultation</li>
+                                    <li><i class="fas fa-check-circle"></i> Subsidy Application Processing</li>
+                                    <li><i class="fas fa-check-circle"></i> Documentation Assistance</li>
+                                    <li><i class="fas fa-check-circle"></i> Government Scheme Advisory</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                    <div class="service-content">
-                        <h3>Loan & Finance Management</h3>
-                        <p>Comprehensive loan solutions and debt management services</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check-circle"></i> Personal & Housing Loans</li>
-                            <li><i class="fas fa-check-circle"></i> Business & Property Loans</li>
-                            <li><i class="fas fa-check-circle"></i> Education & Auto Loans</li>
-                            <li><i class="fas fa-check-circle"></i> Gold Loan Services</li>
-                            <li><i class="fas fa-check-circle"></i> Project Report Preparation</li>
-                            <li><i class="fas fa-check-circle"></i> Project Finance Solutions</li>
-                            <li><i class="fas fa-check-circle"></i> Working Capital & OD/CC Facilities</li>
-                            <li><i class="fas fa-check-circle"></i> CIBIL Score Improvement</li>
-                            <li><i class="fas fa-check-circle"></i> Credit Rating Advisory</li>
-                            <li><i class="fas fa-check-circle"></i> Joint Venture Consultancy</li>
-                            <li><i class="fas fa-check-circle"></i> Venture Capital Solutions</li>
-                            <li><i class="fas fa-check-circle"></i> Private Placement Services</li>
-                            <li><i class="fas fa-check-circle"></i> Angel Fund Assistance</li>
-                        </ul>
-                        <!-- <a href="loan-finance-services.html" class="service-btn">Learn More <i class="fas fa-arrow-right"></i></a> -->
-                    </div>
-                </div>
 
-                <!-- Small Savings & Investments -->
-                <div class="service-card" data-aos="fade-up">
-                    <div class="service-image">
-                        <img src="images/small-saving.jpg" alt="Small Savings & Investments">
-                        <div class="service-overlay">
-                            <i class="fas fa-piggy-bank"></i>
+                    <!-- Labour Law & Payroll Services -->
+                    <div class="service-card" data-aos="fade-up">
+                        <div class="service-image-container">
+                            <img src="images/labour-law.jpg" alt="Labour Law & Payroll Services">
+                            <div class="service-overlay">
+                                <i class="fas fa-users-cog"></i>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3>Labour Law & Payroll Services</h3>
+                            <div class="service-scroll-container">
+                                <ul class="service-features">
+                                    <li><i class="fas fa-check-circle"></i> PF Registration & Management</li>
+                                    <li><i class="fas fa-check-circle"></i> ESIC Registration & Compliance</li>
+                                    <li><i class="fas fa-check-circle"></i> Labour Contract Licensing</li>
+                                    <li><i class="fas fa-check-circle"></i> Labour Law Consultancy</li>
+                                    <li><i class="fas fa-check-circle"></i> Labour Welfare Fund Services</li>
+                                    <li><i class="fas fa-check-circle"></i> Professional Tax Management</li>
+                                    <li><i class="fas fa-check-circle"></i> Comprehensive Payroll Services</li>
+                                    <li><i class="fas fa-check-circle"></i> TDS Processing & Filing</li>
+                                    <li><i class="fas fa-check-circle"></i> Statutory Compliance Management</li>
+                                    <li><i class="fas fa-check-circle"></i> Employee Benefits Administration</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                    <div class="service-content">
-                        <h3>Small Savings & Investments</h3>
-                        <p>Secure your future with strategic small savings and investment planning</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check-circle"></i> Investment Advisory Services</li>
-                            <li><i class="fas fa-check-circle"></i> Kisan Vikas Patra (KVP)</li>
-                            <li><i class="fas fa-check-circle"></i> Public Provident Fund (PPF)</li>
-                            <li><i class="fas fa-check-circle"></i> Fixed & Recurring Deposits</li>
-                            <li><i class="fas fa-check-circle"></i> Government Securities & Bonds</li>
-                            <li><i class="fas fa-check-circle"></i> Monthly Income Scheme (MIS)</li>
-                            <li><i class="fas fa-check-circle"></i> Non-Convertible Debentures (NCD)</li>
-                            <li><i class="fas fa-check-circle"></i> Corporate Deposit Planning</li>
-                            <li><i class="fas fa-check-circle"></i> National Pension Scheme (NPS)</li>
-                            <li><i class="fas fa-check-circle"></i> National Savings Certificate (NSC)</li>
-                        </ul>
-                        <!-- <a href="small-savings-services.html" class="service-btn">Learn More <i class="fas fa-arrow-right"></i></a> -->
-                    </div>
-                </div>
 
-                <!-- MSME Registration & Subsidies -->
-                <div class="service-card" data-aos="fade-up">
-                    <div class="service-image">
-                        <img src="images/msme-registration.jpg" alt="MSME Registration & Subsidies">
-                        <div class="service-overlay">
-                            <i class="fas fa-industry"></i>
+                    <!-- Trust & NGO Services -->
+                    <div class="service-card" data-aos="fade-up">
+                        <div class="service-image-container">
+                            <img src="images/trust-ngo-society.jpg" alt="Trust & NGO Services">
+                            <div class="service-overlay">
+                                <i class="fas fa-hands-helping"></i>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3>Trust & NGO Formation Services</h3>
+                            <div class="service-scroll-container">
+                                <ul class="service-features">
+                                    <li><i class="fas fa-check-circle"></i> Trust & NGO Registration</li>
+                                    <li><i class="fas fa-check-circle"></i> Society Registration</li>
+                                    <li><i class="fas fa-check-circle"></i> Section 8 Company Formation</li>
+                                    <li><i class="fas fa-check-circle"></i> Trust & Society Compliance</li>
+                                    <li><i class="fas fa-check-circle"></i> 12A Registration Services</li>
+                                    <li><i class="fas fa-check-circle"></i> 80G Certification</li>
+                                    <li><i class="fas fa-check-circle"></i> FCRA Registration</li>
+                                    <li><i class="fas fa-check-circle"></i> CSR Project Consultation</li>
+                                    <li><i class="fas fa-check-circle"></i> Annual Returns Filing</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                    <div class="service-content">
-                        <h3>MSME Registration & Subsidies</h3>
-                        <p>Complete MSME registration and government subsidy assistance</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check-circle"></i> SSI Registration Services</li>
-                            <li><i class="fas fa-check-circle"></i> SME Registration & Compliance</li>
-                            <li><i class="fas fa-check-circle"></i> MSME Registration Support</li>
-                            <li><i class="fas fa-check-circle"></i> Government Subsidy Consultation</li>
-                            <li><i class="fas fa-check-circle"></i> Subsidy Application Processing</li>
-                            <li><i class="fas fa-check-circle"></i> Documentation Assistance</li>
-                            <li><i class="fas fa-check-circle"></i> Government Scheme Advisory</li>
-                        </ul>
-                        <!-- <a href="msme-services.html" class="service-btn">Learn More <i class="fas fa-arrow-right"></i></a> -->
-                    </div>
-                </div>
 
-                <!-- Labour Law & Payroll Services -->
-                <div class="service-card" data-aos="fade-up">
-                    <div class="service-image">
-                        <img src="images/labour-law.jpg" alt="Labour Law & Payroll Services">
-                        <div class="service-overlay">
-                            <i class="fas fa-users-cog"></i>
+                    <!-- ISO Audit & Certification -->
+                    <div class="service-card" data-aos="fade-up">
+                        <div class="service-image-container">
+                            <img src="images/iso.jpg" alt="ISO Audit & Certification">
+                            <div class="service-overlay">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                        </div>  
+                        <div class="service-content">
+                            <h3>ISO Audit & Certifications</h3>
+                            <div class="service-scroll-container">
+                                <ul class="service-features">
+                                    <li><i class="fas fa-check-circle"></i> ISO 9001:2015 QMS Certification</li>
+                                    <li><i class="fas fa-check-circle"></i> ISO Renewal Services</li>
+                                    <li><i class="fas fa-check-circle"></i> Re-audit Management</li>
+                                    <li><i class="fas fa-check-circle"></i> ISO 22000 FSMS Certification</li>
+                                    <li><i class="fas fa-check-circle"></i> ISO 14001 Environmental Management</li>
+                                    <li><i class="fas fa-check-circle"></i> ISO 27001 Information Security</li>
+                                    <li><i class="fas fa-check-circle"></i> Documentation Support</li>
+                                    <li><i class="fas fa-check-circle"></i> Audit Preparation Services</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                    <div class="service-content">
-                        <h3>Labour Law & Payroll Services</h3>
-                        <p>Complete labour compliance and payroll management solutions</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check-circle"></i> PF Registration & Management</li>
-                            <li><i class="fas fa-check-circle"></i> ESIC Registration & Compliance</li>
-                            <li><i class="fas fa-check-circle"></i> Labour Contract Licensing</li>
-                            <li><i class="fas fa-check-circle"></i> Labour Law Consultancy</li>
-                            <li><i class="fas fa-check-circle"></i> Labour Welfare Fund Services</li>
-                            <li><i class="fas fa-check-circle"></i> Professional Tax Management</li>
-                            <li><i class="fas fa-check-circle"></i> Comprehensive Payroll Services</li>
-                            <li><i class="fas fa-check-circle"></i> TDS Processing & Filing</li>
-                            <li><i class="fas fa-check-circle"></i> Statutory Compliance Management</li>
-                            <li><i class="fas fa-check-circle"></i> Employee Benefits Administration</li>
-                        </ul>
-                        <!-- <a href="labour-law-services.html" class="service-btn">Learn More <i class="fas fa-arrow-right"></i></a> -->
+                    
+                    <!-- Trademark and patent Assignments -->
+                    <div class="service-card" data-aos="fade-up">
+                        <div class="service-image-container">
+                            <img src="images/trademark1.jpg" alt="Trademark & Patent Services">
+                            <div class="service-overlay">
+                                <i class="fas fa-trademark"></i>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3>Trademark & Patent Services</h3>
+                            <div class="service-scroll-container">
+                                <ul class="service-features">
+                                    <li><i class="fas fa-check-circle"></i> Trademark Registration</li>
+                                    <li><i class="fas fa-check-circle"></i> Copyright Registration</li>
+                                    <li><i class="fas fa-check-circle"></i> Patent Registration</li>
+                                    <li><i class="fas fa-check-circle"></i> Brand Protection Services</li>
+                                    <li><i class="fas fa-check-circle"></i> IP Rights Management</li>
+                                    <li><i class="fas fa-check-circle"></i> Trademark Search & Analysis</li>
+                                    <li><i class="fas fa-check-circle"></i> IP Documentation Support</li>
+                                    <li><i class="fas fa-check-circle"></i> Legal Consultation for IP</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Trust & NGO Services -->
-                <div class="service-card" data-aos="fade-up">
-                    <div class="service-image">
-                        <img src="images/trust-ngo-society.jpg" alt="Trust & NGO Services">
-                        <div class="service-overlay">
-                            <i class="fas fa-hands-helping"></i>
+                    <!-- Training & Certification -->
+                    <div class="service-card" data-aos="fade-up">
+                        <div class="service-image-container">
+                            <img src="images/research-development.jpg" alt="Training & Certification">
+                            <div class="service-overlay">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3>Training & Certification Programs</h3>
+                            <div class="service-scroll-container">
+                                <ul class="service-features">
+                                    <li><i class="fas fa-check-circle"></i> Tax Management Training</li>
+                                    <li><i class="fas fa-check-circle"></i> Financial Accounting Certification</li>
+                                    <li><i class="fas fa-check-circle"></i> Freelancer Development Program</li>
+                                    <li><i class="fas fa-check-circle"></i> Stock Market Trading Course</li>
+                                    <li><i class="fas fa-check-circle"></i> Practical Hands-on Training</li>
+                                    <li><i class="fas fa-check-circle"></i> Industry Expert Sessions</li>
+                                    <li><i class="fas fa-check-circle"></i> Certificate of Completion</li>
+                                    <li><i class="fas fa-check-circle"></i> Placement Assistance</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                    <div class="service-content">
-                        <h3>Trust & NGO Formation Services</h3>
-                        <p>Complete assistance for non-profit organization setup and compliance</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check-circle"></i> Trust & NGO Registration</li>
-                            <li><i class="fas fa-check-circle"></i> Society Registration</li>
-                            <li><i class="fas fa-check-circle"></i> Section 8 Company Formation</li>
-                            <li><i class="fas fa-check-circle"></i> Trust & Society Compliance</li>
-                            <li><i class="fas fa-check-circle"></i> 12A Registration Services</li>
-                            <li><i class="fas fa-check-circle"></i> 80G Certification</li>
-                            <li><i class="fas fa-check-circle"></i> FCRA Registration</li>
-                            <li><i class="fas fa-check-circle"></i> CSR Project Consultation</li>
-                            <li><i class="fas fa-check-circle"></i> Annual Returns Filing</li>
-                        </ul>
-                        <!-- <a href="trust-ngo-services.html" class="service-btn">Learn More <i class="fas fa-arrow-right"></i></a> -->
-                    </div>
-                </div>
 
-                <!-- ISO Audit & Certification -->
-                <div class="service-card" data-aos="fade-up">
-                    <div class="service-image">
-                        <img src="images/iso.jpg" alt="ISO Audit & Certification">
-                        <div class="service-overlay">
-                            <i class="fas fa-certificate"></i>
+                    <!-- NRI & Foreign Services -->
+                    <div class="service-card" data-aos="fade-up">
+                        <div class="service-image-container">
+                            <img src="images/payroll-services.jpg" alt="NRI & Foreign Services">
+                            <div class="service-overlay">
+                                <i class="fas fa-globe-asia"></i>
+                            </div>
                         </div>
-                    </div>  
-                    <div class="service-content">
-                        <h3>ISO Audit & Certifications</h3>
-                        <p>Comprehensive ISO certification and audit management services</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check-circle"></i> ISO 9001:2015 QMS Certification</li>
-                            <li><i class="fas fa-check-circle"></i> ISO Renewal Services</li>
-                            <li><i class="fas fa-check-circle"></i> Re-audit Management</li>
-                            <li><i class="fas fa-check-circle"></i> ISO 22000 FSMS Certification</li>
-                            <li><i class="fas fa-check-circle"></i> ISO 14001 Environmental Management</li>
-                            <li><i class="fas fa-check-circle"></i> ISO 27001 Information Security</li>
-                            <li><i class="fas fa-check-circle"></i> Documentation Support</li>
-                            <li><i class="fas fa-check-circle"></i> Audit Preparation Services</li>
-                        </ul>
-                        <!-- <a href="iso-certification-services.html" class="service-btn">Learn More <i class="fas fa-arrow-right"></i></a> -->
-                    </div>
-                </div>
-              <!-- Trademark and patent Assignments -->
-                <div class="service-card" data-aos="fade-up">
-                    <div class="service-image">
-                        <img src="images/trademark1.jpg" alt="Trademark & Patent Services">
-                        <div class="service-overlay">
-                            <i class="fas fa-trademark"></i>
+                        <div class="service-content">
+                            <h3>Premium NRI & Foreign Services</h3>
+                            <div class="service-scroll-container">
+                                <ul class="service-features">
+                                    <li><i class="fas fa-check-circle"></i> Indian Financial Investment Advisory</li>
+                                    <li><i class="fas fa-check-circle"></i> Business Setup for Foreign Entities</li>
+                                    <li><i class="fas fa-check-circle"></i> Holding Company Formation</li>
+                                    <li><i class="fas fa-check-circle"></i> FDI Consultation & Approval</li>
+                                    <li><i class="fas fa-check-circle"></i> Indian Stock Market Trading</li>
+                                    <li><i class="fas fa-check-circle"></i> FII Registration Services</li>
+                                    <li><i class="fas fa-check-circle"></i> Foreign Brand Registration</li>
+                                    <li><i class="fas fa-check-circle"></i> NRI Portfolio Management</li>
+                                    <li><i class="fas fa-check-circle"></i> Regulatory Compliance Support</li>
+                                    <li><i class="fas fa-check-circle"></i> Cross-Border Transaction Advisory</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                    <div class="service-content">
-                        <h3>Trademark & Patent Services</h3>
-                        <p>Comprehensive intellectual property protection and registration services</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check-circle"></i> Trademark Registration</li>
-                            <li><i class="fas fa-check-circle"></i> Copyright Registration</li>
-                            <li><i class="fas fa-check-circle"></i> Patent Registration</li>
-                            <li><i class="fas fa-check-circle"></i> Brand Protection Services</li>
-                            <li><i class="fas fa-check-circle"></i> IP Rights Management</li>
-                            <li><i class="fas fa-check-circle"></i> Trademark Search & Analysis</li>
-                            <li><i class="fas fa-check-circle"></i> IP Documentation Support</li>
-                            <li><i class="fas fa-check-circle"></i> Legal Consultation for IP</li>
-                        </ul>
-                        <!-- <a href="trademark-patent-services.html" class="service-btn">Learn More <i class="fas fa-arrow-right"></i></a> -->
-                    </div>
-                </div>
 
-
-                <!-- Training & Certification -->
-                <div class="service-card" data-aos="fade-up">
-                    <div class="service-image">
-                        <img src="images/research-development.jpg" alt="Training & Certification">
-                        <div class="service-overlay">
-                            <i class="fas fa-graduation-cap"></i>
+                    <!-- Special & Premium Services -->
+                    <div class="service-card" data-aos="fade-up">
+                        <div class="service-image-container">
+                            <img src="images/sebi-matters.jpg" alt="Special & Premium Services">
+                            <div class="service-overlay">
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3>Special & Premium Assignments</h3>
+                            <div class="service-scroll-container">
+                                <ul class="service-features">
+                                    <li><i class="fas fa-check-circle"></i> Complete Business Setup Services</li>
+                                    <li><i class="fas fa-check-circle"></i> Professional Broking Services</li>
+                                    <li><i class="fas fa-check-circle"></i> Joint Venture Facilitation</li>
+                                    <li><i class="fas fa-check-circle"></i> Business Revival & Rehabilitation</li>
+                                    <li><i class="fas fa-check-circle"></i> Compliance Monitoring Systems</li>
+                                    <li><i class="fas fa-check-circle"></i> Comprehensive Business Planning</li>
+                                    <li><i class="fas fa-check-circle"></i> Financial Restructuring</li>
+                                    <li><i class="fas fa-check-circle"></i> Real Estate Deal Advisory</li>
+                                    <li><i class="fas fa-check-circle"></i> Strategic Business Consulting</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                    <div class="service-content">
-                        <h3>Training & Certification Programs</h3>
-                        <p>Professional development courses with industry-recognized certifications</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check-circle"></i> Tax Management Training</li>
-                            <li><i class="fas fa-check-circle"></i> Financial Accounting Certification</li>
-                            <li><i class="fas fa-check-circle"></i> Freelancer Development Program</li>
-                            <li><i class="fas fa-check-circle"></i> Stock Market Trading Course</li>
-                            <li><i class="fas fa-check-circle"></i> Practical Hands-on Training</li>
-                            <li><i class="fas fa-check-circle"></i> Industry Expert Sessions</li>
-                            <li><i class="fas fa-check-circle"></i> Certificate of Completion</li>
-                            <li><i class="fas fa-check-circle"></i> Placement Assistance</li>
-                        </ul>
-                        <!-- <a href="training-services.html" class="service-btn">Learn More <i class="fas fa-arrow-right"></i></a> -->
-                    </div>
-                </div>
 
-                <!-- NRI & Foreign Services -->
-                <div class="service-card" data-aos="fade-up">
-                    <div class="service-image">
-                        <img src="images/payroll-services.jpg" alt="NRI & Foreign Services">
-                        <div class="service-overlay">
-                            <i class="fas fa-globe-asia"></i>
+                    <!-- International Trading Services -->
+                    <div class="service-card" data-aos="fade-up">
+                        <div class="service-image-container">
+                            <img src="images/international.jpg" alt="International Trading Services">
+                            <div class="service-overlay">
+                                <i class="fas fa-ship"></i>
+                            </div>
                         </div>
-                    </div>
-                    <div class="service-content">
-                        <h3>Premium NRI & Foreign Services</h3>
-                        <p>Specialized services for NRIs and foreign entities investing in India</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check-circle"></i> Indian Financial Investment Advisory</li>
-                            <li><i class="fas fa-check-circle"></i> Business Setup for Foreign Entities</li>
-                            <li><i class="fas fa-check-circle"></i> Holding Company Formation</li>
-                            <li><i class="fas fa-check-circle"></i> FDI Consultation & Approval</li>
-                            <li><i class="fas fa-check-circle"></i> Indian Stock Market Trading</li>
-                            <li><i class="fas fa-check-circle"></i> FII Registration Services</li>
-                            <li><i class="fas fa-check-circle"></i> Foreign Brand Registration</li>
-                            <li><i class="fas fa-check-circle"></i> NRI Portfolio Management</li>
-                            <li><i class="fas fa-check-circle"></i> Regulatory Compliance Support</li>
-                            <li><i class="fas fa-check-circle"></i> Cross-Border Transaction Advisory</li>
-                        </ul>
-                        <!-- <a href="nri-foreign-services.html" class="service-btn">Learn More <i class="fas fa-arrow-right"></i></a> -->
-                    </div>
-                </div>
-
-                <!-- Special & Premium Services -->
-                <div class="service-card" data-aos="fade-up">
-                    <div class="service-image">
-                        <img src="images/sebi-matters.jpg" alt="Special & Premium Services">
-                        <div class="service-overlay">
-                            <i class="fas fa-star"></i>
+                        <div class="service-content">
+                            <h3>International Trading Services</h3>
+                            <div class="service-scroll-container">
+                                <ul class="service-features">
+                                    <li><i class="fas fa-check-circle"></i> IEC Code Registration</li>
+                                    <li><i class="fas fa-check-circle"></i> Export-Import Documentation</li>
+                                    <li><i class="fas fa-check-circle"></i> Foreign Trade Consultation</li>
+                                    <li><i class="fas fa-check-circle"></i> LC Processing & Approval</li>
+                                    <li><i class="fas fa-check-circle"></i> Trade Compliance Support</li>
+                                    <li><i class="fas fa-check-circle"></i> International Market Advisory</li>
+                                    <li><i class="fas fa-check-circle"></i> Custom Clearance Assistance</li>
+                                    <li><i class="fas fa-check-circle"></i> Trade Finance Solutions</li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
-                    <div class="service-content">
-                        <h3>Special & Premium Assignments</h3>
-                        <p>Elite business solutions and specialized consultancy services</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check-circle"></i> Complete Business Setup Services
-                                <!-- <ul class="sub-features">
-                                    <li>Restaurants</li>
-                                    <li>Hospitals</li>
-                                    <li>Schools</li>
-                                    <li>Shopping Complexes</li>
-                                </ul> -->
-                            </li>
-                            <li><i class="fas fa-check-circle"></i> Professional Broking Services</li>
-                            <li><i class="fas fa-check-circle"></i> Joint Venture Facilitation</li>
-                            <li><i class="fas fa-check-circle"></i> Business Revival & Rehabilitation</li>
-                            <li><i class="fas fa-check-circle"></i> Compliance Monitoring Systems</li>
-                            <li><i class="fas fa-check-circle"></i> Comprehensive Business Planning</li>
-                            <li><i class="fas fa-check-circle"></i> Financial Restructuring</li>
-                            <li><i class="fas fa-check-circle"></i> Real Estate Deal Advisory</li>
-                            <li><i class="fas fa-check-circle"></i> Strategic Business Consulting</li>
-                        </ul>
-                        <!-- <a href="premium-services.html" class="service-btn">Learn More <i class="fas fa-arrow-right"></i></a> -->
-                    </div>
-                </div>
-
-                <!-- International Trading Services -->
-                <div class="service-card" data-aos="fade-up">
-                    <div class="service-image">
-                        <img src="images/international.jpg" alt="International Trading Services">
-                        <div class="service-overlay">
-                            <i class="fas fa-ship"></i>
-                        </div>
-                    </div>
-                    <div class="service-content">
-                        <h3>International Trading Services</h3>
-                        <p>Comprehensive import-export solutions and trade consultancy</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check-circle"></i> IEC Code Registration</li>
-                            <li><i class="fas fa-check-circle"></i> Export-Import Documentation</li>
-                            <li><i class="fas fa-check-circle"></i> Foreign Trade Consultation</li>
-                            <li><i class="fas fa-check-circle"></i> LC Processing & Approval</li>
-                            <li><i class="fas fa-check-circle"></i> Trade Compliance Support</li>
-                            <li><i class="fas fa-check-circle"></i> International Market Advisory</li>
-                            <li><i class="fas fa-check-circle"></i> Custom Clearance Assistance</li>
-                            <li><i class="fas fa-check-circle"></i> Trade Finance Solutions</li>
-                        </ul>
-                        <!-- <a href="international-trade-services.html" class="service-btn">Learn More <i class="fas fa-arrow-right"></i></a> -->
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Why Choose Us Section -->
     <section class="why-choose-services" data-aos="fade-up">
@@ -600,107 +571,27 @@
         </div>
     </section>
 
-    <!-- Detailed Services Section
-    <section class="detailed-services" data-aos="fade-up">
-        <div class="container">
-            <h2 class="section-title text-center">Our Complete Service Catalog</h2>
-            <p class="section-subtitle text-center">Comprehensive financial and business solutions under one roof</p>
-
-            <div class="service-categories"> -->
-                <!-- Tax Services -->
-                <!-- <div class="category-card" data-aos="fade-up">
-                    <div class="category-header">
-                        <div class="category-icon">
-                            <i class="fas fa-calculator"></i>
-                        </div>
-                        <h3>Tax Services</h3>
-                    </div>
-                    <div class="category-content">
-                        <div class="service-group">
-                            <h4><i class="fas fa-check-circle"></i> Income Tax Services</h4>
-                            <ul>
-                                <li>Individual tax return filing</li>
-                                <li>Company and firm tax returns</li>
-                                <li>Institution tax filing</li>
-                            </ul>
-                        </div>
-                        <div class="service-group">
-                            <h4><i class="fas fa-check-circle"></i> GST Services</h4>
-                            <ul>
-                                <li>GST Registration</li>
-                                <li>Return filing</li>
-                                <li>Refund processing</li>
-                                <li>Assessments</li>
-                            </ul>
-                        </div>
-                        <div class="service-group">
-                            <h4><i class="fas fa-check-circle"></i> TDS & Appeals</h4>
-                            <ul>
-                                <li>TDS Compliances</li>
-                                <li>Appeal filing</li>
-                                <li>Department representation</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="category-image">
-                        <img src="images/25.jpg" alt="Tax Services">
-                    </div>
-                </div> -->
-
-                <!-- Business Services -->
-                <!-- <div class="category-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="category-header">
-                        <div class="category-icon">
-                            <i class="fas fa-building"></i>
-                        </div>
-                        <h3>Business Services</h3>
-                    </div>
-                    <div class="category-content">
-                        <div class="service-group">
-                            <h4><i class="fas fa-check-circle"></i> Business Formation</h4>
-                            <ul>
-                                <li>Company registration (Pvt Ltd, OPC, LLP)</li>
-                                <li>Partnership firm registration</li>
-                                <li>Start-up assistance</li>
-                            </ul>
-                        </div>
-                        <div class="service-group">
-                            <h4><i class="fas fa-check-circle"></i> Compliance Services</h4>
-                            <ul>
-                                <li>ROC Return filing</li>
-                                <li>Company law compliance</li>
-                                <li>Regulatory approvals</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="category-image">
-                        <img src="images/25.jpg" alt="Business Services">
-                    </div>
-                </div> -->
-
-                <!-- Add similar category cards for other service categories -->
-            <!-- </div>
-        </div>
-    </section> -->
-
     <!-- CTA Container -->
-    <div class="cta-container">
-        <!-- CTA will be loaded here by script -->
-    </div>
+    <div id="cta-container"></div>
 
     <!-- Footer Container -->
-    <div class="footer-container">
-        <!-- Footer will be loaded here by script -->
-    </div>
+    <div id="footer-container"></div>
 
-    <!-- Scripts -->
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS Animation Library -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- GSAP Animation Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <!-- Bootstrap JS Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-
+    
+    <!-- Custom JS -->
     <script src="js/script.js"></script>
 </body>
 </html>
+

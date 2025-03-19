@@ -1,556 +1,548 @@
-<!DOCTYPE html>
-<html lang="en">
+  <!DOCTYPE html>
+  <html lang="en">
 
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Professional Wealth Management and Financial Services">
     <meta name="keywords" content="wealth management, financial services, investment, tax planning, retirement">
     <title>IndianMoney Master - Your Financial Partner</title>
 
-    <!-- Favicon --> 
+    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
-    
+
     <!-- Third Party Libraries -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  </head>
 
-    
+  <body>
 
-    
-</head>
-
-<body>
-    
     <!-- Preloader -->
     <div class="preloader">
-        <div class="loader"></div>
+      <div class="loader"></div>
     </div>
 
-    <!-- Header Container -->
-    <!-- <div class="header-container"></div> -->
+    <!-- Header will be dynamically loaded here -->
+    <div id="header-container"></div>
 
-    <!-- Market Ticker will be loaded by script -->
+    <!-- Main Content -->
+    <main>
+      <!-- Hero Section -->
+      <!-- You can comment out or remove any static hero content if using dynamic carousel -->
 
-    <!-- Hero Section -->
-    <!-- <section class="hero-section" style="background-image: url('images/138.jpg');">
-        <div class="hero-content" data-aos="fade-up">
-            <h1 class="main-heading">
-                <span class="gradient-text">Transform Your Financial Future</span>
-                <span class="emphasis-text">With Expert Guidance</span>
-            </h1>
-            <p class="hero-tagline">Your trusted partner in wealth creation and financial freedom</p>
-            <div class="hero-buttons">
-                <a href="services.html" class="btn-primary" data-aos="fade-right" data-aos-delay="200">
-                    <i class="fas fa-chart-line"></i> Explore Services
-                </a>
-                <a href="contact.html" class="btn-secondary" data-aos="fade-left" data-aos-delay="300">
-                    <i class="fas fa-handshake"></i> Free Consultation
-                </a>
-            </div>
+      <!-- Enhanced Hero Carousel (Dynamic Swiper Carousel) -->
+      <section>
+        <!-- Section Heading -->
+        <h2 class="section-title">Our Financial Solutions</h2>
+      
+        <!-- Swiper container -->
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <!-- Dynamic slides will be inserted here via JS -->
+          </div>
+          <!-- Pagination and navigation -->
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
         </div>
-    </section> -->
+      </section>
 
-    <!-- Add dividers between sections -->
-    <div class="section-divider"></div>
+      <!-- Financial Services Gallery Section -->
+      <section class="financial-gallery">
+        <div class="gallery-container">
+          <!-- Title moved outside slider container -->
+          <h2 class="gallery-title">One-Roof Financial Ecosystem</h2>
+      
+          <!-- Navigation Arrows -->
+          <!-- <div class="gallery-arrow prev-arrow">‹</div>
+          <div class="gallery-arrow next-arrow">›</div> -->
+      
+          <!-- Image Slider -->
+          <div class="gallery-slider">
+            <!-- Slides with proper spacing and alt text -->
+            <div class="slide">
+              <img src="images/all_financial_services.webp" 
+                   alt="All financial services" 
+                   loading="lazy">
+              <div class="image-caption">ALL Services Under One Roof</div>
+            </div>
+      
+            <div class="slide">
+              <img src="images/diversified.webp" 
+                   alt="Diversified investment portfolio" 
+                   loading="lazy">
+              <div class="image-caption">India's Biggest Diversified Financial Services</div>
+            </div>
+      
+            <div class="slide">
+              <img src="images/unique_concept.webp" 
+                   alt="Unique financial concept" 
+                   loading="lazy">
+              <div class="image-caption">India's First Unique Concept</div>
+            </div>
+      
+            <div class="slide">
+              <img src="images/more than 100 services.webp" 
+                   alt="100+ services" 
+                   loading="lazy">
+              <div class="image-caption">More Than 100 Services</div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-    <!-- Destination Section -->
-    <section class="destination-section">
+     
+
+      <!-- Financial All-In-One Calculator Section -->
+      <section class="calculator-section" data-aos="fade-up">
         <div class="container">
-            <div class="destination-header">
-                <h2 data-aos="fade-down">our services</h2>
-                <p data-aos="fade-up" data-aos-delay="200">Comprehensive financial services tailored to secure your future and maximize your wealth potential</p>
+          <h2>Financial All-In-One Calculator</h2>
+          <p>Plan your investments, tax savings, and retirement in one go!</p>
+          <form id="allInOneCalculator" class="calculator-form">
+            <div class="form-group">
+              <label for="investment-amount">Investment Amount (₹)</label>
+              <input type="number" id="investment-amount" required>
             </div>
-            
-            <div class="row g-4">
-                <!-- Tax Services Card -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="destination-card">
-                        <img src="images/income-tax-return.jpg" alt="Tax Services" class="destination-image">
-                        <div class="destination-overlay">
-                            <h3 class="destination-title">Tax Services</h3>
-                            <p class="destination-description">Expert tax planning and compliance services for individuals and businesses.</p>
-                            <a href="tax-services.html" class="view-more-btn">Learn More <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Investment Planning Card -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="destination-card">
-                        <img src="images/fdi-investment.jpg" alt="Investment Planning" class="destination-image">
-                        <div class="destination-overlay">
-                            <h3 class="destination-title">Investment Planning</h3>
-                            <p class="destination-description">Strategic investment solutions to help you achieve your financial goals.</p>
-                            <a href="investment.html" class="view-more-btn">Learn More <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Wealth Management Card -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="destination-card">
-                        <img src="images/wealth-tax.jpg" alt="Wealth Management" class="destination-image">
-                        <div class="destination-overlay">
-                            <h3 class="destination-title">Wealth Management</h3>
-                            <p class="destination-description">Comprehensive wealth management solutions for long-term prosperity.</p>
-                            <a href="wealth-services.html" class="view-more-btn">Learn More <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
+            <div class="form-group">
+              <label for="expected-return">Expected Return (%)</label>
+              <input type="number" id="expected-return" step="0.1" required>
             </div>
+            <div class="form-group">
+              <label for="investment-years">Investment Duration (Years)</label>
+              <input type="number" id="investment-years" required>
+            </div>
+            <button type="submit">Calculate</button>
+          </form>
+          <div id="calculatorResult" class="calculator-result"></div>
         </div>
-    </section>
+      </section>
 
-    <!-- Achievements Section -->
-    <section class="achievements py-5">
+      <!-- Insurance Services Section -->
+      <section class="insurance-section" data-aos="fade-up">
         <div class="container">
-            <h2 class="text-center mb-5" data-aos="fade-down">Our Key Achievements</h2>
-            <div class="row g-4 justify-content-center">
-                <!-- India's Biggest Diversified Financial Services -->
-                <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="achievement-box">
-                        <div class="achievement-image">
-                            <img src="images/diverse.jpg" alt="Diversified Services">
-                        </div>
-                        <div class="icon-wrapper">
-                            <i class="fas fa-crown"></i>
-                        </div>
-                        <div class="counter-wrapper">
-                            <span class="achievement-text">India's Biggest</span>
-                        </div>
-                        <p class="achievement-title">Diversified Financial Services</p>
-                        <div class="shine-effect"></div>
-                    </div>
-                </div>
-                
-                <!-- India's First Unique Concept -->
-                <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="achievement-box">
-                        <div class="achievement-image">
-                            <img src="images/first.jpg" alt="Unique Concept">
-                        </div>
-                        <div class="icon-wrapper">
-                            <i class="fas fa-lightbulb"></i>
-                        </div>
-                        <div class="counter-wrapper">
-                            <span class="achievement-text">First Unique</span>
-                        </div>
-                        <p class="achievement-title">Concept in Financial Market</p>
-                        <div class="shine-effect"></div>
-                    </div>
-                </div>
-                
-                <!-- More than 100 Services -->
-                <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="achievement-box">
-                        <div class="achievement-image">
-                            <img src="images/pic.jpg" alt="Services">
-                        </div>
-                        <div class="icon-wrapper">
-                            <i class="fas fa-chart-pie"></i>
-                        </div>
-                        <div class="counter-wrapper">
-                            <span class="counter" data-target="100">100</span>
-                            <span class="plus">+</span>
-                        </div>
-                        <p class="achievement-title">Financial Services</p>
-                        <div class="shine-effect"></div>
-                    </div>
-                </div>
-                
-                <!-- All Services under One Roof -->
-                <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="400">
-                    <div class="achievement-box">
-                        <div class="achievement-image">
-                            <img src="images/all.jpg" alt="One Roof Services">
-                        </div>
-                        <div class="icon-wrapper">
-                            <i class="fas fa-home"></i>
-                        </div>
-                        <div class="counter-wrapper">
-                            <span class="achievement-text">One Roof</span>
-                        </div>
-                        <p class="achievement-title">All Services Under One Roof</p>
-                        <div class="shine-effect"></div>
-                    </div>
-                </div>
+          <h2>Insurance Services</h2>
+          <div class="insurance-cards">
+            <div class="insurance-card" data-aos="fade-up">
+              <i class="fas fa-heartbeat"></i>
+              <h3>Life Insurance</h3>
+              <p>Comprehensive policies to secure your family's future.</p>
             </div>
+            <div class="insurance-card" data-aos="fade-up" data-aos-delay="100">
+              <i class="fas fa-car"></i>
+              <h3>Auto Insurance</h3>
+              <p>Protect your vehicle with our reliable insurance plans.</p>
+            </div>
+            <div class="insurance-card" data-aos="fade-up" data-aos-delay="200">
+              <i class="fas fa-home"></i>
+              <h3>Home Insurance</h3>
+              <p>Safeguard your home against unforeseen risks.</p>
+            </div>
+            <div class="insurance-card" data-aos="fade-up" data-aos-delay="300">
+              <i class="fas fa-shield-alt"></i>
+              <h3>Health Insurance</h3>
+              <p>Get comprehensive medical coverage for peace of mind.</p>
+            </div>
+          </div>
         </div>
-    </section>
-    
-    <!-- Services Section -->
-    <section class="services-section" data-aos="fade-up">
+      </section>
+
+      <!-- Tax Planning Services Section -->
+      <section class="tax-planning-section" data-aos="fade-up">
         <div class="container">
-            <div class="services-header">
-                <h2>Our Financial Services</h2>
-                <p>Comprehensive financial solutions tailored to help you achieve your goals and secure your future</p>
+          <h2 class="section-title">Advanced Tax Planning Solutions</h2>
+          <p class="section-subtitle text-center mb-5">Optimize your tax liabilities with our strategic solutions</p>
+          <div class="tax-services">
+            <div class="tax-service" data-aos="flip-left">
+              <div class="service-inner">
+                <div class="service-front">
+                  <h3>Personal Tax Planning</h3>
+                  <ul>
+                    <li><i class="fas fa-check-circle"></i> Income tax optimization</li>
+                    <li><i class="fas fa-check-circle"></i> Investment planning</li>
+                    <li><i class="fas fa-check-circle"></i> Tax-saving strategies</li>
+                  </ul>
+                  <div class="service-hover">
+                    <a href="taxplanning.html" class="btn-view-more">View More <i class="fas fa-arrow-right"></i></a>
+                  </div>
+                </div>
+              </div>
             </div>
-            
-            <div class="services-grid">
-                <div class="service-card" data-aos="fade-up">
-                    <div class="service-image">
-                        <img src="images/tax-management.jpg" alt="Tax Services">
-                        <span class="service-overlay">Featured</span>
-                    </div>
-                    <div class="service-content">
-                        <div class="service-icon">
-                            <i class="fas fa-calculator"></i>
-                        </div>
-                        <h3>Tax Services</h3>
-                        <p>Expert tax planning and compliance services to optimize your tax savings and ensure regulatory compliance.</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check-circle"></i> Tax Planning & Advisory</li>
-                            <li><i class="fas fa-check-circle"></i> Tax Return Filing</li>
-                            <li><i class="fas fa-check-circle"></i> GST Compliance</li>
-                        </ul>
-                        <a href="tax-services.html" class="service-btn">
-                            Learn More
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
+            <div class="tax-service" data-aos="flip-left" data-aos-delay="100">
+              <div class="service-inner">
+                <div class="service-front">
+                  <h3>Business Tax Planning</h3>
+                  <ul>
+                    <li><i class="fas fa-check-circle"></i> Corporate tax strategies</li>
+                    <li><i class="fas fa-check-circle"></i> GST compliance</li>
+                    <li><i class="fas fa-check-circle"></i> Business optimization</li>
+                  </ul>
+                  <div class="service-hover">
+                    <a href="taxplanning.html" class="btn-view-more">View More <i class="fas fa-arrow-right"></i></a>
+                  </div>
                 </div>
-
-                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="service-image">
-                        <img src="images/sip-investment.jpg" alt="Investment Planning">
-                        <span class="service-overlay">Popular</span>
-                    </div>
-                    <div class="service-content">
-                        <div class="service-icon">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <h3>Investment Planning</h3>
-                        <p>Strategic investment solutions to help you build and grow your wealth with calculated risks.</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check-circle"></i> Portfolio Management</li>
-                            <li><i class="fas fa-check-circle"></i> Mutual Funds</li>
-                            <li><i class="fas fa-check-circle"></i> Stock Market Advisory</li>
-                        </ul>
-                        <a href="investment.html" class="service-btn">
-                            Learn More
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="service-image">
-                        <img src="images/retirement and prnsion shceme.jpg" alt="Retirement Planning">
-                        <span class="service-overlay">Essential</span>
-                    </div>
-                    <div class="service-content">
-                        <div class="service-icon">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <h3>Retirement Planning</h3>
-                        <p>Secure your golden years with our comprehensive retirement planning and pension solutions.</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check-circle"></i> Pension Planning</li>
-                            <li><i class="fas fa-check-circle"></i> Retirement Funds</li>
-                            <li><i class="fas fa-check-circle"></i> Estate Planning</li>
-                        </ul>
-                        <a href="retirement.html" class="service-btn">
-                            Learn More
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
+              </div>
             </div>
+            <div class="tax-service" data-aos="flip-left" data-aos-delay="200">
+              <div class="service-inner">
+                <div class="service-front">
+                  <h3>Investment Tax Planning</h3>
+                  <ul>
+                    <li><i class="fas fa-check-circle"></i> Capital gains planning</li>
+                    <li><i class="fas fa-check-circle"></i> Retirement planning</li>
+                    <li><i class="fas fa-check-circle"></i> Estate planning</li>
+                  </ul>
+                  <div class="service-hover">
+                    <a href="taxplanning.html" class="btn-view-more">View More <i class="fas fa-arrow-right"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- Calculator Section -->
-    <section class="calculator-section">
+      <!-- Market Insights Section -->
+      <section class="market-insights" data-aos="fade-up">
         <div class="container">
-            <div class="calculator-header text-center">
-                <h2>Financial Calculators</h2>
-                <p>Plan your finances with our easy-to-use calculators</p>
-            </div>
+          <div class="section-header text-center mb-5">
+            <h2 class="section-title">Real-Time Market Insights</h2>
+            <p class="section-subtitle">Track live financial markets with interactive analytics</p>
+          </div>
 
-            <div class="calculator-tabs">
-                <button class="tab-btn active" data-tab="sip">SIP Calculator</button>
-                <button class="tab-btn" data-tab="emi">EMI Calculator</button>
-            </div>
+          <!-- <div class="insights-wrapper">
+            <=Ticker Section -->
+            <!-- <div class="market-ticker mb-4">
+              <div class="ticker-header">
+                <i class="fas fa-chart-line"></i>
+                <h3>Live Market Movers</h3>
+              </div>
+              <div class="ticker-wrapper">
+                <div class="ticker-track"></div>
+              </div>
+            </div> --> 
 
-            <div class="calculator-cards">
-                <!-- SIP Calculator -->
-                <div id="sipCalculator" class="calculator-card active">
-                    <div class="card-header">
-                        <i class="fas fa-chart-line"></i>
-                        <h3>SIP Calculator</h3>
-                    </div>
-                    <form class="calculator-form">
-                        <div class="input-group">
-                            <div class="input-wrapper">
-                                <i class="fas fa-rupee-sign"></i>
-                                <input type="number" id="sipAmount" value="5000" min="500" max="200000">
-                            </div>
-                            <div class="range-slider">
-                                <input type="range" min="500" max="200000" value="5000" step="500">
-                            </div>
-                        </div>
-                        <div class="input-group">
-                            <div class="input-wrapper">
-                                <i class="fas fa-calendar"></i>
-                                <input type="number" id="sipYears" value="10" min="1" max="30">
-                            </div>
-                            <div class="range-slider">
-                                <input type="range" min="1" max="30" value="10" step="1">
-                            </div>
-                        </div>
-                        <div class="input-group">
-                            <div class="input-wrapper">
-                                <i class="fas fa-percent"></i>
-                                <input type="number" id="sipReturn" value="12" min="1" max="30">
-                            </div>
-                            <div class="range-slider">
-                                <input type="range" min="1" max="30" value="12" step="0.5">
-                            </div>
-                        </div>
-                    </form>
-                    <div class="result-container">
-                        <div class="result-card">
-                            <span class="result-label">Invested Amount</span>
-                            <span class="result-value">₹0</span>
-                        </div>
-                        <div class="result-card">
-                            <span class="result-label">Est. Returns</span>
-                            <span class="result-value">₹0</span>
-                        </div>
-                        <div class="result-card highlight">
-                            <span class="result-label">Total Value</span>
-                            <span class="result-value">₹0</span>
-                        </div>
-                    </div>
+            <!-- Chart Section -->
+            <div class="chart-container card">
+              <div class="chart-header">
+                <div class="chart-controls">
+                  <button class="btn btn-timeframe active" data-timeframe="1D">24H</button>
+                  <button class="btn btn-timeframe" data-timeframe="1W">1W</button>
+                  <button class="btn btn-timeframe" data-timeframe="1M">1M</button>
+                  <button class="btn btn-timeframe" data-timeframe="1Y">1Y</button>
                 </div>
-
-                <!-- EMI Calculator -->
-                <div id="emiCalculator" class="calculator-card">
-                    <div class="card-header">
-                        <i class="fas fa-home"></i>
-                        <h3>EMI Calculator</h3>
-                    </div>
-                    <form class="calculator-form">
-                        <div class="input-group">
-                            <div class="input-wrapper">
-                                <i class="fas fa-rupee-sign"></i>
-                                <input type="number" id="loanAmount" value="1000000" min="100000" max="10000000">
-                            </div>
-                            <div class="range-slider">
-                                <input type="range" min="100000" max="10000000" value="1000000" step="100000">
-                            </div>
-                        </div>
-                        <div class="input-group">
-                            <div class="input-wrapper">
-                                <i class="fas fa-calendar"></i>
-                                <input type="number" id="loanTerm" value="20" min="1" max="30">
-                            </div>
-                            <div class="range-slider">
-                                <input type="range" min="1" max="30" value="20" step="1">
-                            </div>
-                        </div>
-                        <div class="input-group">
-                            <div class="input-wrapper">
-                                <i class="fas fa-percent"></i>
-                                <input type="number" id="loanInterest" value="8.5" min="5" max="20">
-                            </div>
-                            <div class="range-slider">
-                                <input type="range" min="5" max="20" value="8.5" step="0.1">
-                            </div>
-                        </div>
-                    </form>
-                    <div class="result-container">
-                        <div class="result-card">
-                            <span class="result-label">Monthly EMI</span>
-                            <span class="result-value">₹0</span>
-                        </div>
-                        <div class="result-card">
-                            <span class="result-label">Total Interest</span>
-                            <span class="result-value">₹0</span>
-                        </div>
-                        <div class="result-card highlight">
-                            <span class="result-label">Total Payment</span>
-                            <span class="result-value">₹0</span>
-                        </div>
-                    </div>
-                </div>
+                <h4 class="chart-title">NIFTY 50 Index Performance</h4>
+              </div>
+              <canvas id="marketChart"></canvas>
             </div>
+
+            <!-- Market Summary -->
+            <div class="market-summary row">
+              <div class="col-md-4 summary-card">
+                <div class="card">
+                  <i class="fas fa-rupee-sign"></i>
+                  <h5>Sensex</h5>
+                  <div class="value" id="sensex-value">72,186.09</div>
+                  <div class="change positive">+1.10%</div>
+                </div>
+              </div>
+              <div class="col-md-4 summary-card">
+                <div class="card">
+                  <i class="fas fa-chart-bar"></i>
+                  <h5>Nifty 50</h5>
+                  <div class="value" id="nifty-value">21,853.80</div>
+                  <div class="change positive">+0.95%</div>
+                </div>
+              </div>
+              <div class="col-md-4 summary-card">
+                <div class="card">
+                  <i class="fas fa-coins"></i>
+                  <h5>Gold Price</h5>
+                  <div class="value" id="gold-value">₹62,580</div>
+                  <div class="change negative">-0.25%</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- Why Choose Us Section -->
-    <section class="why-us-section" data-aos="fade-up">
-        <div class="container">
-            <div class="section-header text-center mb-5">
-                <h2 class="section-title" data-aos="fade-down">Why Choose Us</h2>
-                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Your trusted partner in financial success</p>
-            </div>
+      <!-- CTA Section -->
+      <div id="cta-container"></div>
 
-            <div class="row g-4">
-                <!-- Expert Guidance -->
-                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="feature-card">
-                        <div class="feature-image">
-                            <img src="images/business-expand.jpg" alt="Expert Guidance">
-                        </div>
-                        <div class="feature-icon">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <div class="feature-content">
-                            <h3>Expert Guidance</h3>
-                            <p>Professional advice from certified financial experts</p>
-                        </div>
-                    </div>
-                </div>
+      <!-- Footer Section -->
+      <div id="footer-container"></div>
+    </main>
 
-                <!-- Proven Track Record -->
-                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                    <div class="feature-card">
-                        <div class="feature-image">
-                            <img src="images/project-report.jpg" alt="Proven Track Record">
-                        </div>
-                        <div class="feature-icon">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <div class="feature-content">
-                            <h3>Proven Track Record</h3>
-                            <p>Consistent performance and growth over the years</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Personalized Solutions -->
-                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                    <div class="feature-card">
-                        <div class="feature-image">
-                            <img src="images/loan.jpg" alt="Personalized Solutions">
-                        </div>
-                        <div class="feature-icon">
-                            <i class="fas fa-user-shield"></i>
-                        </div>
-                        <div class="feature-content">
-                            <h3>Personalized Solutions</h3>
-                            <p>Customized strategies for your unique needs</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Timely Support -->
-                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
-                    <div class="feature-card">
-                        <div class="feature-image">
-                            <img src="images/business-plan.jpg" alt="Timely Support">
-                        </div>
-                        <div class="feature-icon">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <div class="feature-content">
-                            <h3>Timely Support</h3>
-                            <p>Round-the-clock assistance for all your queries</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Testimonials Section -->
-    <section class="testimonials-section" data-aos="fade-up">
-        <div class="container">
-            <div class="section-header text-center mb-5">
-                <h2 class="section-title" data-aos="fade-down">What Our Clients Say</h2>
-                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Success stories from our valued clients</p>
-            </div>
-
-            <div class="testimonials-slider row g-4">
-                <!-- Testimonial 1 -->
-                <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <div class="quote-icon">
-                                <i class="fas fa-quote-left"></i>
-                            </div>
-                            <p class="testimonial-text">"Outstanding financial guidance that helped me achieve my retirement goals ahead of schedule. The team's expertise and dedication are truly exceptional."</p>
-                            <div class="client-info">
-                                <div class="client-image">
-                                    <img src="images/143.jpg" alt="Rajesh Kumar">
-                                </div>
-                                <div class="client-details">
-                                    <h4>Rajesh Kumar</h4>
-                                    <span>Business Owner</span>
-                                    <div class="rating">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Testimonial 2 -->
-                <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <div class="quote-icon">
-                                <i class="fas fa-quote-left"></i>
-                            </div>
-                            <p class="testimonial-text">"Their tax planning strategies helped me save significantly on my tax obligations. Professional, knowledgeable, and always available for consultation."</p>
-                            <div class="client-info">
-                                <div class="client-image">
-                                    <img src="images/144.jpg" alt="Priya Sharma">
-                                </div>
-                                <div class="client-details">
-                                    <h4>Priya Sharma</h4>
-                                    <span>IT Professional</span>
-                                    <div class="rating">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Container -->
-    <div class="cta-container">
-        <!-- CTA will be loaded here by script -->
-    </div>
-
-    <!-- Footer Container -->
-    <div class="footer-container">
-        <!-- Footer will be loaded here by script -->
-    </div>
-
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    
-    <script defer src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Custom Script -->
+    <script>
+      // Initialization for all galleries and carousels
+      function initImageGalleries() {
+        initFinancialServicesCarousel();
+        initGallerySlider();
+        initDynamicFinancialCarousel();
+      }
 
-    
-</body>
-</html>
+      // 1. Financial Services Carousel using Swiper
+      function initFinancialServicesCarousel() {
+        if (typeof Swiper === 'undefined') return;
+        
+        const swiperContainer = document.querySelector('.swiper-container');
+        if (!swiperContainer) return;
+        
+        const swiperWrapper = document.querySelector('.swiper-wrapper');
+        if (!swiperWrapper) return;
+        
+        // Clear existing slides
+        swiperWrapper.innerHTML = '';
+        
+        // Fetch images data from getImages.php; alternatively, use a sample array
+        fetch('getImages.php')
+          .then(response => {
+            if (!response.ok) throw new Error('Network error');
+            return response.json();
+          })
+          .then(images => {
+            images.forEach(image => {
+              const slide = document.createElement('div');
+              slide.className = 'swiper-slide';
+              slide.innerHTML = `
+                <div class="carousel-card overlay-gradient">
+                  <div class="card-image">
+                    <img src="${image.src}" alt="${image.caption}" loading="lazy">
+                  </div>
+                  <div class="carousel-content">
+                    <h2 class="animated-title">${image.caption}</h2>
+                    <p class="animated-subtitle">${image.subtitle}</p>
+                  </div>
+                </div>
+              `;
+              swiperWrapper.appendChild(slide);
+            });
+            initializeSwiper();
+          })
+          .catch(error => console.error('Error fetching images:', error));
+        
+        // Alternatively, if you prefer sample data:
+        /*
+        const images = [
+          { src: 'images/all_financial_services.webp', alt: 'Wealth Management', title: 'Wealth Management', subtitle: 'Strategic investment solutions for long-term growth' },
+          { src: 'images/diversified_investment_portfolio.webp', alt: 'Tax Planning', title: 'Tax Planning', subtitle: 'Optimize your tax strategy with expert guidance' },
+          { src: 'images/0.jpg', alt: 'Retirement Planning', title: 'Retirement Planning', subtitle: 'Secure your future with tailored retirement strategies' }
+        ];
+        
+        images.forEach(image => {
+          const slide = document.createElement('div');
+          slide.className = 'swiper-slide';
+          slide.innerHTML = `
+            <div class="carousel-card overlay-gradient">
+              <div class="card-image">
+                <img src="${image.src}" alt="${image.alt}" loading="lazy">
+              </div>
+              <div class="carousel-content">
+                <h2 class="animated-title">${image.title}</h2>
+                <p class="animated-subtitle">${image.subtitle}</p>
+              </div>
+            </div>
+          `;
+          swiperWrapper.appendChild(slide);
+        });
+        initializeSwiper();
+        */
+        
+        function initializeSwiper() {
+          new Swiper('.swiper-container', {
+            loop: true,
+            speed: 800,
+            slidesPerView: 1,
+            spaceBetween: 20,
+            centeredSlides: true,
+            autoplay: {
+              delay: 3500,
+              disableOnInteraction: false,
+            },
+            pagination: {
+              el: '.swiper-pagination',
+              clickable: true,
+            },
+            navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+              768: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 }
+            },
+            lazy: {
+              loadPrevNext: true,
+              loadPrevNextAmount: 3,
+            },
+            on: {
+              init() {
+                document.querySelectorAll('.swiper-slide-active').forEach(slide => {
+                  slide.style.opacity = 1;
+                });
+              }
+            }
+          });
+        }
+      }
+
+      // 2. Gallery Slider (manual and auto-slide)
+      function initGallerySlider() {
+        const slider = document.querySelector('.gallery-slider');
+        const slides = document.querySelectorAll('.slide');
+        const prevArrow = document.querySelector('.prev-arrow');
+        const nextArrow = document.querySelector('.next-arrow');
+        
+        if (!slider || !slides.length || !prevArrow || !nextArrow) return;
+        
+        let currentIndex = 0;
+        let visibleSlides = 3; // Default
+        
+        function updateSlider() {
+          const slideWidth = slides[0].offsetWidth + 20; // Adjust margin if needed
+          slider.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+        }
+        
+        function handleResize() {
+          if (window.innerWidth < 480) {
+            visibleSlides = 1;
+          } else if (window.innerWidth < 768) {
+            visibleSlides = 2;
+          } else {
+            visibleSlides = 3;
+          }
+          updateSlider();
+        }
+        
+        nextArrow.addEventListener('click', () => {
+          if (currentIndex < slides.length - visibleSlides) {
+            currentIndex++;
+            updateSlider();
+          }
+        });
+        
+        prevArrow.addEventListener('click', () => {
+          if (currentIndex > 0) {
+            currentIndex--;
+            updateSlider();
+          }
+        });
+        
+        const autoSlideInterval = setInterval(() => {
+          if (currentIndex < slides.length - visibleSlides) {
+            currentIndex++;
+          } else {
+            currentIndex = 0;
+          }
+          updateSlider();
+        }, 5000);
+        
+        window.addEventListener('resize', handleResize);
+        handleResize();
+        
+        // Optional: Return a cleanup function for SPA
+        return () => {
+          clearInterval(autoSlideInterval);
+          window.removeEventListener('resize', handleResize);
+        };
+      }
+
+      // 3. Dynamic Financial Carousel using Owl Carousel (AJAX-loaded)
+      function initDynamicFinancialCarousel() {
+        const carouselContainer = document.querySelector('.financial-carousel');
+        const loadingOverlay = document.querySelector('.loading-overlay');
+        
+        if (!carouselContainer || !loadingOverlay) return;
+        
+        fetch('carousel-loader.php')
+          .then(response => {
+            if (!response.ok) throw new Error('Network error');
+            return response.json();
+          })
+          .then(services => {
+            loadingOverlay.remove();
+            const carousel = document.getElementById('dynamic-financial-carousel');
+            if (!carousel) return;
+            
+            carousel.innerHTML = '';
+            services.forEach(service => {
+              const item = document.createElement('div');
+              item.className = 'item';
+              item.innerHTML = `
+                <div class="carousel-card overlay-gradient">
+                  <div class="card-image">
+                    <img class="owl-lazy" data-src="${service.src}" alt="${service.title}" loading="lazy">
+                  </div>
+                  <div class="carousel-content">
+                    <h2 class="animated-title">${service.title}</h2>
+                    <p class="animated-subtitle">${service.description}</p>
+                  </div>
+                </div>
+              `;
+              carousel.appendChild(item);
+            });
+            
+            if (typeof $ !== 'undefined' && typeof $.fn.owlCarousel !== 'undefined') {
+              $('#dynamic-financial-carousel').owlCarousel({
+                items: 3,
+                loop: services.length > 3,
+                center: true,
+                lazyLoad: true,
+                margin: 25,
+                responsive: {
+                  0: { items: 1 },
+                  768: { items: 2 },
+                  992: { items: 3 }
+                },
+                nav: true,
+                navText: [
+                  '<i class="fas fa-chevron-left"></i>',
+                  '<i class="fas fa-chevron-right"></i>'
+                ],
+                dots: false,
+                autoplay: true
+              });
+            }
+          })
+          .catch(error => {
+            console.error('Error loading dynamic financial carousel:', error);
+            if (loadingOverlay) {
+              loadingOverlay.innerHTML = `
+                <div class="error-message">
+                  Error loading financial services.
+                  <button onclick="location.reload()">Try Again</button>
+                </div>
+              `;
+            }
+          });
+      }
+
+      document.addEventListener('DOMContentLoaded', initImageGalleries);
+    </script>
+    <script src="js/script.js"></script>
+  </body>
+
+  </html>

@@ -10,20 +10,20 @@
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/new-style.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Animation Libraries -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
-   
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -33,7 +33,7 @@
     </div>
 
     <!-- Header will be dynamically loaded here -->
-    <div class="header-container"></div>
+    <div id="header-container"></div>
 
     <!-- Hero Section -->
     <section class="about-hero">
@@ -63,32 +63,33 @@
     <section class="founder-section">
         <div class="container">
             <div class="founder-card" data-aos="fade-up">
-                <div class="founder-image">
-                    <img 
-                        class="lazyload"
-                        data-src="images/founder.jpg" 
+                <figure class="founder-image">
+                    <img class="lazyload"
                         src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                        alt="Manoj N. Kastiya Jain"
+                        data-src="images/founder.jpg"
+                        alt="Manoj N. Kastiya Jain - Founder of Indian Money Master"
                         loading="lazy"
-                    >
-                </div>
+                        width="400"
+                        height="400">
+                </figure>
                 <div class="founder-content">
                     <h2>Our Founder</h2>
-                    <h3>Mr. Manoj N. Kastiya Jain</h3>
+                    <div class="founder-name">
+                        <h3>Mr. Manoj N. Kastiya Jain</h3>
+                    </div>
                     <div class="credentials">
                         <span class="credential-badge">B.Com.</span>
                         <span class="credential-badge">Certified Govt Auditor</span>
                         <span class="credential-badge">Sales Tax Practitioner</span>
                         <span class="credential-badge">ISO Lead Auditor</span>
-                        <span class="credential-badge">BSE NSE AP-Associates Person</span>
-                        <span class="credential-badge">IRDA Approved Insurance Advisor</span>
+                        <span class="credential-badge">BSE/NSE Authorized Person</span>
+                        <span class="credential-badge">IRDAI Approved Insurance Advisor</span>
                     </div>
-                    <p>Founded in 2002, our organization is growing up as Largest Service Provider in Financial Sector with Brand of Indian Money Master to all India level.</p>
+                    <p>Founded in 2002, our organization has grown to become the largest service provider in the financial sector under the nationwide brand of Indian Money Master.</p>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- Vision Section -->
     <section class="vision-section">
         <div class="container">
@@ -282,7 +283,7 @@
                     <h3>Customized Financial Solutions</h3>
                     <p>We offer tailored services to meet each client's unique financial goals, ensuring a personalized experience.</p>
                 </div>
-                
+
                 <div class="concept-item" data-aos="fade-up" data-aos-delay="300">
                     <h3>Innovative Technology Integration</h3>
                     <p>Leveraging cutting-edge technology to deliver seamless, fast, and secure financial services to our clients.</p>
@@ -305,27 +306,31 @@
             </div>
         </div>
     </section>
-    
-
-    
-
-    
-
+        
     <!-- CTA Container -->
-    <div class="cta-container">
-        <!-- CTA will be loaded here by script -->
-    </div>
+    <div id="cta-container"></div>
 
     <!-- Footer Container -->
-    <div class="footer-container">
-        <!-- Footer will be loaded here by script -->
-    </div>
+    <div id="footer-container"></div>
 
-    <!-- Scripts -->
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    
+    <!-- AOS Animation Library -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- GSAP Animation Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Custom JS -->
     <script src="js/script.js"></script>
 </body>
 </html>
+

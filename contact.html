@@ -10,41 +10,20 @@
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="css/style.css">
-    <!-- <link rel="stylesheet" href="responsive.css">  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Animation Libraries -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-    <!-- Additional Libraries -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
-
-    <!-- Google Fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
-
-
-    <!--Owl Carousel-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-
-    <!--AOS Animation-->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-    <!--Swiper-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto+Mono&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="contact-page">
@@ -53,7 +32,8 @@
         <div class="loader"></div>
     </div>
 
-    </header>
+    <!-- Header Container --> 
+    <div id="header-container"></div>
 
     <!-- Contact Information Section -->
     <section class="contact-info-section" data-aos="fade-up">
@@ -68,23 +48,21 @@
                     <p>Mumbai-Thane-Pune India</p>
                 </div>
                 <div class="contact-info-card" data-aos="fade-up">
-
                     <div class="info-icon">
                         <i class="fas fa-phone-alt"></i>
                     </div>
                     <h3>Call Us</h3>
-                    <p>022-64463146</p>
-                    <p>9867673434</p>
+                    <p><a href="tel:02264463146">022-64463146</a></p>
+                    <p><a href="tel:9867673434">9867673434</a></p>
                     <p>Mon-Sat: 9:00 AM - 6:00 PM</p>
                 </div>
                 <div class="contact-info-card" data-aos="fade-left">
-
                     <div class="info-icon">
                         <i class="fas fa-envelope"></i>
                     </div>
                     <h3>Email Us</h3>
-                    <p>info@indianmoneymaster.com</p>
-                    <p>support@indianmoneymaster.com</p>
+                    <p><a href="mailto:info@indianmoneymaster.com">info@indianmoneymaster.com</a></p>
+                    <p><a href="mailto:support@indianmoneymaster.com">support@indianmoneymaster.com</a></p>
                 </div>
             </div>
         </div>
@@ -98,7 +76,7 @@
                     <h2 class="gradient-heading">Get In Touch</h2>
                     <p class="form-subtitle">Fill out the form below and we'll get back to you shortly</p>
                     
-                    <form class="contact-form" id="contactForm">
+                    <form class="contact-form" id="contactForm" onsubmit="return validateForm('contactForm')">
                         <div class="input-group">
                             <div class="input-wrapper">
                                 <i class="fas fa-user"></i>
@@ -113,7 +91,7 @@
                         </div>
                         <div class="input-group">
                             <div class="input-wrapper">
-                                <i clas s="fas fa-phone"></i>
+                                <i class="fas fa-phone"></i>
                                 <input type="tel" placeholder="Your Phone" required>
                             </div>
                         </div>
@@ -148,7 +126,7 @@
                 <div class="map-side" data-aos="fade-left">
                     <div class="map-wrapper">
                         <iframe 
-                            src="https://www.google.com/maps/embed?pb=YOUR_MAP_EMBED_URL"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.11609823277!2d72.74109995709657!3d19.08219783958221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1648642058961!5m2!1sen!2sin"
                             width="100%" 
                             height="100%" 
                             style="border:0;" 
@@ -156,35 +134,38 @@
                             loading="lazy">
                         </iframe>
                     </div>
-                    <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                    </div>
+                    <!-- <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div> -->
                 </div>
             </div>
         </div>
     </section>
 
     <!-- CTA Container -->
-    <div class="cta-container">
-        <!-- CTA will be loaded here by script -->
-    </div>
+    <div id="cta-container"></div>
 
     <!-- Footer Container -->
-    <div class="footer-container">
-        <!-- Footer will be loaded here by script -->
-    </div>
+    <div id="footer-container"></div>
 
-    <!-- Scripts -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="js/script.js"></script>
-
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- GSAP Animation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
 </body>
 </html>
 
