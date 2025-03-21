@@ -18,7 +18,11 @@ const FinancialApp = (() => {
           { symbol: "GOLD", price: 62580, change: 0.65, positive: true }
         ]
       },
-      CAROUSEL_DATA: "carousel-loader.php"
+      CAROUSEL_DATA: "carousel-loader.php",
+      FALLBACK_IMAGES: [
+        { src: 'images/default1.jpg', title: 'Investment Advisory', description: 'Expert financial guidance' },
+        { src: 'images/default2.jpg', title: 'Tax Planning', description: 'Optimize your tax strategy' }
+      ]
     },
     SELECTORS: {
       PRELOADER: ".preloader",
@@ -114,8 +118,8 @@ const FinancialApp = (() => {
         if (!response.ok) throw new Error("Network response error");
         return await response.json();
       } catch (error) {
-        console.error("Carousel data fallback:", error);
-        return [/* Fallback data array */];
+        console.error("Using fallback carousel data:", error);
+        return CONFIG.API.FALLBACK_IMAGES;
       }
     }
   };
@@ -163,54 +167,86 @@ const FinancialApp = (() => {
   };
 
   // ========================= CORE FUNCTIONALITY =========================
-  return {
-    // Initialization
-    async init() {
+  const initPreloader = () => {
+    if (!DOM.preloader) return;
+    
+    const hidePreloader = () => {
+      DOM.preloader.style.opacity = '0';
+      setTimeout(() => {
+        if (DOM.preloader.parentNode) {
+          DOM.preloader.parentNode.removeChild(DOM.preloader);
+        }
+      }, 300);
+    };
+
+    document.readyState === 'complete' 
+      ? hidePreloader()
+      : window.addEventListener('load', hidePreloader);
+  };
+
+  const initMarketTicker = async () => {
+    if (!DOM.marketTicker) return;
+
+    try {
+      const data = await DataService.fetchStockData();
+      DOM.marketTicker.innerHTML = data.map(UIComponents.createTickerItem).join("");
+    } catch (error) {
+      console.error("Ticker update failed:", error);
+      DOM.marketTicker.innerHTML = UIComponents.createFallbackTickers();
+    }
+    
+    setInterval(async () => {
       try {
-        this.initPreloader();
-        await this.loadComponents();
-        this.initializeCoreModules();
-        this.initMarketTicker();
-        this.initCalculators();
-        this.initUIComponents();
-        this.initThirdPartyIntegrations();
+        const data = await DataService.fetchStockData();
+        DOM.marketTicker.innerHTML = data.map(UIComponents.createTickerItem).join("");
+      } catch (error) {
+        console.error("Ticker update failed:", error);
+      }
+    }, 300000);
+  };
+
+  const initFinancialServicesCarousel = async () => {
+    const carouselContainer = document.querySelector('.financial-carousel');
+    if (!carouselContainer) return;
+
+    try {
+      const services = await DataService.fetchCarouselData();
+      UIComponents.renderFinancialCarousel(services);
+    } catch (error) {
+      console.error("Carousel initialization failed:", error);
+      UIComponents.renderFinancialCarousel(CONFIG.API.FALLBACK_IMAGES);
+    }
+  };
+
+  // ========================= PUBLIC INTERFACE =========================
+  return {
+    init: async () => {
+      try {
+        initPreloader();
+        await initMarketTicker();
+        await initFinancialServicesCarousel();
+        UIComponents.initScrollToTop();
+        
+        // Initialize third-party libraries
+        if (typeof AOS !== 'undefined') {
+          AOS.init({ duration: 1000, easing: "ease-in-out", once: true });
+        }
+        
+        if (typeof gsap !== 'undefined') {
+          gsap.registerPlugin(ScrollTrigger);
+          // Add GSAP animations here
+        }
+
       } catch (error) {
         console.error("Initialization error:", error);
       }
-    },
-
-    // Component initialization
-    initializeCoreModules() {
-      this.initLazyLoading();
-      UIComponents.initScrollToTop();
-      this.initServiceModals();
-      this.initDynamicFinancialCarousel();
-    },
-
-    // Third-party integrations
-    initThirdPartyIntegrations() {
-      this.initAOS();
-      this.initGSAPAnimations();
-      this.initOwlCarousel();
-      this.initSwiper();
-    },
-
-    // AOS initialization
-    initAOS() {
-      if (typeof AOS === "object") {
-        AOS.init({ duration: 1000, easing: "ease-in-out", once: true });
-      }
-    },
-
-    // Rest of the implementation...
-    // (Include other methods from original code with similar refactoring)
+    }
   };
 })();
 
-// ========================= APPLICATION BOOTSTRAP =========================
-document.addEventListener("DOMContentLoaded", () => {
+// ========================= INITIALIZE APPLICATION =========================
+document.addEventListener('DOMContentLoaded', () => {
   FinancialApp.init();
-  window.validateForm = (formId) => FinancialApp.validateForm(formId);
 });
 
 console.log("Financial Application initialized successfully");
