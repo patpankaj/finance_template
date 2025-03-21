@@ -1,1 +1,280 @@
 
+
+
+<!-- Enhanced Market Ticker -->
+<div class="market-ticker gradient-bg">
+    <div class="ticker-wrapper">
+        <div class="ticker-track">
+            <div class="ticker-item">
+                <span class="stock">NIFTY 50</span>
+                <span class="price up">21,853.80</span>
+                <span class="change up">+0.95%</span>
+            </div>
+            <div class="ticker-item">
+                <span class="stock">SENSEX</span>
+                <span class="price up">72,186.09</span>
+                <span class="change up">+1.10%</span>
+            </div>
+            <div class="ticker-item">
+                <span class="stock">BANK NIFTY</span>
+                <span class="price up">45,923.45</span>
+                <span class="change up">+0.75%</span>
+            </div>
+            <div class="ticker-item">
+                <span class="stock">USD/INR</span>
+                <span class="price down">82.96</span>
+                <span class="change down">-0.12%</span>
+            </div>
+            <div class="ticker-item">
+                <span class="stock">GOLD</span>
+                <span class="price up">₹62,580</span>
+                <span class="change up">+0.65%</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Enhanced Main Header -->
+<header class="main-header">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <!-- Enhanced Logo -->
+            <a class="navbar-brand" href="index.html">
+                <img src="images/all_financial_services.webp" alt="IndianMoney Master" width="200" class="brand-logo">
+                <span class="brand-text">IndianMoney Master</span>
+            </a>
+
+            <!-- Enhanced Mobile Toggle -->
+            <button class="navbar-toggler" type="button" 
+                    data-bs-toggle="collapse" 
+                    data-bs-target="#mainNav" 
+                    aria-controls="mainNav" 
+                    aria-expanded="false" 
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Enhanced Navigation -->
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">
+                            <i class="fas fa-home me-2"></i>Home
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" 
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-hand-holding-usd me-2"></i>Services
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="services.html">All Services</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="taxplanning.html">Tax Planning</a></li>
+                            <!-- <li><a class="dropdown-item" href="investment.html">Investment Advisory</a></li> -->
+                            <li><a class="dropdown-item" href="retirement.html">Retirement Planning</a></li>
+                            <li><a class="dropdown-item" href="detailedservices.html">Detailed Servics</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">
+                            <i class="fas fa-info-circle me-2"></i>About
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">
+                            <i class="fas fa-phone-alt me-2"></i>Contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+ 
+    <section class="hero text-center">
+        <div class="container">
+            <h1 class="display-4">IndianMoney Master</h1>
+            <p class="lead">Your Financial Partner</p>
+            <p class="fs-4">Comprehensive financial services tailored to secure your future and maximize your wealth potential</p>
+        </div>
+    </section> 
+    </header>
+
+    <!-- Enhanced Hero Carousel -->
+    <!-- <div class="hero-carousel owl-carousel owl-theme">
+        <div class="item">
+            <div class="carousel-card overlay-gradient">
+                <div class="card-image">
+                    <img src="images/all_financial_services.webp" alt="Wealth Management">
+                </div>
+                <div class="carousel-content">
+                    <h2 class="animated-title">Wealth Management</h2>
+                    <p class="animated-subtitle">Strategic investment solutions for long-term growth</p>
+                    <a href="services.html" class="card-btn pulse-animation">
+                        Learn More <i class="fas fa-arrow-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="carousel-card overlay-gradient">
+                <div class="card-image">
+                    <img src="images/diversified_investment_portfolio.webp" alt="Tax Planning">
+                </div>
+                <div class="carousel-content">
+                    <h2 class="animated-title">Tax Planning</h2>
+                    <p class="animated-subtitle">Optimize your tax strategy with expert guidance</p>
+                    <a href="services.html" class="card-btn pulse-animation">
+                        Learn More <i class="fas fa-arrow-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="carousel-card overlay-gradient">
+                <div class="card-image">
+                    <img src="images/0.jpg" alt="Retirement Planning">
+                </div>
+                <div class="carousel-content">
+                    <h2 class="animated-title">Retirement Planning</h2>
+                    <p class="animated-subtitle">Secure your future with tailored retirement strategies</p>
+                    <a href="services.html" class="card-btn pulse-animation">
+                        Learn More <i class="fas fa-arrow-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="carousel-card overlay-gradient">
+                <div class="card-image">
+                    <img src="images/insurance_services.webp" alt="Insurance Services">
+                </div>
+                <div class="carousel-content">
+                    <h2 class="animated-title">Insurance Services</h2>
+                    <p class="animated-subtitle">Comprehensive insurance solutions for peace of mind</p>
+                    <a href="services.html" class="card-btn pulse-animation">
+                        Learn More <i class="fas fa-arrow-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="carousel-card overlay-gradient">
+                <div class="card-image">
+                    <img src="images/investment_advisory.webp" alt="Investment Advisory">
+                </div>
+                <div class="carousel-content">
+                    <h2 class="animated-title">Investment Advisory</h2>
+                    <p class="animated-subtitle">Expert advice to grow your wealth effectively</p>
+                    <a href="services.html" class="card-btn pulse-animation">
+                        Learn More <i class="fas fa-arrow-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="carousel-card overlay-gradient">
+                <div class="card-image">
+                    <img src="images/financial_consulting.webp" alt="Financial Consulting">
+                </div>
+                <div class="carousel-content">
+                    <h2 class="animated-title">Financial Consulting</h2>
+                    <p class="animated-subtitle">Personalized financial strategies for success</p>
+                    <a href="services.html" class="card-btn pulse-animation">
+                        Learn More <i class="fas fa-arrow-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="carousel-card overlay-gradient">
+                <div class="card-image">
+                    <img src="images/estate_planning.webp" alt="Estate Planning">
+                </div>
+                <div class="carousel-content">
+                    <h2 class="animated-title">Estate Planning</h2>
+                    <p class="animated-subtitle">Protect your legacy with effective estate planning</p>
+                    <a href="services.html" class="card-btn pulse-animation">
+                        Learn More <i class="fas fa-arrow-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="carousel-card overlay-gradient">
+                <div class="card-image">
+                    <img src="images/business_advisory.webp" alt="Business Advisory">
+                </div>
+                <div class="carousel-content">
+                    <h2 class="animated-title">Business Advisory</h2>
+                    <p class="animated-subtitle">Guidance to grow and scale your business</p>
+                    <a href="services.html" class="card-btn pulse-animation">
+                        Learn More <i class="fas fa-arrow-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="carousel-card overlay-gradient">
+                <div class="card-image">
+                    <img src="images/risk_management.webp" alt="Risk Management">
+                </div>
+                <div class="carousel-content">
+                    <h2 class="animated-title">Risk Management</h2>
+                    <p class="animated-subtitle">Minimize risks and maximize opportunities</p>
+                    <a href="services.html" class="card-btn pulse-animation">
+                        Learn More <i class="fas fa-arrow-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="carousel-card overlay-gradient">
+                <div class="card-image">
+                    <img src="images/wealth_preservation.webp" alt="Wealth Preservation">
+                </div>
+                <div class="carousel-content">
+                    <h2 class="animated-title">Wealth Preservation</h2>
+                    <p class="animated-subtitle">Preserve and grow your wealth over time</p>
+                    <a href="services.html" class="card-btn pulse-animation">
+                        Learn More <i class="fas fa-arrow-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="carousel-card overlay-gradient">
+                <div class="card-image">
+                    <img src="images/asset_allocation.webp" alt="Asset Allocation">
+                </div>
+                <div class="carousel-content">
+                    <h2 class="animated-title">Asset Allocation</h2>
+                    <p class="animated-subtitle">Optimize your portfolio with strategic asset allocation</p>
+                    <a href="services.html" class="card-btn pulse-animation">
+                        Learn More <i class="fas fa-arrow-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="carousel-card overlay-gradient">
+                <div class="card-image">
+                    <img src="images/financial_education.webp" alt="Financial Education">
+                </div>
+                <div class="carousel-content">
+                    <h2 class="animated-title">Financial Education</h2>
+                    <p class="animated-subtitle">Empower yourself with financial knowledge</p>
+                    <a href="services.html" class="card-btn pulse-animation">
+                        Learn More <i class="fas fa-arrow-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+ </header>  -->
+
+<!-- <style>
+.header-logo, .award-badge {
+  aspect-ratio: attr(width) / attr(height);
+}
+</style> -->
