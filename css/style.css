@@ -4862,3 +4862,40 @@ body {
 .lazyload.loaded {
   opacity: 1;
 }
+.market-insights .btn-timeframe {
+  padding: 0.25rem 0.75rem;
+  margin: 0 0.25rem;
+  border-radius: 20px;
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+}
+
+.btn-timeframe.active {
+  background: #2962ff;
+  color: white;
+  border-color: #2962ff;
+}
+
+.summary-card .card {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.summary-card i {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  color: #2962ff;
+}
+
+.summary-card .value {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0.5rem 0;
+}
+
+.change {
+  font-weight: 500;
+}
+
+.change.positive { color: #28a745; }
+.change.negative { color: #dc3545; } 
