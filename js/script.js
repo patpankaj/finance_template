@@ -640,6 +640,89 @@ document.addEventListener("DOMContentLoaded", () => {
   console.log("DOM fully loaded, initializing FinancialApp");
   FinancialApp.init();
 });
+document.addEventListener('DOMContentLoaded', function() {
+  // Chart.js Initialization
+  const ctx = document.getElementById('marketChart').getContext('2d');
+  let marketChart;
 
+  // Timeframe Data Generator
+  function generateData(timeframe) {
+      const dataPoints = {
+          '1D': 24,
+          '1W': 7,
+          '1M': 30,
+          '1Y': 12
+      }[timeframe] || 24;
+
+      return Array.from({length: dataPoints}, (_, i) => 
+          Math.floor(Math.random() * 500 + 21000)
+      );
+  }
+
+  // Chart Configuration
+  function initChart(timeframe = '1D') {
+      if (marketChart) marketChart.destroy();
+      
+      marketChart = new Chart(ctx, {
+          type: 'line',
+          data: {
+              labels: generateData(timeframe).map((_, i) => i + 1),
+              datasets: [{
+                  label: 'NIFTY 50',
+                  data: generateData(timeframe),
+                  borderColor: '#2962ff',
+                  tension: 0.4,
+                  fill: false
+              }]
+          },
+          options: {
+              responsive: true,
+              plugins: {
+                  legend: { display: false }
+              },
+              scales: {
+                  y: {
+                      beginAtZero: false,
+                      grid: { color: 'rgba(0,0,0,0.05)' }
+                  }
+              }
+          }
+      });
+  }
+
+  // Timeframe Controls
+  document.querySelectorAll('.btn-timeframe').forEach(button => {
+      button.addEventListener('click', function() {
+          document.querySelector('.btn-timeframe.active').classList.remove('active');
+          this.classList.add('active');
+          initChart(this.dataset.timeframe);
+      });
+  });
+
+  // Initialize default chart
+  initChart();
+
+  // Real-time Value Updates
+  function updateValues() {
+      document.querySelectorAll('.summary-card').forEach(card => {
+          const valueElement = card.querySelector('.value');
+          const changeElement = card.querySelector('.change');
+          let currentValue = parseFloat(valueElement.textContent.replace(/[^0-9.]/g, ''));
+          
+          // Generate random change (-2% to +2%)
+          const change = (Math.random() * 4 - 2).toFixed(2);
+          const newValue = currentValue * (1 + change/100);
+          
+          // Update elements
+          valueElement.textContent = `${card.querySelector('h5').textContent.includes('Gold') ? '₹' : ''}${newValue.toFixed(2)}`;
+          changeElement.textContent = `${change >= 0 ? '+' : ''}${change}%`;
+          changeElement.className = `change ${change >= 0 ? 'positive' : 'negative'}`;
+      });
+  }
+
+  
+  setInterval(updateValues, 5000);
+  updateValues()
+});
 // Log for demonstration purposes
 console.log("Script loaded successfully");
